@@ -31,3 +31,23 @@ html {
 ::selection {
   background-color: rgba(0, 196, 204, 0.2);
 }
+
+/* Employee photos auto scroll animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -177,12 +177,6 @@ export default function Header() {
           <HamburgerIcon />
         </button>
       )}
-      <style jsx>{`
-        @keyframes fadeIn {
-          from { opacity: 0; }
-          to { opacity: 1; }
-        }
-      `}</style>
     </header>
   );
 }
