@@ -201,6 +201,7 @@ export default function Footer() {
               <div style={{ marginTop: '120px' }}>
                 <FooterTitle>会社情報</FooterTitle>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                  <FooterLink href="/company">会社概要</FooterLink>
                   <FooterLink href="/company/executives">役員紹介</FooterLink>
                   <FooterLink href="#">沿革</FooterLink>
                 </div>

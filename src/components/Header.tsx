@@ -48,7 +48,7 @@ const menuItems = [
   { label: '私たちについて', sublabel: 'About Us' },
   { label: 'サービス', sublabel: 'Service', href: '/service' },
   { label: 'ニュース', sublabel: 'News' },
-  { label: '会社情報', sublabel: 'Company' },
+  { label: '会社情報', sublabel: 'Company', href: '/company' },
   { label: '採用サイト', sublabel: 'Careers', isExternal: true },
 ];
 
