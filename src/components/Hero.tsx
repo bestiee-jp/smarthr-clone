@@ -12,6 +12,24 @@ function ArrowIcon() {
 export default function Hero() {
   return (
     <section className="relative overflow-hidden" style={{ minHeight: '90vh' }}>
+      {/* Background video */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover"
+        style={{ zIndex: 0 }}
+      >
+        <source src="/hero-bg.mp4?v=2" type="video/mp4" />
+      </video>
+
+      {/* Overlay for better text readability */}
+      <div
+        className="absolute top-0 left-0 w-full h-full"
+        style={{ zIndex: 1, backgroundColor: 'rgba(255, 255, 255, 0.3)' }}
+      />
+
       {/* Main content */}
       <div className="relative z-10 flex flex-col justify-center" style={{ minHeight: '90vh', padding: '0 5%' }}>
         {/* Tagline */}

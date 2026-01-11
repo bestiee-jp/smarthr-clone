@@ -1,6 +1,8 @@
+import Link from 'next/link';
+
 export default function SmartHRLogo() {
   return (
-    <div className="flex items-center gap-2.5">
+    <Link href="/" className="flex items-center gap-2.5">
       {/* S icon in circle */}
       <svg width="44" height="44" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="20" cy="20" r="20" fill="#00C4CC"/>
@@ -11,6 +13,6 @@ export default function SmartHRLogo() {
       </svg>
       {/* SmartHR text */}
       <span className="text-[#00C4CC] font-bold text-[28px] tracking-tight">SmartHR</span>
-    </div>
+    </Link>
   );
 }

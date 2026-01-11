@@ -1,5 +1,7 @@
 'use client';
 
+import Link from 'next/link';
+
 // X (Twitter) Icon
 function XIcon() {
   return (
@@ -58,6 +60,25 @@ function ExternalLinkIcon() {
 
 // Footer Link Component
 function FooterLink({ href, children, external = false }: { href: string; children: React.ReactNode; external?: boolean }) {
+  const content = (
+    <>
+      <span className="relative inline-block">
+        {children}
+        <span className="absolute left-0 bottom-[-2px] h-[1px] bg-white transition-all duration-100 w-0 group-hover:w-full"></span>
+      </span>
+      {external && <ExternalLinkIcon />}
+    </>
+  );
+
+  // Use Link for internal links (starting with /)
+  if (href.startsWith('/') && !external) {
+    return (
+      <Link href={href} className="group text-[18px] text-white flex items-center gap-2 w-fit">
+        {content}
+      </Link>
+    );
+  }
+
   return (
     <a
       href={href}
@@ -65,11 +86,7 @@ function FooterLink({ href, children, external = false }: { href: string; childr
       target={external ? "_blank" : undefined}
       rel={external ? "noopener noreferrer" : undefined}
     >
-      <span className="relative inline-block">
-        {children}
-        <span className="absolute left-0 bottom-[-2px] h-[1px] bg-white transition-all duration-100 w-0 group-hover:w-full"></span>
-      </span>
-      {external && <ExternalLinkIcon />}
+      {content}
     </a>
   );
 }
@@ -184,7 +201,7 @@ export default function Footer() {
               <div style={{ marginTop: '120px' }}>
                 <FooterTitle>会社情報</FooterTitle>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                  <FooterLink href="#">役員紹介</FooterLink>
+                  <FooterLink href="/company/executives">役員紹介</FooterLink>
                   <FooterLink href="#">沿革</FooterLink>
                 </div>
               </div>

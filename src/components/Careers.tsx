@@ -15,7 +15,7 @@ export default function Careers() {
       {/* Top links section */}
       <div className="flex gap-8" style={{ marginBottom: '80px', padding: '0 5%' }}>
         {/* 会社情報 */}
-        <a href="#" className="flex-1 group">
+        <div className="flex-1">
           <div
             style={{
               height: '200px',
@@ -29,14 +29,26 @@ export default function Careers() {
               Office Image
             </div>
           </div>
-          <div className="flex items-center gap-2 group-hover:text-[#00c8c8] transition-colors">
-            <span style={{ fontSize: '16px' }}>会社情報</span>
+          <a
+            href="#"
+            className="inline-flex items-center justify-between bg-black text-white"
+            style={{
+              padding: '16px 24px',
+              minWidth: '180px',
+              fontSize: '16px',
+              borderRadius: '50px',
+              transition: 'border-radius 0.5s ease',
+            }}
+            onMouseEnter={(e) => e.currentTarget.style.borderRadius = '8px'}
+            onMouseLeave={(e) => e.currentTarget.style.borderRadius = '50px'}
+          >
+            <span>会社情報</span>
             <ArrowIcon />
-          </div>
-        </a>
+          </a>
+        </div>
 
         {/* サステナビリティ */}
-        <a href="#" className="flex-1 group">
+        <div className="flex-1">
           <div
             style={{
               height: '200px',
@@ -50,11 +62,23 @@ export default function Careers() {
               Sustainability Image
             </div>
           </div>
-          <div className="flex items-center gap-2 group-hover:text-[#00c8c8] transition-colors">
-            <span style={{ fontSize: '16px' }}>サステナビリティ</span>
+          <a
+            href="#"
+            className="inline-flex items-center justify-between bg-black text-white"
+            style={{
+              padding: '16px 24px',
+              minWidth: '220px',
+              fontSize: '16px',
+              borderRadius: '50px',
+              transition: 'border-radius 0.5s ease',
+            }}
+            onMouseEnter={(e) => e.currentTarget.style.borderRadius = '8px'}
+            onMouseLeave={(e) => e.currentTarget.style.borderRadius = '50px'}
+          >
+            <span>サステナビリティ</span>
             <ArrowIcon />
-          </div>
-        </a>
+          </a>
+        </div>
       </div>
 
       {/* 採用情報 label with full-width border */}
