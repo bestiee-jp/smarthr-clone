@@ -134,7 +134,7 @@ export default function ContactPage() {
       };
 
       // Send to Google Sheets
-      const googleScriptUrl = 'https://script.google.com/macros/s/AKfycbynKNbbnhch2Fz5-laFU-pRp6rYHhx5FjCJMN_HR2kJuJHKHtMeVKpLqZmtYFcUh2c8/exec';
+      const googleScriptUrl = 'https://script.google.com/macros/s/AKfycbzdBouyTrx8Tjl_53ATyS4izjP4muCjGoGlMkgsxpTWEIl_IiJJugD44o8guuYCFDbD/exec';
 
       // Send both requests in parallel
       await Promise.all([
@@ -804,25 +804,24 @@ export default function ContactPage() {
                     />
                   </div>
 
-                  {/* Recruitment Areas Field */}
+                  {/* Interest Areas Field */}
                   <div style={{ marginBottom: '20px' }}>
                     <label
                       style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: '8px',
+                        display: 'block',
                         fontSize: '14px',
                         color: '#333',
                         marginBottom: '12px',
                       }}
                     >
-                      採用に関わられている領域
+                      【ご興味のある内容を教えてください】（複数選択可）
                       <span style={{
                         backgroundColor: '#dc2626',
                         color: 'white',
                         fontSize: '11px',
                         padding: '2px 8px',
                         borderRadius: '4px',
+                        marginLeft: '8px',
                       }}>必須</span>
                     </label>
                     <div style={{
@@ -832,52 +831,17 @@ export default function ContactPage() {
                       backgroundColor: (errors.recruitmentAreas || shouldShowError('recruitmentAreas')) ? '#fef2f2' : 'transparent',
                     }}>
                     <div style={{
-                      display: 'grid',
-                      gridTemplateColumns: 'repeat(2, 1fr)',
-                      gap: '8px',
-                    }}>
-                      {[
-                        '新卒採用（エンジニア職）',
-                        '新卒採用（その他）',
-                        '中途採用（エンジニア職）',
-                        '中途採用（その他）',
-                      ].map((option) => (
-                        <label
-                          key={option}
-                          style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            gap: '8px',
-                            fontSize: '13px',
-                            color: '#333',
-                            cursor: 'pointer',
-                          }}
-                        >
-                          <input
-                            type="checkbox"
-                            checked={formData.recruitmentAreas.includes(option)}
-                            onChange={() => handleCheckboxChange(option)}
-                            onFocus={() => handleFieldFocus('recruitmentAreas')}
-                            style={{
-                              width: '16px',
-                              height: '16px',
-                              cursor: 'pointer',
-                            }}
-                          />
-                          {option}
-                        </label>
-                      ))}
-                    </div>
-                    <div style={{
                       display: 'flex',
                       flexDirection: 'column',
-                      gap: '8px',
-                      marginTop: '8px',
+                      gap: '10px',
                     }}>
                       {[
-                        'その他採用（アルバイト採用など）',
-                        '顧客の採用支援（採用コンサルなど）',
-                        '採用には関わっていない',
+                        'AI面接練習データ活用の採用マッチング「FastPass」',
+                        '大規模採用イベント「AIチャレンジャーズフェス」',
+                        '少人数制採用イベント「FastPass meetup」',
+                        '家庭教師サービス「ベストティーチ」',
+                        'メディア取材・掲載',
+                        'その他',
                       ].map((option) => (
                         <label
                           key={option}
