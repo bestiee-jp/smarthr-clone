@@ -1,9 +1,10 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import ReCAPTCHA from "react-google-recaptcha";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -22,6 +23,8 @@ export default function ContactPage() {
   const [touched, setTouched] = useState<{ [key: string]: boolean }>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
 
   // Required fields in order
   const requiredFields = ['lastName', 'firstName', 'companyName', 'phone', 'email', 'recruitmentAreas', 'message', 'privacyAgreed'];
@@ -46,7 +49,17 @@ export default function ContactPage() {
            formData.email !== '' &&
            formData.recruitmentAreas.length > 0 &&
            formData.message !== '' &&
-           formData.privacyAgreed;
+           formData.privacyAgreed &&
+           recaptchaToken !== null;
+  };
+
+  // reCAPTCHA handlers
+  const handleRecaptchaChange = (token: string | null) => {
+    setRecaptchaToken(token);
+  };
+
+  const handleRecaptchaExpired = () => {
+    setRecaptchaToken(null);
   };
 
   // Mark previous required fields as touched when focusing on a field
@@ -279,16 +292,9 @@ export default function ContactPage() {
                   color: '#333',
                   marginBottom: '32px',
                 }}>
-                  <p style={{ marginBottom: '16px' }}>
-                    弊社にご興味をお持ちいただき、誠にありがとうございます。<br />
-                    イベント・スカウト・人材紹介・採用ブランディングなど、デジタル人材の<br />
-                    新卒採用に関して幅広くご提案いたします。
-                  </p>
-                  <p style={{ marginBottom: '8px' }}>
-                    ※営業をご希望の方は、必ず<a href="#" style={{ color: '#1a73e8', textDecoration: 'underline' }}>営業専用フォーム</a>からご提案ください。
-                  </p>
                   <p>
-                    ※学生の方は、<a href="#" style={{ color: '#1a73e8', textDecoration: 'underline' }}>学生用サイト</a>からお問い合わせください。
+                    弊社にご興味をお持ちいただき、誠にありがとうございます。<br />
+                    AI採用マッチング・採用イベントなど、優秀学生の新卒採用に関して幅広くご提案いたします。
                   </p>
                 </div>
 
@@ -985,6 +991,16 @@ export default function ContactPage() {
                         borderRadius: '4px',
                       }}>必須</span>
                     </label>
+                  </div>
+
+                  {/* reCAPTCHA */}
+                  <div style={{ marginBottom: '24px' }}>
+                    <ReCAPTCHA
+                      ref={recaptchaRef}
+                      sitekey="6LcTuFQsAAAAAGynPT8ZzeWTsWgPRn77o7SFrtXx"
+                      onChange={handleRecaptchaChange}
+                      onExpired={handleRecaptchaExpired}
+                    />
                   </div>
 
                   {/* Submit Button */}
