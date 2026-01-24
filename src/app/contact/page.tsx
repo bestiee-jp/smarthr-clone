@@ -284,7 +284,7 @@ export default function ContactPage() {
               justifyContent: 'space-between',
             }}>
               {/* Left Column - Info & Awards */}
-              <div style={{ flex: '1', minWidth: '360px', maxWidth: '600px' }}>
+              <div style={{ flex: '1', minWidth: '360px', maxWidth: '700px' }}>
                 {/* Intro Text */}
                 <div style={{
                   fontSize: '15px',
@@ -300,37 +300,82 @@ export default function ContactPage() {
 
                 {/* Past Support Section */}
                 <div style={{ marginTop: '40px' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '24px' }}>
-                    <div style={{ width: '4px', height: '24px', backgroundColor: '#4dd9d9' }}></div>
-                    <h3 style={{ fontSize: '18px', fontWeight: 'bold', color: '#333' }}>過去の支援実績</h3>
-                  </div>
+                  {/* Title */}
+                  <h3 style={{
+                    fontSize: '20px',
+                    fontWeight: 'bold',
+                    color: '#333',
+                    textAlign: 'center',
+                    marginBottom: '32px',
+                    lineHeight: '1.6',
+                  }}>
+                    大手・メガベンチャーからスタートアップまで<br />
+                    <span style={{ color: '#4d7cff' }}>30社以上</span>の支援実績
+                  </h3>
 
-                  {/* Company Logos Grid */}
+                  {/* Two Column Layout */}
                   <div style={{
                     display: 'grid',
-                    gridTemplateColumns: 'repeat(5, 1fr)',
-                    gap: '16px',
-                    marginBottom: '32px',
+                    gridTemplateColumns: 'repeat(2, 1fr)',
+                    gap: '32px',
                   }}>
-                    {['SONY', 'DeNA', 'CyberAgent', 'LINEヤフー', 'mercari', 'NTTData', 'NRI', 'BREXA', 'FUTURE', 'YUMEMI', 'en', 'MIXI', 'LayerX', 'KOKUYO', 'RIZAP'].map((company) => (
-                      <div
-                        key={company}
-                        style={{
-                          padding: '12px 8px',
-                          backgroundColor: '#f9f9f9',
-                          borderRadius: '4px',
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          fontSize: '11px',
-                          fontWeight: '600',
-                          color: '#555',
-                          minHeight: '40px',
-                        }}
-                      >
-                        {company}
+                    {/* Left Column - 大手・メガベンチャー */}
+                    <div>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '16px' }}>
+                        <span style={{ fontSize: '24px' }}>🏢</span>
+                        <h4 style={{ fontSize: '16px', fontWeight: 'bold', color: '#333' }}>大手・メガベンチャー</h4>
                       </div>
-                    ))}
+                      <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                        {[
+                          'ソフトバンク株式会社',
+                          'GMOインターネットグループ株式会社',
+                          '株式会社ディー・エヌ・エー',
+                          '株式会社メルカリ',
+                          'A.T.カーニー株式会社',
+                        ].map((company) => (
+                          <li key={company} style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '8px',
+                            fontSize: '14px',
+                            color: '#333',
+                            marginBottom: '12px',
+                          }}>
+                            <span style={{ color: '#4dd9d9', fontSize: '16px' }}>▶</span>
+                            {company}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    {/* Right Column - スタートアップ */}
+                    <div>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '16px' }}>
+                        <span style={{ fontSize: '24px' }}>🚀</span>
+                        <h4 style={{ fontSize: '16px', fontWeight: 'bold', color: '#333' }}>スタートアップ</h4>
+                      </div>
+                      <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                        {[
+                          '株式会社Sales Marker',
+                          '株式会社FUNDiT',
+                          '株式会社オズビジョン',
+                          '株式会社Sapeet',
+                          'bravesoft株式会社',
+                        ].map((company) => (
+                          <li key={company} style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '8px',
+                            fontSize: '14px',
+                            color: '#333',
+                            marginBottom: '12px',
+                          }}>
+                            <span style={{ color: '#4dd9d9', fontSize: '16px' }}>▶</span>
+                            {company}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
 
                   {/* Divider */}
@@ -344,28 +389,39 @@ export default function ContactPage() {
                 <div style={{ marginTop: '40px' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '24px' }}>
                     <div style={{ width: '4px', height: '24px', backgroundColor: '#4dd9d9' }}></div>
-                    <h3 style={{ fontSize: '18px', fontWeight: 'bold', color: '#333' }}>過去のメディア実績</h3>
+                    <h3 style={{ fontSize: '18px', fontWeight: 'bold', color: '#333' }}>メディア掲載実績</h3>
                   </div>
 
-                  {/* Media Placeholder */}
+                  {/* Media Images */}
                   <div style={{
-                    width: '100%',
-                    height: '250px',
-                    backgroundColor: '#f0f0f0',
-                    borderRadius: '8px',
                     display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    color: '#999',
-                    fontSize: '14px',
+                    gap: '16px',
+                    flexWrap: 'wrap',
                   }}>
-                    メディア実績
+                    <img
+                      src="/media/メディア掲載1.jpg"
+                      alt="メディア掲載実績1"
+                      style={{
+                        width: 'calc(50% - 8px)',
+                        borderRadius: '8px',
+                        objectFit: 'cover',
+                      }}
+                    />
+                    <img
+                      src="/media/メディア掲載2.jpg"
+                      alt="メディア掲載実績2"
+                      style={{
+                        width: 'calc(50% - 8px)',
+                        borderRadius: '8px',
+                        objectFit: 'cover',
+                      }}
+                    />
                   </div>
                 </div>
               </div>
 
               {/* Right Column - Form */}
-              <div style={{ flex: '0 0 auto', width: '600px', minWidth: '400px', maxWidth: '600px', backgroundColor: '#f7fefe', padding: '32px', borderRadius: '8px', alignSelf: 'flex-start', position: 'sticky', top: '100px' }}>
+              <div style={{ flex: '0 0 auto', width: '480px', minWidth: '380px', maxWidth: '480px', backgroundColor: '#f7fefe', padding: '28px', borderRadius: '8px', alignSelf: 'flex-start', position: 'sticky', top: '100px' }}>
                 <h2 style={{
                   fontSize: '18px',
                   fontWeight: 'bold',
