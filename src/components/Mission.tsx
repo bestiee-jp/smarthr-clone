@@ -169,13 +169,13 @@ export default function Mission() {
           {/* Photos - duplicated for seamless loop */}
           {[...Array(2)].map((_, setIndex) => (
             [
-              { src: '/office-photos/photo1.jpg', id: 1 },
-              { src: '/office-photos/photo2.jpg', id: 2 },
-              { src: '/office-photos/photo3.jpg', id: 3 },
-              { src: '/office-photos/photo4.jpg', id: 4 },
-              { src: '/office-photos/photo5.jpg', id: 5 },
-              { src: '/office-photos/photo6.png', id: 6 },
-              { src: '/office-photos/photo7.jpg', id: 7 },
+              { src: '/mission-photos/s-_C8A2490.jpg', id: 1 },
+              { src: '/mission-photos/s-_C8A2500.jpg', id: 2 },
+              { src: '/mission-photos/s-DSC07998.jpg', id: 3 },
+              { src: '/mission-photos/s-DSC08159.jpg', id: 4 },
+              { src: '/mission-photos/s-IMG_5545.jpg', id: 5 },
+              { src: '/mission-photos/s-IMG_5548.jpg', id: 6 },
+              { src: '/mission-photos/s-Vol.2_座談会写真学生2.jpg', id: 7 },
             ].map((photo) => (
               <div
                 key={`${setIndex}-${photo.id}`}

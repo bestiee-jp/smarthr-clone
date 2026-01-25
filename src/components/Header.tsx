@@ -45,7 +45,7 @@ function CloseIcon() {
 
 // Slide menu items data
 const menuItems = [
-  { label: '私たちについて', sublabel: 'About Us' },
+  { label: '私たちについて', sublabel: 'About Us', href: '/mission' },
   { label: 'サービス', sublabel: 'Service', href: '/service' },
   { label: 'ニュース', sublabel: 'News', href: '/news' },
   { label: '会社情報', sublabel: 'Company', href: '/company' },
@@ -53,21 +53,12 @@ const menuItems = [
 
 // Dropdown menu data
 const dropdownMenus: Record<string, { title: string; items: { label: string; isSubItem?: boolean; href?: string }[] }> = {
-  '私たちについて': {
-    title: '私たちについて',
-    items: [
-      { label: 'ミッション・バリュー' },
-      { label: '事業から見るSmartHR' },
-      { label: '組織から見るSmartHR' },
-      { label: 'DEIBに関する取り組み', isSubItem: true },
-      { label: 'ブランドとしての取り組み' },
-    ],
-  },
   '会社情報': {
     title: '会社情報',
     items: [
+      { label: '会社情報', href: '/company' },
       { label: '役員紹介', href: '/company/executives' },
-      { label: '沿革' },
+      { label: '沿革', href: '/company/history' },
     ],
   },
 };
@@ -182,9 +173,8 @@ export default function Header() {
               <nav className="flex items-center gap-10">
                 <NavItem
                   label="私たちについて"
-                  hasDropdown
-                  isOpen={openDropdown === '私たちについて'}
-                  onMouseEnter={() => setOpenDropdown('私たちについて')}
+                  href="/mission"
+                  onMouseEnter={() => setOpenDropdown(null)}
                 />
                 <NavItem
                   label="サービス"

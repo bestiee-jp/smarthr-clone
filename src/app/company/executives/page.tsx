@@ -1,5 +1,6 @@
 'use client';
 
+import { useState, useEffect, useRef } from 'react';
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -36,6 +37,22 @@ const navSections = [
 ];
 
 export default function ExecutivesPage() {
+  const [showNav, setShowNav] = useState(true);
+  const relatedSectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (relatedSectionRef.current) {
+        const rect = relatedSectionRef.current.getBoundingClientRect();
+        // Hide nav when related section is in view (top of section reaches 300px from top)
+        setShowNav(rect.top > 300);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <main className="min-h-screen flex flex-col">
       <Header />
@@ -277,6 +294,9 @@ export default function ExecutivesPage() {
             top: '200px',
             width: '200px',
             zIndex: 100,
+            opacity: showNav ? 1 : 0,
+            visibility: showNav ? 'visible' : 'hidden',
+            transition: 'opacity 0.3s ease, visibility 0.3s ease',
           }}>
             {navSections.map((section, index) => (
               <a
@@ -376,6 +396,112 @@ export default function ExecutivesPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Related Pages Section */}
+      <section ref={relatedSectionRef} style={{ backgroundColor: '#f8fafc', padding: '80px 5%' }}>
+        {/* Section header */}
+        <div className="flex items-center gap-4" style={{ marginBottom: '40px' }}>
+          <div style={{ width: '4px', height: '28px', backgroundColor: '#4dd9d9' }}></div>
+          <span style={{ color: 'black', fontSize: '22px', letterSpacing: '0.1em', fontWeight: '500' }}>関連ページ</span>
+        </div>
+
+        {/* Related pages grid */}
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(3, 1fr)',
+          gap: '24px',
+        }}>
+          {/* 会社情報 */}
+          <a href="/company" style={{ textDecoration: 'none' }}>
+            <div style={{
+              position: 'relative',
+              aspectRatio: '16/10',
+              overflow: 'hidden',
+              borderRadius: '8px',
+            }}>
+              <img
+                src="/images/related-company.jpg"
+                alt="会社情報"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                }}
+              />
+              <div style={{
+                position: 'absolute',
+                bottom: 0,
+                left: 0,
+                right: 0,
+                padding: '20px',
+                background: 'linear-gradient(transparent, rgba(0,0,0,0.7))',
+              }}>
+                <span style={{ color: 'white', fontSize: '18px', fontWeight: '600' }}>会社情報</span>
+              </div>
+            </div>
+          </a>
+
+          {/* 役員紹介 */}
+          <a href="/company/executives" style={{ textDecoration: 'none' }}>
+            <div style={{
+              position: 'relative',
+              aspectRatio: '16/10',
+              overflow: 'hidden',
+              borderRadius: '8px',
+            }}>
+              <img
+                src="/images/related-executives.jpg"
+                alt="役員紹介"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                }}
+              />
+              <div style={{
+                position: 'absolute',
+                bottom: 0,
+                left: 0,
+                right: 0,
+                padding: '20px',
+                background: 'linear-gradient(transparent, rgba(0,0,0,0.7))',
+              }}>
+                <span style={{ color: 'white', fontSize: '18px', fontWeight: '600' }}>役員紹介</span>
+              </div>
+            </div>
+          </a>
+
+          {/* 沿革 */}
+          <a href="/company/history" style={{ textDecoration: 'none' }}>
+            <div style={{
+              position: 'relative',
+              aspectRatio: '16/10',
+              overflow: 'hidden',
+              borderRadius: '8px',
+            }}>
+              <img
+                src="/images/related-history.jpg"
+                alt="沿革"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                }}
+              />
+              <div style={{
+                position: 'absolute',
+                bottom: 0,
+                left: 0,
+                right: 0,
+                padding: '20px',
+                background: 'linear-gradient(transparent, rgba(0,0,0,0.7))',
+              }}>
+                <span style={{ color: 'white', fontSize: '18px', fontWeight: '600' }}>沿革</span>
+              </div>
+            </div>
+          </a>
         </div>
       </section>
 
