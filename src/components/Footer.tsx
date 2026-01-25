@@ -22,12 +22,20 @@ function NoteIcon() {
   );
 }
 
-// SmartHR S Icon
-function SmartHRIcon() {
+// LinkedIn Icon
+function LinkedInIcon() {
   return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-      <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
-      <text x="12" y="16" textAnchor="middle" fontSize="10" fontWeight="bold" fill="currentColor">S</text>
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+    </svg>
+  );
+}
+
+// TikTok Icon
+function TikTokIcon() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
     </svg>
   );
 }
@@ -101,9 +109,9 @@ function FooterTitle({ children, isMobile = false }: { children: React.ReactNode
 }
 
 // Social Link Component
-function SocialLink({ icon, label, isMobile = false }: { icon: React.ReactNode; label: string; isMobile?: boolean }) {
+function SocialLink({ icon, label, href, isMobile = false }: { icon: React.ReactNode; label: string; href: string; isMobile?: boolean }) {
   return (
-    <a href="#" className="group flex items-center gap-3 text-white w-fit" style={{ fontSize: isMobile ? '14px' : '18px' }}>
+    <a href={href} target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 text-white w-fit" style={{ fontSize: isMobile ? '14px' : '18px' }}>
       {icon}
       <span className="relative inline-block">
         {label}
@@ -150,22 +158,21 @@ export default function Footer() {
 
               {/* SNS Links */}
               <div style={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', gap: isMobile ? '24px' : '64px' }}>
-                {/* Column 1 - X, note, TechBlog, Real SmartHR */}
+                {/* Column 1 - X, note, LinkedIn */}
                 <div style={{ display: 'flex', flexDirection: 'column', gap: isMobile ? '12px' : '20px' }}>
-                  <SocialLink icon={<XIcon />} label="X" isMobile={isMobile} />
-                  <SocialLink icon={<NoteIcon />} label="note" isMobile={isMobile} />
-                  <SocialLink icon={<SmartHRIcon />} label="TechBlog" isMobile={isMobile} />
-                  <SocialLink icon={<SmartHRIcon />} label="Real SmartHR (Official Blog)" isMobile={isMobile} />
+                  <SocialLink icon={<XIcon />} label="X (代表:後藤 弘)" href="https://x.com/kou_goto_" isMobile={isMobile} />
+                  <SocialLink icon={<XIcon />} label="X (FastPass公式)" href="https://x.com/fastpass_ai" isMobile={isMobile} />
+                  <SocialLink icon={<NoteIcon />} label="note (代表:後藤 弘)" href="https://note.com/kou_goto_" isMobile={isMobile} />
+                  <SocialLink icon={<NoteIcon />} label="note (FastPass公式)" href="https://note.com/fastpass_ai" isMobile={isMobile} />
+                  <SocialLink icon={<LinkedInIcon />} label="LinkedIn" href="https://www.linkedin.com/in/%E5%BC%98-%E5%BE%8C%E8%97%A4-ab61a3379/" isMobile={isMobile} />
                 </div>
 
-                {/* Column 2 - YouTube & Facebook */}
+                {/* Column 2 - YouTube, TikTok, Facebook */}
                 <div style={{ display: 'flex', flexDirection: 'column', gap: isMobile ? '12px' : '20px' }}>
-                  <SocialLink icon={<YouTubeIcon />} label="YouTube (Corporate)" isMobile={isMobile} />
-                  <SocialLink icon={<YouTubeIcon />} label="YouTube (Service)" isMobile={isMobile} />
-                  <div style={{ paddingTop: isMobile ? '12px' : '20px' }}>
-                    <SocialLink icon={<FacebookIcon />} label="Facebook (Corporate)" isMobile={isMobile} />
-                  </div>
-                  <SocialLink icon={<FacebookIcon />} label="Facebook (Service)" isMobile={isMobile} />
+                  <SocialLink icon={<YouTubeIcon />} label="YouTube (代表:後藤 弘)" href="https://www.youtube.com/@toudaiou_room" isMobile={isMobile} />
+                  <SocialLink icon={<YouTubeIcon />} label="YouTube (AIチャレンジャーズフェス)" href="https://youtu.be/O4GQPqapLI4?si=S5GMDRgfnClG8EvC" isMobile={isMobile} />
+                  <SocialLink icon={<TikTokIcon />} label="TikTok" href="https://www.tiktok.com/@toudaiou_room" isMobile={isMobile} />
+                  <SocialLink icon={<FacebookIcon />} label="Facebook" href="https://www.facebook.com/people/%E5%BE%8C%E8%97%A4%E5%BC%98/100014465291670/" isMobile={isMobile} />
                 </div>
               </div>
             </div>
