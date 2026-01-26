@@ -101,8 +101,8 @@ export default function News() {
                 {/* Category tag */}
                 <span
                   style={{
-                    border: '1px solid #00c8c8',
-                    color: '#00c8c8',
+                    border: '1px solid var(--bestiee-cyan)',
+                    color: 'var(--bestiee-cyan)',
                     padding: isMobile ? '4px 12px' : '6px 20px',
                     borderRadius: '20px',
                     fontSize: isMobile ? '11px' : '13px',
@@ -117,7 +117,7 @@ export default function News() {
 
               {/* Title */}
               <span
-                className="group-hover:text-[#00c8c8] transition-colors"
+                className="group-hover:text-[var(--bestiee-cyan)] transition-colors"
                 style={{
                   color: 'black',
                   fontSize: isMobile ? '14px' : '16px',

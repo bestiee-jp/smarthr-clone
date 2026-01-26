@@ -33,7 +33,7 @@ export function ArrowCircleIcon({ hover = false, size = 40 }: ArrowCircleIconPro
         width: `${size}px`,
         height: `${size}px`,
         borderRadius: '50%',
-        backgroundColor: hover ? '#00c8c8' : 'black',
+        backgroundColor: hover ? 'var(--bestiee-cyan)' : 'black',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',

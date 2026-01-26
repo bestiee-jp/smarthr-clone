@@ -179,15 +179,45 @@ export default function Footer() {
             width: isMobile ? '100%' : '50%',
             display: 'flex',
             flexDirection: isMobile ? 'column' : 'row',
-            gap: isMobile ? '24px' : '64px'
+            gap: isMobile ? '32px' : '64px'
           }}>
-            <FooterTitle isMobile={isMobile}>私たちについて</FooterTitle>
-            <FooterTitle isMobile={isMobile}>サービス</FooterTitle>
-            <FooterTitle isMobile={isMobile}>ニュース</FooterTitle>
-            <FooterTitle isMobile={isMobile}>会社情報</FooterTitle>
-            <FooterLink href="/contact" isMobile={isMobile}>
-              <span style={{ fontSize: isMobile ? '16px' : '22px', fontWeight: 'bold' }}>お問い合わせ</span>
-            </FooterLink>
+            {/* 私たちについて */}
+            <div>
+              <FooterLink href="/mission" isMobile={isMobile}>
+                <span style={{ fontSize: isMobile ? '16px' : '22px', fontWeight: 'bold' }}>私たちについて</span>
+              </FooterLink>
+            </div>
+
+            {/* サービス */}
+            <div>
+              <FooterLink href="/service" isMobile={isMobile}>
+                <span style={{ fontSize: isMobile ? '16px' : '22px', fontWeight: 'bold' }}>サービス</span>
+              </FooterLink>
+            </div>
+
+            {/* ニュース */}
+            <div>
+              <FooterLink href="/news" isMobile={isMobile}>
+                <span style={{ fontSize: isMobile ? '16px' : '22px', fontWeight: 'bold' }}>ニュース</span>
+              </FooterLink>
+            </div>
+
+            {/* 会社情報 */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: isMobile ? '12px' : '16px' }}>
+              <FooterLink href="/company" isMobile={isMobile}>
+                <span style={{ fontSize: isMobile ? '16px' : '22px', fontWeight: 'bold' }}>会社情報</span>
+              </FooterLink>
+              <FooterLink href="/company" isMobile={isMobile}>会社情報</FooterLink>
+              <FooterLink href="/company/executives" isMobile={isMobile}>役員紹介</FooterLink>
+              <FooterLink href="/company/history" isMobile={isMobile}>沿革</FooterLink>
+            </div>
+
+            {/* お問い合わせ */}
+            <div>
+              <FooterLink href="/contact" isMobile={isMobile}>
+                <span style={{ fontSize: isMobile ? '16px' : '22px', fontWeight: 'bold' }}>お問い合わせ</span>
+              </FooterLink>
+            </div>
           </div>
         </div>
       </div>
