@@ -492,11 +492,11 @@ export default function ContactPage() {
                       setRecaptchaToken(null);
                     }}
                     style={{
-                      padding: '6px 12px',
+                      padding: '5px 11px',
                       fontSize: '12px',
-                      color: hasAnyInput() ? '#666' : '#aaa',
+                      color: hasAnyInput() ? '#000' : '#aaa',
                       backgroundColor: hasAnyInput() ? '#e5e7eb' : '#f5f5f5',
-                      border: 'none',
+                      border: hasAnyInput() ? '1px solid #333' : '1px solid transparent',
                       borderRadius: '4px',
                       cursor: hasAnyInput() ? 'pointer' : 'default',
                       opacity: hasAnyInput() ? 1 : 0.6,
