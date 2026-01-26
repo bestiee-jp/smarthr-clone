@@ -467,7 +467,7 @@ export default function ContactPage() {
                     fontWeight: 'bold',
                     color: '#333',
                   }}>
-                    下記フォームにご記入ください。(1分)
+                    下記フォームにご記入ください。
                   </h2>
                   <button
                     type="button"
