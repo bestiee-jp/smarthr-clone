@@ -24,6 +24,7 @@ export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
+  const [isLoaded, setIsLoaded] = useState(false);
   const recaptchaRef = useRef<ReCAPTCHA>(null);
 
   const STORAGE_KEY = 'bestiee_contact_form';
@@ -39,14 +40,15 @@ export default function ContactPage() {
         // Invalid data, ignore
       }
     }
+    setIsLoaded(true);
   }, []);
 
-  // Save form data on change
+  // Save form data on change (only after initial load)
   useEffect(() => {
-    if (!isSubmitted) {
+    if (isLoaded && !isSubmitted) {
       sessionStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
     }
-  }, [formData, isSubmitted]);
+  }, [formData, isSubmitted, isLoaded]);
 
   // Required fields in order
   const requiredFields = ['lastName', 'firstName', 'companyName', 'phone', 'email', 'recruitmentAreas', 'message', 'privacyAgreed'];
