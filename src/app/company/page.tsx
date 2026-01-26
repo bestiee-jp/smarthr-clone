@@ -52,7 +52,7 @@ export default function CompanyPage() {
             right: '-100px',
             width: '600px',
             height: '120px',
-            backgroundColor: '#4dd9d9',
+            background: 'linear-gradient(90deg, #1E5AA8 0%, #00A3E0 50%, #4DD9D9 100%)',
             transform: 'rotate(-25deg)',
             transformOrigin: 'center',
           }} />
@@ -63,7 +63,7 @@ export default function CompanyPage() {
             right: '-50px',
             width: '500px',
             height: '80px',
-            backgroundColor: '#4dd9d9',
+            background: 'linear-gradient(90deg, #00A3E0 0%, #4DD9D9 100%)',
             opacity: 0.7,
             transform: 'rotate(-25deg)',
             transformOrigin: 'center',
@@ -75,7 +75,7 @@ export default function CompanyPage() {
             right: '-80px',
             width: '550px',
             height: '60px',
-            background: 'repeating-linear-gradient(90deg, #4dd9d9 0px, #4dd9d9 4px, white 4px, white 8px)',
+            background: 'repeating-linear-gradient(90deg, #00A3E0 0px, #00A3E0 4px, white 4px, white 8px)',
             transform: 'rotate(-25deg)',
             transformOrigin: 'center',
           }} />
@@ -86,7 +86,7 @@ export default function CompanyPage() {
             right: '-60px',
             width: '500px',
             height: '40px',
-            background: 'repeating-linear-gradient(90deg, #4dd9d9 0px, #4dd9d9 2px, white 2px, white 6px)',
+            background: 'repeating-linear-gradient(90deg, #4DD9D9 0px, #4DD9D9 2px, white 2px, white 6px)',
             opacity: 0.8,
             transform: 'rotate(-25deg)',
             transformOrigin: 'center',
@@ -132,7 +132,7 @@ export default function CompanyPage() {
           {/* Section header */}
           <div style={{ marginBottom: '40px' }}>
             <div className="flex items-center gap-4">
-              <div style={{ width: '4px', height: '28px', backgroundColor: '#4dd9d9' }}></div>
+              <div style={{ width: '4px', height: '28px', background: 'linear-gradient(180deg, #1E5AA8 0%, #00A3E0 50%, #4DD9D9 100%)' }}></div>
               <span style={{ color: 'black', fontSize: '22px', letterSpacing: '0.1em', fontWeight: '500' }}>会社概要</span>
             </div>
           </div>
@@ -177,7 +177,7 @@ export default function CompanyPage() {
           {/* Section header */}
           <div style={{ marginBottom: '40px' }}>
             <div className="flex items-center gap-4">
-              <div style={{ width: '4px', height: '28px', backgroundColor: '#4dd9d9' }}></div>
+              <div style={{ width: '4px', height: '28px', background: 'linear-gradient(180deg, #1E5AA8 0%, #00A3E0 50%, #4DD9D9 100%)' }}></div>
               <span style={{ color: 'black', fontSize: '22px', letterSpacing: '0.1em', fontWeight: '500' }}>関連ページ</span>
             </div>
           </div>

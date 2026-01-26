@@ -85,7 +85,7 @@ export default function News() {
             gap: isMobile ? '12px' : '16px'
           }}
         >
-          <div style={{ width: '4px', height: isMobile ? '24px' : '28px', backgroundColor: '#4dd9d9' }}></div>
+          <div style={{ width: '4px', height: isMobile ? '24px' : '28px', background: 'linear-gradient(180deg, #1E5AA8 0%, #00A3E0 50%, #4DD9D9 100%)' }}></div>
           <span style={{ color: 'black', fontSize: isMobile ? '18px' : '22px', letterSpacing: '0.2em', fontWeight: '500' }}>ニュース</span>
         </div>
       </div>

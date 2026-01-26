@@ -57,7 +57,7 @@ export default function CompareAnimations() {
         boxShadow: '0 4px 20px rgba(0,0,0,0.15)',
       }}>
         <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-          style={{ width: '12px', height: '12px', borderRadius: '50%', backgroundColor: '#4dd9d9' }} title="1. フェード+スケール" />
+          style={{ width: '12px', height: '12px', borderRadius: '50%', background: 'linear-gradient(135deg, #1E5AA8 0%, #00A3E0 100%)' }} title="1. フェード+スケール" />
         <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 550, behavior: 'smooth' }); }}
           style={{ width: '12px', height: '12px', borderRadius: '50%', backgroundColor: '#f59e0b' }} title="2. スライド" />
         <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 1100, behavior: 'smooth' }); }}

@@ -104,7 +104,7 @@ export default function Services() {
             gap: isMobile ? '12px' : '16px'
           }}
         >
-          <div style={{ width: '4px', height: isMobile ? '24px' : '28px', backgroundColor: '#4dd9d9' }}></div>
+          <div style={{ width: '4px', height: isMobile ? '24px' : '28px', background: 'linear-gradient(180deg, #1E5AA8 0%, #00A3E0 50%, #4DD9D9 100%)' }}></div>
           <span style={{ color: 'black', fontSize: isMobile ? '18px' : '22px', letterSpacing: '0.2em', fontWeight: '500' }}>サービス</span>
         </div>
       </div>
@@ -224,7 +224,7 @@ export default function Services() {
                       cy={size / 2}
                       r={radius}
                       fill="none"
-                      stroke="#4dd9d9"
+                      stroke="#00A3E0"
                       strokeWidth={strokeWidth}
                       strokeLinecap="round"
                       strokeDasharray={circumference}
@@ -236,7 +236,7 @@ export default function Services() {
                       cx={size / 2}
                       cy={size / 2}
                       r={3}
-                      fill="#4dd9d9"
+                      fill="#00A3E0"
                       style={{ transform: 'rotate(90deg)', transformOrigin: 'center' }}
                     />
                   </svg>

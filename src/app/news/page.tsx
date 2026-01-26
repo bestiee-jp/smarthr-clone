@@ -151,7 +151,7 @@ function NewsCardImage({ type }: { type: string }) {
             <div style={{
               width: '28px',
               height: '28px',
-              backgroundColor: '#4dd9d9',
+              background: 'linear-gradient(135deg, #1E5AA8 0%, #00A3E0 50%, #4DD9D9 100%)',
               borderRadius: '6px',
               display: 'flex',
               alignItems: 'center',
@@ -196,7 +196,7 @@ function NewsCardImage({ type }: { type: string }) {
           <div style={{
             width: '20px',
             height: '20px',
-            backgroundColor: '#4dd9d9',
+            background: 'linear-gradient(135deg, #1E5AA8 0%, #00A3E0 50%, #4DD9D9 100%)',
             borderRadius: '4px',
             display: 'flex',
             alignItems: 'center',
@@ -229,7 +229,7 @@ function NewsCardImage({ type }: { type: string }) {
           <div style={{
             width: '20px',
             height: '20px',
-            backgroundColor: '#4dd9d9',
+            background: 'linear-gradient(135deg, #1E5AA8 0%, #00A3E0 50%, #4DD9D9 100%)',
             borderRadius: '4px',
             display: 'flex',
             alignItems: 'center',
@@ -248,7 +248,7 @@ function NewsCardImage({ type }: { type: string }) {
       <div style={{
         width: '100%',
         height: '100%',
-        backgroundColor: '#4dd9d9',
+        background: 'linear-gradient(135deg, #1E5AA8 0%, #00A3E0 50%, #4DD9D9 100%)',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -269,7 +269,7 @@ function NewsCardImage({ type }: { type: string }) {
             alignItems: 'center',
             justifyContent: 'center',
           }}>
-            <span style={{ color: '#4dd9d9', fontWeight: 'bold', fontSize: '10px' }}>S</span>
+            <span style={{ color: '#1E5AA8', fontWeight: 'bold', fontSize: '10px' }}>S</span>
           </div>
           <span style={{ fontSize: '12px', color: 'white' }}>SmartHR</span>
         </div>
@@ -282,7 +282,7 @@ function NewsCardImage({ type }: { type: string }) {
       <div style={{
         width: '100%',
         height: '100%',
-        background: 'linear-gradient(135deg, #00a0a0 0%, #4dd9d9 50%, #00a0a0 100%)',
+        background: 'linear-gradient(135deg, #1E5AA8 0%, #00A3E0 50%, #4DD9D9 100%)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -359,7 +359,7 @@ function NewsCardImage({ type }: { type: string }) {
     <div style={{
       width: '100%',
       height: '100%',
-      backgroundColor: '#4dd9d9',
+      background: 'linear-gradient(135deg, #1E5AA8 0%, #00A3E0 50%, #4DD9D9 100%)',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
@@ -378,7 +378,7 @@ function NewsCardImage({ type }: { type: string }) {
         <svg width="36" height="36" viewBox="0 0 40 40" fill="none">
           <path
             d="M20.5 10C16.5 10 14 12 14 14.8C14 17.8 16.5 19 20 19.8C23 20.5 24 21.2 24 22.5C24 24 22.5 25 20 25C17 25 15.5 23.5 15.2 21.5H11.5C11.8 25.5 15 28.5 20 28.5C24.5 28.5 27.5 26 27.5 22.3C27.5 19 25 17.5 21 16.7C18.2 16.1 17 15.5 17 14.3C17 13 18.3 12 20.3 12C22.5 12 24 13.2 24.3 15H28C27.5 11.5 24.5 10 20.5 10Z"
-            fill="#4dd9d9"
+            fill="#00A3E0"
           />
         </svg>
       </div>
@@ -435,7 +435,7 @@ function NewsCard({ item }: { item: typeof newsItems[0] }) {
             width: '36px',
             height: '36px',
             borderRadius: '50%',
-            backgroundColor: '#4dd9d9',
+            background: 'linear-gradient(135deg, #1E5AA8 0%, #00A3E0 50%, #4DD9D9 100%)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -613,7 +613,7 @@ export default function NewsPage() {
             <div style={{
               width: '100%',
               height: '100%',
-              background: 'linear-gradient(135deg, #00a0a0 0%, #4dd9d9 50%, #00a0a0 100%)',
+              background: 'linear-gradient(135deg, #1E5AA8 0%, #00A3E0 50%, #4DD9D9 100%)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -730,7 +730,7 @@ export default function NewsPage() {
                   width: '48px',
                   height: '48px',
                   borderRadius: '50%',
-                  backgroundColor: '#4dd9d9',
+                  background: 'linear-gradient(135deg, #1E5AA8 0%, #00A3E0 50%, #4DD9D9 100%)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',

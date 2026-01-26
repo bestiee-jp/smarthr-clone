@@ -4,6 +4,11 @@
   --background: #ffffff;
   --foreground: #171717;
   --smarthr-cyan: #00C4CC;
+  --bestiee-blue: #1E5AA8;
+  --bestiee-blue-light: #00A3E0;
+  --bestiee-cyan: #4DD9D9;
+  --bestiee-gradient: linear-gradient(135deg, #1E5AA8 0%, #00A3E0 50%, #4DD9D9 100%);
+  --bestiee-gradient-vertical: linear-gradient(180deg, #1E5AA8 0%, #00A3E0 50%, #4DD9D9 100%);
 }
 
 @theme inline {
@@ -30,7 +35,7 @@ html {
 }
 
 ::selection {
-  background-color: rgba(0, 196, 204, 0.2);
+  background-color: rgba(30, 90, 168, 0.2);
 }
 
 /* Employee photos auto scroll animation */

@@ -31,7 +31,7 @@ const slides = [
     name: 'FastPass',
     category: 'Services',
     description: '「FastPass」は、AI面接練習データを活用した、ハイクラス学生特化の採用マッチングサービスです。AIが解析した面接データをもとに、エージェントが貴社に最適な学生を紹介します。',
-    bgColor: '#4dd9d9',
+    bgColor: '#00A3E0',
     image: '/images/service-fastpass.png',
   },
   {
@@ -139,7 +139,7 @@ export default function ServicesMercari() {
               gap: isMobile ? '12px' : '16px'
             }}
           >
-            <div style={{ width: '4px', height: isMobile ? '24px' : '28px', backgroundColor: '#4dd9d9' }}></div>
+            <div style={{ width: '4px', height: isMobile ? '24px' : '28px', background: 'linear-gradient(180deg, #1E5AA8 0%, #00A3E0 50%, #4DD9D9 100%)' }}></div>
             <span style={{ color: 'black', fontSize: isMobile ? '18px' : '22px', letterSpacing: '0.2em', fontWeight: '500' }}>サービス</span>
           </div>
         </div>
@@ -207,7 +207,7 @@ export default function ServicesMercari() {
           {/* Category label */}
           <div
             style={{
-              color: '#4dd9d9',
+              color: '#1E5AA8',
               fontSize: '14px',
               fontWeight: '600',
               letterSpacing: '0.1em',
@@ -319,7 +319,7 @@ export default function ServicesMercari() {
                           cy={size / 2}
                           r={radius}
                           fill="none"
-                          stroke="#4dd9d9"
+                          stroke="#00A3E0"
                           strokeWidth={strokeWidth}
                           strokeLinecap="round"
                           strokeDasharray={circumference}
@@ -331,7 +331,7 @@ export default function ServicesMercari() {
                           cx={size / 2}
                           cy={size / 2}
                           r={3}
-                          fill="#4dd9d9"
+                          fill="#00A3E0"
                           style={{ transform: 'rotate(90deg)', transformOrigin: 'center' }}
                         />
                       </svg>

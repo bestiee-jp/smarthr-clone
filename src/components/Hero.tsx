@@ -70,7 +70,7 @@ export default function Hero() {
                 className="text-[clamp(34px,7vw,67px)] italic"
                 style={{
                   fontFamily: 'var(--font-satisfy), cursive',
-                  color: '#4dd9d9',
+                  color: '#4DD9D9',
                   opacity: isVideoReady ? 1 : 0,
                   transform: isVideoReady ? 'translateY(0)' : 'translateY(50px)',
                   transition: 'opacity 1.5s ease-out 2s, transform 1.5s cubic-bezier(0.16, 1, 0.3, 1) 2s',

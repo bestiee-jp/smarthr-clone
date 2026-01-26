@@ -261,7 +261,7 @@ export default function Header() {
                       height="20"
                       viewBox="0 0 24 24"
                       fill="none"
-                      className="text-[#4dd9d9] flex-shrink-0"
+                      className="text-[#00A3E0] flex-shrink-0"
                       style={{ transition: 'transform 0.3s ease' }}
                     >
                       <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>

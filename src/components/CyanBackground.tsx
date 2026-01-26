@@ -25,9 +25,9 @@ export default function CyanBackground() {
       >
         <defs>
           <linearGradient id="wave1Gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#5de0e0" />
-            <stop offset="50%" stopColor="#4dd9d9" />
-            <stop offset="100%" stopColor="#3dd4d4" />
+            <stop offset="0%" stopColor="#1E5AA8" />
+            <stop offset="50%" stopColor="#00A3E0" />
+            <stop offset="100%" stopColor="#4DD9D9" />
           </linearGradient>
         </defs>
         <path
@@ -51,8 +51,8 @@ export default function CyanBackground() {
       >
         <defs>
           <linearGradient id="wave2Gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#6ee7e7" />
-            <stop offset="100%" stopColor="#4dd9d9" />
+            <stop offset="0%" stopColor="#1E5AA8" />
+            <stop offset="100%" stopColor="#00A3E0" />
           </linearGradient>
         </defs>
         <path
@@ -76,8 +76,8 @@ export default function CyanBackground() {
       >
         <defs>
           <linearGradient id="wave3Gradient" x1="100%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stopColor="#4dd9d9" />
-            <stop offset="100%" stopColor="#2cc8c8" />
+            <stop offset="0%" stopColor="#00A3E0" />
+            <stop offset="100%" stopColor="#4DD9D9" />
           </linearGradient>
         </defs>
         <path
@@ -101,8 +101,8 @@ export default function CyanBackground() {
       >
         <defs>
           <linearGradient id="wave4Gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#5de0e0" />
-            <stop offset="100%" stopColor="#3dd4d4" />
+            <stop offset="0%" stopColor="#1E5AA8" />
+            <stop offset="100%" stopColor="#00A3E0" />
           </linearGradient>
         </defs>
         <path
@@ -120,7 +120,7 @@ export default function CyanBackground() {
           left: '20%',
           width: '300px',
           height: '300px',
-          background: 'radial-gradient(circle, rgba(77, 217, 217, 0.4) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(0, 163, 224, 0.4) 0%, transparent 70%)',
           borderRadius: '50%',
           filter: 'blur(30px)',
         }}
@@ -140,9 +140,9 @@ export default function CyanBackground() {
       >
         <defs>
           <linearGradient id="wave5Gradient" x1="100%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stopColor="#6ee7e7" />
-            <stop offset="50%" stopColor="#4dd9d9" />
-            <stop offset="100%" stopColor="#3dd4d4" />
+            <stop offset="0%" stopColor="#1E5AA8" />
+            <stop offset="50%" stopColor="#00A3E0" />
+            <stop offset="100%" stopColor="#4DD9D9" />
           </linearGradient>
         </defs>
         <path
@@ -166,8 +166,8 @@ export default function CyanBackground() {
       >
         <defs>
           <linearGradient id="wave6Gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#4dd9d9" />
-            <stop offset="100%" stopColor="#2cc8c8" />
+            <stop offset="0%" stopColor="#00A3E0" />
+            <stop offset="100%" stopColor="#4DD9D9" />
           </linearGradient>
         </defs>
         <path

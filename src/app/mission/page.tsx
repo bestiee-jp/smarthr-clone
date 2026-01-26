@@ -51,7 +51,7 @@ export default function MissionPage() {
               gap: '16px'
             }}
           >
-            <div style={{ width: '4px', height: '28px', backgroundColor: '#4dd9d9' }}></div>
+            <div style={{ width: '4px', height: '28px', background: 'linear-gradient(180deg, #1E5AA8 0%, #00A3E0 50%, #4DD9D9 100%)' }}></div>
             <span style={{ color: 'black', fontSize: '22px', letterSpacing: '0.2em', fontWeight: '500' }}>ミッション</span>
           </div>
         </div>
@@ -82,9 +82,9 @@ export default function MissionPage() {
             >
               <defs>
                 <linearGradient id="missionWave1" x1="100%" y1="0%" x2="0%" y2="100%">
-                  <stop offset="0%" stopColor="#5de0e0" />
-                  <stop offset="50%" stopColor="#4dd9d9" />
-                  <stop offset="100%" stopColor="#3dd4d4" />
+                  <stop offset="0%" stopColor="#1E5AA8" />
+                  <stop offset="50%" stopColor="#00A3E0" />
+                  <stop offset="100%" stopColor="#4DD9D9" />
                 </linearGradient>
               </defs>
               <path
@@ -108,8 +108,8 @@ export default function MissionPage() {
             >
               <defs>
                 <linearGradient id="missionWave2" x1="100%" y1="0%" x2="0%" y2="100%">
-                  <stop offset="0%" stopColor="#6ee7e7" />
-                  <stop offset="100%" stopColor="#4dd9d9" />
+                  <stop offset="0%" stopColor="#00A3E0" />
+                  <stop offset="100%" stopColor="#4DD9D9" />
                 </linearGradient>
               </defs>
               <path
@@ -191,7 +191,7 @@ export default function MissionPage() {
               gap: '16px'
             }}
           >
-            <div style={{ width: '4px', height: '28px', backgroundColor: '#4dd9d9' }}></div>
+            <div style={{ width: '4px', height: '28px', background: 'linear-gradient(180deg, #1E5AA8 0%, #00A3E0 50%, #4DD9D9 100%)' }}></div>
             <span style={{ color: 'black', fontSize: '22px', letterSpacing: '0.2em', fontWeight: '500' }}>バリュー</span>
           </div>
         </div>
@@ -221,7 +221,7 @@ export default function MissionPage() {
             <div style={{ flex: 1 }}>
               <p style={{
                 fontSize: '14px',
-                color: '#4dd9d9',
+                color: '#1E5AA8',
                 fontWeight: '600',
                 letterSpacing: '0.05em',
                 marginBottom: '8px',
@@ -273,7 +273,7 @@ export default function MissionPage() {
             <div style={{ flex: 1 }}>
               <p style={{
                 fontSize: '14px',
-                color: '#4dd9d9',
+                color: '#1E5AA8',
                 fontWeight: '600',
                 letterSpacing: '0.05em',
                 marginBottom: '8px',
@@ -323,7 +323,7 @@ export default function MissionPage() {
             <div style={{ flex: 1 }}>
               <p style={{
                 fontSize: '14px',
-                color: '#4dd9d9',
+                color: '#1E5AA8',
                 fontWeight: '600',
                 letterSpacing: '0.05em',
                 marginBottom: '8px',

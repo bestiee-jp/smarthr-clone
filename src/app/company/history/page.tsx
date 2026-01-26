@@ -53,7 +53,7 @@ export default function HistoryPage() {
               gap: '16px'
             }}
           >
-            <div style={{ width: '4px', height: '28px', backgroundColor: '#4dd9d9' }}></div>
+            <div style={{ width: '4px', height: '28px', background: 'linear-gradient(180deg, #1E5AA8 0%, #00A3E0 50%, #4DD9D9 100%)' }}></div>
             <span style={{ color: 'black', fontSize: '22px', letterSpacing: '0.2em', fontWeight: '500' }}>bestieeの歴史</span>
           </div>
         </div>
@@ -76,7 +76,7 @@ export default function HistoryPage() {
                 right: '0',
                 width: '400px',
                 height: '200px',
-                background: 'repeating-linear-gradient(-65deg, #4dd9d9 0px, #4dd9d9 3px, transparent 3px, transparent 10px)',
+                background: 'repeating-linear-gradient(-65deg, #00A3E0 0px, #00A3E0 3px, transparent 3px, transparent 10px)',
                 opacity: 0.4,
                 zIndex: 0,
               }} />
@@ -86,7 +86,7 @@ export default function HistoryPage() {
                 right: '50px',
                 width: '300px',
                 height: '150px',
-                background: 'repeating-linear-gradient(-65deg, #4dd9d9 0px, #4dd9d9 2px, transparent 2px, transparent 8px)',
+                background: 'repeating-linear-gradient(-65deg, #4DD9D9 0px, #4DD9D9 2px, transparent 2px, transparent 8px)',
                 opacity: 0.3,
                 zIndex: 0,
               }} />
@@ -168,7 +168,7 @@ export default function HistoryPage() {
                     left: '-66px',
                     width: '12px',
                     height: '12px',
-                    backgroundColor: '#4dd9d9',
+                    background: 'linear-gradient(135deg, #1E5AA8 0%, #00A3E0 100%)',
                     borderRadius: '50%',
                   }} />
                   {/* Horizontal line */}
@@ -201,7 +201,7 @@ export default function HistoryPage() {
                 left: '0',
                 width: '60%',
                 height: '300px',
-                backgroundColor: '#4dd9d9',
+                background: 'linear-gradient(135deg, #1E5AA8 0%, #00A3E0 50%, #4DD9D9 100%)',
                 opacity: 0.15,
                 transform: 'skewY(-5deg)',
                 zIndex: 0,
@@ -286,7 +286,7 @@ export default function HistoryPage() {
                     left: '-66px',
                     width: '12px',
                     height: '12px',
-                    backgroundColor: '#4dd9d9',
+                    background: 'linear-gradient(135deg, #1E5AA8 0%, #00A3E0 100%)',
                     borderRadius: '50%',
                   }} />
                   {/* Horizontal line */}
@@ -306,7 +306,7 @@ export default function HistoryPage() {
                     left: '-66px',
                     width: '12px',
                     height: '12px',
-                    backgroundColor: '#4dd9d9',
+                    background: 'linear-gradient(135deg, #1E5AA8 0%, #00A3E0 100%)',
                     borderRadius: '50%',
                   }} />
                   {/* Horizontal line */}
@@ -339,7 +339,7 @@ export default function HistoryPage() {
                 right: '0',
                 width: '350px',
                 height: '180px',
-                background: 'repeating-linear-gradient(-65deg, #4dd9d9 0px, #4dd9d9 3px, transparent 3px, transparent 10px)',
+                background: 'repeating-linear-gradient(-65deg, #00A3E0 0px, #00A3E0 3px, transparent 3px, transparent 10px)',
                 opacity: 0.3,
                 zIndex: 0,
               }} />
@@ -389,7 +389,7 @@ export default function HistoryPage() {
                     left: '-66px',
                     width: '12px',
                     height: '12px',
-                    backgroundColor: '#4dd9d9',
+                    background: 'linear-gradient(135deg, #1E5AA8 0%, #00A3E0 100%)',
                     borderRadius: '50%',
                   }} />
                   {/* Horizontal line */}
@@ -412,7 +412,7 @@ export default function HistoryPage() {
       <section style={{ backgroundColor: '#f8fafc', padding: '80px 5%' }}>
         {/* Section header */}
         <div className="flex items-center gap-4" style={{ marginBottom: '40px' }}>
-          <div style={{ width: '4px', height: '28px', backgroundColor: '#4dd9d9' }}></div>
+          <div style={{ width: '4px', height: '28px', background: 'linear-gradient(180deg, #1E5AA8 0%, #00A3E0 50%, #4DD9D9 100%)' }}></div>
           <span style={{ color: 'black', fontSize: '22px', letterSpacing: '0.1em', fontWeight: '500' }}>関連ページ</span>
         </div>
 

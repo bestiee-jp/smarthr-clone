@@ -88,7 +88,7 @@ export default function Services1() {
         <span style={{
           display: 'inline-block',
           padding: '8px 16px',
-          backgroundColor: '#4dd9d9',
+          background: 'linear-gradient(135deg, #1E5AA8 0%, #00A3E0 100%)',
           color: 'white',
           borderRadius: '20px',
           fontSize: '14px',
@@ -175,7 +175,7 @@ export default function Services1() {
           {slides.map((_, index) => (
             <button key={index} onClick={() => { setIsAnimating(true); setProgress(0); setTimeout(() => { setCurrentSlide(index); setIsAnimating(false); }, 300); }}
               style={{ width: currentSlide === index ? '24px' : '8px', height: '8px', borderRadius: '4px', border: 'none',
-                backgroundColor: currentSlide === index ? '#4dd9d9' : '#d1d5db', cursor: 'pointer', transition: 'all 0.3s ease' }} />
+                backgroundColor: currentSlide === index ? '#00A3E0' : '#d1d5db', cursor: 'pointer', transition: 'all 0.3s ease' }} />
           ))}
         </div>
       </div>

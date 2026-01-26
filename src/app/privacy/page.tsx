@@ -47,7 +47,7 @@ export default function PrivacyPage() {
             株式会社bestiee（以下「当社」といいます。）は、事業活動を推進するにあたり、プライバシーの適切な保護の重要性と社会的責任を十分に認識し、個人情報の保護に関する法律（以下「個人情報保護法」といいます。）その他の関係法令を遵守します。また、当社およびその役職員は、業務にあたり以下の個人情報保護方針を遵守します。なお、本プライバシーポリシーにおいて、「個人情報」、「個人データ」および「保有個人データ」は、個人情報保護法の定義に従います。
           </p>
 
-          <h2 style={{ fontSize: '20px', fontWeight: 'bold', marginTop: '40px', marginBottom: '16px', borderLeft: '4px solid #4dd9d9', paddingLeft: '12px' }}>1. 個人情報保護方針</h2>
+          <h2 style={{ fontSize: '20px', fontWeight: 'bold', marginTop: '40px', marginBottom: '16px', borderLeft: '4px solid #1E5AA8', paddingLeft: '12px' }}>1. 個人情報保護方針</h2>
 
           <h3 style={{ fontSize: '16px', fontWeight: 'bold', marginTop: '24px', marginBottom: '12px' }}>1.1 個人情報の取扱い</h3>
           <p style={{ marginBottom: '16px' }}>当社は、個人情報の取得について、利用目的をできる限り特定し、適法かつ公正な手段によって取得を行います。また、個人情報の利用は、特定した利用目的の達成に必要な範囲内で行います。</p>
@@ -64,7 +64,7 @@ export default function PrivacyPage() {
           <h3 style={{ fontSize: '16px', fontWeight: 'bold', marginTop: '24px', marginBottom: '12px' }}>1.5 継続的な改善</h3>
           <p style={{ marginBottom: '16px' }}>当社は、個人情報保護に関する取り組みを継続的に見直し改善します。</p>
 
-          <h2 style={{ fontSize: '20px', fontWeight: 'bold', marginTop: '40px', marginBottom: '16px', borderLeft: '4px solid #4dd9d9', paddingLeft: '12px' }}>2. 個人情報の取得</h2>
+          <h2 style={{ fontSize: '20px', fontWeight: 'bold', marginTop: '40px', marginBottom: '16px', borderLeft: '4px solid #1E5AA8', paddingLeft: '12px' }}>2. 個人情報の取得</h2>
           <p style={{ marginBottom: '16px' }}>当社は、以下の場合に個人情報を取得します。</p>
           <ul style={{ marginBottom: '16px', paddingLeft: '24px', listStyleType: 'disc' }}>
             <li>当社のサービス利用に伴い、お客さまご自身にご入力いただく場合</li>
@@ -73,7 +73,7 @@ export default function PrivacyPage() {
             <li>上記のほか、お客さまの同意を得た第三者から提供を受ける場合等、適法に取得する場合</li>
           </ul>
 
-          <h2 style={{ fontSize: '20px', fontWeight: 'bold', marginTop: '40px', marginBottom: '16px', borderLeft: '4px solid #4dd9d9', paddingLeft: '12px' }}>3. 個人情報の利用目的</h2>
+          <h2 style={{ fontSize: '20px', fontWeight: 'bold', marginTop: '40px', marginBottom: '16px', borderLeft: '4px solid #1E5AA8', paddingLeft: '12px' }}>3. 個人情報の利用目的</h2>
 
           <h3 style={{ fontSize: '16px', fontWeight: 'bold', marginTop: '24px', marginBottom: '12px' }}>3.1 サービス利用者の情報</h3>
 
@@ -121,7 +121,7 @@ export default function PrivacyPage() {
             <li>官公庁への届出・報告等</li>
           </ul>
 
-          <h2 style={{ fontSize: '20px', fontWeight: 'bold', marginTop: '40px', marginBottom: '16px', borderLeft: '4px solid #4dd9d9', paddingLeft: '12px' }}>4. 第三者提供</h2>
+          <h2 style={{ fontSize: '20px', fontWeight: 'bold', marginTop: '40px', marginBottom: '16px', borderLeft: '4px solid #1E5AA8', paddingLeft: '12px' }}>4. 第三者提供</h2>
           <p style={{ marginBottom: '16px' }}>当社は、以下に掲げる場合を除き、事前にご本人の同意を得ることなく個人データを第三者に提供しません。</p>
           <ul style={{ marginBottom: '16px', paddingLeft: '24px', listStyleType: 'disc' }}>
             <li>法令に基づく場合</li>
@@ -137,7 +137,7 @@ export default function PrivacyPage() {
             <li><strong>統計データの提供：</strong>個人を特定できないように加工した統計情報を、提携企業に提供する場合があります。</li>
           </ul>
 
-          <h2 style={{ fontSize: '20px', fontWeight: 'bold', marginTop: '40px', marginBottom: '16px', borderLeft: '4px solid #4dd9d9', paddingLeft: '12px' }}>5. 外部送信（情報収集モジュール）</h2>
+          <h2 style={{ fontSize: '20px', fontWeight: 'bold', marginTop: '40px', marginBottom: '16px', borderLeft: '4px solid #1E5AA8', paddingLeft: '12px' }}>5. 外部送信（情報収集モジュール）</h2>
           <p style={{ marginBottom: '16px' }}>当社は、サービスの提供、機能改善、およびAI機能の実装のために、以下の第三者サービスを利用しており、利用者の情報を当該サービス提供者へ送信しています。</p>
 
           <h4 style={{ fontSize: '15px', fontWeight: 'bold', marginTop: '20px', marginBottom: '8px' }}>【AI関連サービス】</h4>
@@ -163,25 +163,25 @@ export default function PrivacyPage() {
             <li>Sentry（または同等の監視ツール）：エラー検知、バグ修正</li>
           </ul>
 
-          <h2 style={{ fontSize: '20px', fontWeight: 'bold', marginTop: '40px', marginBottom: '16px', borderLeft: '4px solid #4dd9d9', paddingLeft: '12px' }}>6. 第三国への移転</h2>
+          <h2 style={{ fontSize: '20px', fontWeight: 'bold', marginTop: '40px', marginBottom: '16px', borderLeft: '4px solid #1E5AA8', paddingLeft: '12px' }}>6. 第三国への移転</h2>
           <p style={{ marginBottom: '16px' }}>当社のサービス（特にAI機能）を提供するために、利用者の情報が以下の第三国にあるサーバーに移転、処理される可能性があります。</p>
           <ul style={{ marginBottom: '16px', paddingLeft: '24px', listStyleType: 'disc' }}>
             <li>アメリカ合衆国（OpenAI, L.L.C.、Anthropic, PBC、Google LLC、Stripe, Inc. 等のサービスプロバイダーが所在）</li>
           </ul>
 
-          <h2 style={{ fontSize: '20px', fontWeight: 'bold', marginTop: '40px', marginBottom: '16px', borderLeft: '4px solid #4dd9d9', paddingLeft: '12px' }}>7. 安全管理措置</h2>
+          <h2 style={{ fontSize: '20px', fontWeight: 'bold', marginTop: '40px', marginBottom: '16px', borderLeft: '4px solid #1E5AA8', paddingLeft: '12px' }}>7. 安全管理措置</h2>
           <p style={{ marginBottom: '16px' }}>当社は、個人データへの不正アクセスまたは個人データの漏えい、滅失または毀損の防止その他の個人データの安全管理のために、技術的および組織的に適切なセキュリティ対策を講じます。当社は個人データの保護を継続的・向上的に行っていくため、当社が定めた社内規程等を法令および社会規範の変化にあわせて見直し、改善をしていきます。</p>
 
-          <h2 style={{ fontSize: '20px', fontWeight: 'bold', marginTop: '40px', marginBottom: '16px', borderLeft: '4px solid #4dd9d9', paddingLeft: '12px' }}>8. 保有個人データの開示等</h2>
+          <h2 style={{ fontSize: '20px', fontWeight: 'bold', marginTop: '40px', marginBottom: '16px', borderLeft: '4px solid #1E5AA8', paddingLeft: '12px' }}>8. 保有個人データの開示等</h2>
           <p style={{ marginBottom: '16px' }}>個人情報保護法の規定に基づき、ご本人から保有個人データの利用目的の通知、保有個人データの開示、内容の訂正、追加もしくは削除、または、利用の停止、消去もしくは第三者への提供の停止（以下「開示等」と総称します。）を請求することができます。開示等のご請求があった場合、当社は、ご本人からのご請求であることを確認のうえで、遅滞なく対応いたします。</p>
 
-          <h2 style={{ fontSize: '20px', fontWeight: 'bold', marginTop: '40px', marginBottom: '16px', borderLeft: '4px solid #4dd9d9', paddingLeft: '12px' }}>9. お問い合わせ窓口</h2>
+          <h2 style={{ fontSize: '20px', fontWeight: 'bold', marginTop: '40px', marginBottom: '16px', borderLeft: '4px solid #1E5AA8', paddingLeft: '12px' }}>9. お問い合わせ窓口</h2>
           <p style={{ marginBottom: '16px' }}>
             株式会社bestiee 個人情報問合せ窓口<br />
             メールアドレス：info@bestiee.co.jp
           </p>
 
-          <h2 style={{ fontSize: '20px', fontWeight: 'bold', marginTop: '40px', marginBottom: '16px', borderLeft: '4px solid #4dd9d9', paddingLeft: '12px' }}>10. プライバシーポリシーの変更</h2>
+          <h2 style={{ fontSize: '20px', fontWeight: 'bold', marginTop: '40px', marginBottom: '16px', borderLeft: '4px solid #1E5AA8', paddingLeft: '12px' }}>10. プライバシーポリシーの変更</h2>
           <p style={{ marginBottom: '16px' }}>当社は、本プライバシーポリシーを随時変更できるものとします。重要な変更については、当社ウェブサイト上での通知または公表を行います。</p>
 
           <div style={{ marginTop: '60px', padding: '24px', backgroundColor: '#f8fafc', borderRadius: '8px' }}>

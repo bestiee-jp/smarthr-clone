@@ -76,7 +76,7 @@ export default function ExecutivesPage() {
             right: '-100px',
             width: '600px',
             height: '120px',
-            backgroundColor: '#4dd9d9',
+            background: 'linear-gradient(90deg, #1E5AA8 0%, #00A3E0 50%, #4DD9D9 100%)',
             transform: 'rotate(-25deg)',
             transformOrigin: 'center',
           }} />
@@ -87,7 +87,7 @@ export default function ExecutivesPage() {
             right: '-50px',
             width: '500px',
             height: '80px',
-            backgroundColor: '#4dd9d9',
+            background: 'linear-gradient(90deg, #00A3E0 0%, #4DD9D9 100%)',
             opacity: 0.7,
             transform: 'rotate(-25deg)',
             transformOrigin: 'center',
@@ -99,7 +99,7 @@ export default function ExecutivesPage() {
             right: '-80px',
             width: '550px',
             height: '60px',
-            background: 'repeating-linear-gradient(90deg, #4dd9d9 0px, #4dd9d9 4px, white 4px, white 8px)',
+            background: 'repeating-linear-gradient(90deg, #00A3E0 0px, #00A3E0 4px, white 4px, white 8px)',
             transform: 'rotate(-25deg)',
             transformOrigin: 'center',
           }} />
@@ -110,7 +110,7 @@ export default function ExecutivesPage() {
             right: '-60px',
             width: '500px',
             height: '40px',
-            background: 'repeating-linear-gradient(90deg, #4dd9d9 0px, #4dd9d9 2px, white 2px, white 6px)',
+            background: 'repeating-linear-gradient(90deg, #4DD9D9 0px, #4DD9D9 2px, white 2px, white 6px)',
             opacity: 0.8,
             transform: 'rotate(-25deg)',
             transformOrigin: 'center',
@@ -152,7 +152,7 @@ export default function ExecutivesPage() {
         {/* Section header with full-width border */}
         <div id="executives" style={{ borderBottom: '1px solid #e5e7eb' }}>
           <div className="flex items-center gap-4" style={{ padding: '0 5%', paddingBottom: '20px' }}>
-            <div style={{ width: '4px', height: '28px', backgroundColor: '#4dd9d9' }}></div>
+            <div style={{ width: '4px', height: '28px', background: 'linear-gradient(180deg, #1E5AA8 0%, #00A3E0 50%, #4DD9D9 100%)' }}></div>
             <span style={{ color: 'black', fontSize: '22px', letterSpacing: '0.1em', fontWeight: '500' }}>取締役・CXO</span>
           </div>
         </div>
@@ -179,7 +179,7 @@ export default function ExecutivesPage() {
                   position: 'absolute',
                   width: '500px',
                   height: '60px',
-                  background: 'repeating-linear-gradient(90deg, #4dd9d9 0px, #4dd9d9 3px, transparent 3px, transparent 8px)',
+                  background: 'repeating-linear-gradient(90deg, #00A3E0 0px, #00A3E0 3px, transparent 3px, transparent 8px)',
                   transform: 'rotate(-25deg)',
                   opacity: 0.4,
                 }} />
@@ -188,7 +188,7 @@ export default function ExecutivesPage() {
                   top: '50px',
                   width: '400px',
                   height: '40px',
-                  background: 'repeating-linear-gradient(90deg, #4dd9d9 0px, #4dd9d9 2px, transparent 2px, transparent 6px)',
+                  background: 'repeating-linear-gradient(90deg, #4DD9D9 0px, #4DD9D9 2px, transparent 2px, transparent 6px)',
                   transform: 'rotate(-25deg)',
                   opacity: 0.3,
                 }} />
@@ -208,7 +208,7 @@ export default function ExecutivesPage() {
                   position: 'absolute',
                   width: '500px',
                   height: '80px',
-                  background: 'repeating-linear-gradient(90deg, #4dd9d9 0px, #4dd9d9 3px, transparent 3px, transparent 8px)',
+                  background: 'repeating-linear-gradient(90deg, #00A3E0 0px, #00A3E0 3px, transparent 3px, transparent 8px)',
                   transform: 'rotate(-25deg)',
                   opacity: 0.5,
                 }} />
@@ -217,7 +217,7 @@ export default function ExecutivesPage() {
                   top: '80px',
                   width: '450px',
                   height: '50px',
-                  background: 'repeating-linear-gradient(90deg, #4dd9d9 0px, #4dd9d9 2px, transparent 2px, transparent 5px)',
+                  background: 'repeating-linear-gradient(90deg, #4DD9D9 0px, #4DD9D9 2px, transparent 2px, transparent 5px)',
                   transform: 'rotate(-25deg)',
                   opacity: 0.3,
                 }} />
@@ -307,7 +307,7 @@ export default function ExecutivesPage() {
                   alignItems: 'center',
                   justifyContent: 'space-between',
                   padding: '16px 20px',
-                  backgroundColor: section.active ? '#4dd9d9' : 'white',
+                  background: section.active ? 'linear-gradient(90deg, #1E5AA8 0%, #00A3E0 100%)' : 'white',
                   color: section.active ? 'white' : 'black',
                   borderBottom: '1px solid #e5e7eb',
                   cursor: 'pointer',
@@ -331,7 +331,7 @@ export default function ExecutivesPage() {
         {/* Section header with full-width border */}
         <div id="core-members" style={{ borderBottom: '1px solid #e5e7eb' }}>
           <div className="flex items-center gap-4" style={{ padding: '20px 5%' }}>
-            <div style={{ width: '4px', height: '28px', backgroundColor: '#4dd9d9' }}></div>
+            <div style={{ width: '4px', height: '28px', background: 'linear-gradient(180deg, #1E5AA8 0%, #00A3E0 50%, #4DD9D9 100%)' }}></div>
             <span style={{ color: 'black', fontSize: '22px', letterSpacing: '0.1em', fontWeight: '500' }}>コアメンバー</span>
           </div>
         </div>
@@ -403,7 +403,7 @@ export default function ExecutivesPage() {
       <section ref={relatedSectionRef} style={{ backgroundColor: '#f8fafc', padding: '80px 5%' }}>
         {/* Section header */}
         <div className="flex items-center gap-4" style={{ marginBottom: '40px' }}>
-          <div style={{ width: '4px', height: '28px', backgroundColor: '#4dd9d9' }}></div>
+          <div style={{ width: '4px', height: '28px', background: 'linear-gradient(180deg, #1E5AA8 0%, #00A3E0 50%, #4DD9D9 100%)' }}></div>
           <span style={{ color: 'black', fontSize: '22px', letterSpacing: '0.1em', fontWeight: '500' }}>関連ページ</span>
         </div>
 

@@ -233,12 +233,12 @@ export default function ContactPage() {
               padding: '60px 40px',
               backgroundColor: '#f0fdfa',
               borderRadius: '16px',
-              border: '1px solid #4dd9d9',
+              border: '1px solid #1E5AA8',
             }}>
               <div style={{
                 width: '80px',
                 height: '80px',
-                backgroundColor: '#4dd9d9',
+                background: 'linear-gradient(135deg, #1E5AA8 0%, #00A3E0 100%)',
                 borderRadius: '50%',
                 display: 'flex',
                 alignItems: 'center',
@@ -341,7 +341,7 @@ export default function ContactPage() {
                             color: '#333',
                             marginBottom: '12px',
                           }}>
-                            <span style={{ color: '#4dd9d9', fontSize: '16px' }}>▶</span>
+                            <span style={{ color: '#1E5AA8', fontSize: '16px' }}>▶</span>
                             {company}
                           </li>
                         ))}
@@ -370,7 +370,7 @@ export default function ContactPage() {
                             color: '#333',
                             marginBottom: '12px',
                           }}>
-                            <span style={{ color: '#4dd9d9', fontSize: '16px' }}>▶</span>
+                            <span style={{ color: '#1E5AA8', fontSize: '16px' }}>▶</span>
                             {company}
                           </li>
                         ))}
@@ -388,7 +388,7 @@ export default function ContactPage() {
                 {/* Media Section */}
                 <div style={{ marginTop: '40px' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '24px' }}>
-                    <div style={{ width: '4px', height: '24px', backgroundColor: '#4dd9d9' }}></div>
+                    <div style={{ width: '4px', height: '24px', background: 'linear-gradient(135deg, #1E5AA8 0%, #00A3E0 100%)' }}></div>
                     <h3 style={{ fontSize: '18px', fontWeight: 'bold', color: '#333' }}>メディア掲載実績</h3>
                   </div>
 
@@ -971,17 +971,17 @@ export default function ContactPage() {
                       fontSize: '16px',
                       fontWeight: '600',
                       color: 'white',
-                      backgroundColor: isSubmitting ? '#9ca3af' : (isFormComplete() ? '#4dd9d9' : '#9ca3af'),
+                      backgroundColor: isSubmitting ? '#9ca3af' : (isFormComplete() ? '#00A3E0' : '#9ca3af'),
                       border: 'none',
                       borderRadius: '4px',
                       cursor: (isSubmitting || !isFormComplete()) ? 'not-allowed' : 'pointer',
                       transition: 'background-color 0.3s ease',
                     }}
                     onMouseEnter={(e) => {
-                      if (!isSubmitting && isFormComplete()) e.currentTarget.style.backgroundColor = '#3bc4c4';
+                      if (!isSubmitting && isFormComplete()) e.currentTarget.style.backgroundColor = '#1E5AA8';
                     }}
                     onMouseLeave={(e) => {
-                      if (!isSubmitting && isFormComplete()) e.currentTarget.style.backgroundColor = '#4dd9d9';
+                      if (!isSubmitting && isFormComplete()) e.currentTarget.style.backgroundColor = '#00A3E0';
                     }}
                   >
                     {isSubmitting ? '送信中...' : '送信する'}
