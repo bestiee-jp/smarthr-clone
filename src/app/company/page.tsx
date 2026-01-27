@@ -19,9 +19,9 @@ const companyInfo = [
 
 // Related pages
 const relatedPages = [
-  { label: '会社情報', href: '/company', image: '/images/empty-office-workplace-with-table-chair-computer.jpg' },
-  { label: '役員紹介', href: '/company/executives', image: '/images/役員紹介.jpg' },
-  { label: '沿革', href: '/company/history', image: '/images/沿革_TIB.jpg' },
+  { label: '会社情報', href: '/company', image: '/images/related-company.jpg' },
+  { label: '役員紹介', href: '/company/executives', image: '/images/related-executives.jpg' },
+  { label: '沿革', href: '/company/history', image: '/images/history-tib.jpg' },
 ];
 
 export default function CompanyPage() {
@@ -50,7 +50,7 @@ export default function CompanyPage() {
             borderRadius: '12px',
           }}>
             <Image
-              src="/images/empty-office-workplace-with-table-chair-computer.jpg"
+              src="/images/related-company.jpg"
               alt="オフィス"
               width={1200}
               height={675}
