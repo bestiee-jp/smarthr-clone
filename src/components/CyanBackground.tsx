@@ -25,9 +25,9 @@ export default function CyanBackground() {
       >
         <defs>
           <linearGradient id="wave1Gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#1E5AA8" />
-            <stop offset="50%" stopColor="#00A3E0" />
-            <stop offset="100%" stopColor="#4DD9D9" />
+            <stop offset="0%" stopColor="var(--bestiee-blue)" />
+            <stop offset="50%" stopColor="var(--bestiee-blue-light)" />
+            <stop offset="100%" stopColor="var(--bestiee-cyan)" />
           </linearGradient>
         </defs>
         <path
@@ -51,8 +51,8 @@ export default function CyanBackground() {
       >
         <defs>
           <linearGradient id="wave2Gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#1E5AA8" />
-            <stop offset="100%" stopColor="#00A3E0" />
+            <stop offset="0%" stopColor="var(--bestiee-blue)" />
+            <stop offset="100%" stopColor="var(--bestiee-blue-light)" />
           </linearGradient>
         </defs>
         <path
@@ -76,8 +76,8 @@ export default function CyanBackground() {
       >
         <defs>
           <linearGradient id="wave3Gradient" x1="100%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stopColor="#00A3E0" />
-            <stop offset="100%" stopColor="#4DD9D9" />
+            <stop offset="0%" stopColor="var(--bestiee-blue-light)" />
+            <stop offset="100%" stopColor="var(--bestiee-cyan)" />
           </linearGradient>
         </defs>
         <path
@@ -101,8 +101,8 @@ export default function CyanBackground() {
       >
         <defs>
           <linearGradient id="wave4Gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#1E5AA8" />
-            <stop offset="100%" stopColor="#00A3E0" />
+            <stop offset="0%" stopColor="var(--bestiee-blue)" />
+            <stop offset="100%" stopColor="var(--bestiee-blue-light)" />
           </linearGradient>
         </defs>
         <path
@@ -140,9 +140,9 @@ export default function CyanBackground() {
       >
         <defs>
           <linearGradient id="wave5Gradient" x1="100%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stopColor="#1E5AA8" />
-            <stop offset="50%" stopColor="#00A3E0" />
-            <stop offset="100%" stopColor="#4DD9D9" />
+            <stop offset="0%" stopColor="var(--bestiee-blue)" />
+            <stop offset="50%" stopColor="var(--bestiee-blue-light)" />
+            <stop offset="100%" stopColor="var(--bestiee-cyan)" />
           </linearGradient>
         </defs>
         <path
@@ -166,8 +166,8 @@ export default function CyanBackground() {
       >
         <defs>
           <linearGradient id="wave6Gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#00A3E0" />
-            <stop offset="100%" stopColor="#4DD9D9" />
+            <stop offset="0%" stopColor="var(--bestiee-blue-light)" />
+            <stop offset="100%" stopColor="var(--bestiee-cyan)" />
           </linearGradient>
         </defs>
         <path
