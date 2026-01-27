@@ -3,6 +3,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
+import SectionHeader from "@/components/SectionHeader";
 import Link from "next/link";
 
 export default function HistoryPage() {
@@ -22,19 +23,7 @@ export default function HistoryPage() {
 
       {/* History Section */}
       <section style={{ backgroundColor: 'white' }}>
-        {/* Section header with full-width border */}
-        <div style={{ borderBottom: '1px solid #e5e7eb' }}>
-          <div
-            className="flex items-center"
-            style={{
-              padding: '20px 5%',
-              gap: '16px'
-            }}
-          >
-            <div style={{ width: '4px', height: '28px', background: 'var(--bestiee-gradient-vertical)' }}></div>
-            <span style={{ color: 'black', fontSize: '22px', letterSpacing: '0.2em', fontWeight: '500' }}>bestieeの歴史</span>
-          </div>
-        </div>
+        <SectionHeader title="bestieeの歴史" withBorder />
 
         {/* Timeline Content */}
         <div style={{ position: 'relative' }}>

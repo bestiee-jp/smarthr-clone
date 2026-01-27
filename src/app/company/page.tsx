@@ -2,9 +2,10 @@
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Link from "next/link";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
+import SectionHeader from "@/components/SectionHeader";
+import RelatedPagesGrid from "@/components/RelatedPagesGrid";
 
 // Company info data
 const companyInfo = [
@@ -63,13 +64,7 @@ export default function CompanyPage() {
       {/* Company Info Table Section */}
       <section style={{ backgroundColor: 'white', padding: '0 5% 80px' }}>
         <div style={{ maxWidth: '1200px' }}>
-          {/* Section header */}
-          <div style={{ marginBottom: '40px' }}>
-            <div className="flex items-center gap-4">
-              <div style={{ width: '4px', height: '28px', background: 'var(--bestiee-gradient-vertical)' }}></div>
-              <span style={{ color: 'black', fontSize: '22px', letterSpacing: '0.1em', fontWeight: '500' }}>会社概要</span>
-            </div>
-          </div>
+          <SectionHeader title="会社概要" padding="0 0 40px 0" />
 
           {/* Info Table */}
           <div style={{ borderTop: '1px solid #e5e7eb' }}>
@@ -130,13 +125,7 @@ export default function CompanyPage() {
       {/* Access Section */}
       <section style={{ backgroundColor: '#f9fafb', padding: '80px 5%' }}>
         <div style={{ maxWidth: '1200px' }}>
-          {/* Section header */}
-          <div style={{ marginBottom: '40px' }}>
-            <div className="flex items-center gap-4">
-              <div style={{ width: '4px', height: '28px', background: 'var(--bestiee-gradient-vertical)' }}></div>
-              <span style={{ color: 'black', fontSize: '22px', letterSpacing: '0.1em', fontWeight: '500' }}>アクセス</span>
-            </div>
-          </div>
+          <SectionHeader title="アクセス" padding="0 0 40px 0" />
 
           {/* Access Info */}
           <div style={{ marginBottom: '32px' }}>
@@ -164,63 +153,7 @@ export default function CompanyPage() {
         </div>
       </section>
 
-      {/* Related Pages Section */}
-      <section style={{ backgroundColor: 'white', padding: '80px 5%' }}>
-        <div style={{ maxWidth: '1200px' }}>
-          {/* Section header */}
-          <div style={{ marginBottom: '40px' }}>
-            <div className="flex items-center gap-4">
-              <div style={{ width: '4px', height: '28px', background: 'var(--bestiee-gradient-vertical)' }}></div>
-              <span style={{ color: 'black', fontSize: '22px', letterSpacing: '0.1em', fontWeight: '500' }}>関連ページ</span>
-            </div>
-          </div>
-
-          {/* Related Links with Images */}
-          <div style={{ display: 'flex', gap: '24px', flexWrap: 'wrap' }}>
-            {relatedPages.map((page, index) => (
-              <Link
-                key={index}
-                href={page.href}
-                className="group"
-                style={{
-                  flex: '1 1 300px',
-                  maxWidth: '380px',
-                  textDecoration: 'none',
-                }}
-              >
-                <div style={{
-                  position: 'relative',
-                  aspectRatio: '16/10',
-                  overflow: 'hidden',
-                  borderRadius: '8px',
-                  marginBottom: '12px',
-                }}>
-                  <Image
-                    src={page.image}
-                    alt={page.label}
-                    width={380}
-                    height={238}
-                    style={{
-                      width: '100%',
-                      height: '100%',
-                      objectFit: 'cover',
-                      transition: 'transform 0.3s ease',
-                    }}
-                    className="group-hover:scale-105"
-                  />
-                </div>
-                <span style={{
-                  fontSize: '18px',
-                  fontWeight: '500',
-                  color: '#333',
-                }}>
-                  {page.label}
-                </span>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+      <RelatedPagesGrid pages={relatedPages} />
 
       <Footer />
     </main>

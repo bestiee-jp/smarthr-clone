@@ -2,60 +2,27 @@
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Link from "next/link";
 import Image from "next/image";
+import PageHero from "@/components/PageHero";
+import SectionHeader from "@/components/SectionHeader";
 
 export default function MissionPage() {
   return (
     <main className="min-h-screen flex flex-col">
       <Header />
 
-      {/* Hero Section */}
-      <section style={{ backgroundColor: '#f8fafc', paddingTop: '80px', paddingBottom: '40px' }}>
-        <div style={{ padding: '0 5%' }}>
-          <h1 style={{
-            fontSize: 'clamp(32px, 5vw, 48px)',
-            fontWeight: 'bold',
-            color: 'black',
-          }}>
-            私たちについて
-          </h1>
-          <p style={{
-            fontSize: '16px',
-            color: '#666',
-            marginTop: '12px',
-          }}>
-            About Us
-          </p>
-
-          {/* Breadcrumb */}
-          <div style={{
-            fontSize: '14px',
-            color: '#666',
-            marginTop: '24px',
-          }}>
-            <Link href="/" style={{ color: '#666', textDecoration: 'none' }}>トップ</Link>
-            <span style={{ margin: '0 8px' }}>-</span>
-            <span>私たちについて</span>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        title="私たちについて"
+        subtitle="About Us"
+        breadcrumb={[
+          { label: 'トップ', href: '/' },
+          { label: '私たちについて' },
+        ]}
+      />
 
       {/* Mission Section */}
       <section style={{ backgroundColor: 'white', position: 'relative', overflow: 'hidden' }}>
-        {/* ミッション label with full-width border */}
-        <div style={{ borderBottom: '1px solid #e5e7eb' }}>
-          <div
-            className="flex items-center"
-            style={{
-              padding: '20px 5%',
-              gap: '16px'
-            }}
-          >
-            <div style={{ width: '4px', height: '28px', background: 'var(--bestiee-gradient-vertical)' }}></div>
-            <span style={{ color: 'black', fontSize: '22px', letterSpacing: '0.2em', fontWeight: '500' }}>ミッション</span>
-          </div>
-        </div>
+        <SectionHeader title="ミッション" withBorder />
 
         {/* Content */}
         <div style={{
@@ -129,19 +96,7 @@ export default function MissionPage() {
 
       {/* Values Section */}
       <section style={{ backgroundColor: 'white', position: 'relative' }}>
-        {/* バリュー label with full-width border */}
-        <div style={{ borderBottom: '1px solid #e5e7eb' }}>
-          <div
-            className="flex items-center"
-            style={{
-              padding: '20px 5%',
-              gap: '16px'
-            }}
-          >
-            <div style={{ width: '4px', height: '28px', background: 'var(--bestiee-gradient-vertical)' }}></div>
-            <span style={{ color: 'black', fontSize: '22px', letterSpacing: '0.2em', fontWeight: '500' }}>バリュー</span>
-          </div>
-        </div>
+        <SectionHeader title="バリュー" withBorder />
 
         {/* Values Content */}
         <div style={{ padding: '80px 5% 100px' }}>
