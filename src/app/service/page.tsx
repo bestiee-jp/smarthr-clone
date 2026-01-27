@@ -3,6 +3,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ArrowIcon, ExternalLinkIcon } from "@/components/icons";
+import SectionHeader from "@/components/SectionHeader";
 
 export default function ServicePage() {
   return (
@@ -213,11 +214,8 @@ export default function ServicePage() {
       {/* Service Introduction Section */}
       <section className="bg-white" style={{ paddingTop: '80px', paddingBottom: '80px' }}>
         {/* Section label with full-width border */}
-        <div style={{ borderBottom: '1px solid #e5e7eb', marginBottom: '60px' }}>
-          <div className="flex items-center gap-4" style={{ padding: '0 5%', paddingBottom: '20px' }}>
-            <div style={{ width: '4px', height: '28px', background: 'var(--bestiee-gradient-vertical)' }}></div>
-            <span style={{ color: 'black', fontSize: '22px', letterSpacing: '0.2em', fontWeight: '500' }}>サービス紹介</span>
-          </div>
+        <div style={{ marginBottom: '60px' }}>
+          <SectionHeader title="サービス紹介" withBorder padding="0 5% 20px 5%" />
         </div>
 
         {/* Content */}

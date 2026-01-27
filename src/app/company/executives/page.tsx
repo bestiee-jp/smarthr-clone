@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import { DecorativeBands } from "@/components/PageHero";
+import SectionHeader from "@/components/SectionHeader";
 
 // Executive data
 const executives = [
@@ -100,12 +101,7 @@ export default function ExecutivesPage() {
         </div>
 
         {/* Section header with full-width border */}
-        <div id="executives" style={{ borderBottom: '1px solid #e5e7eb' }}>
-          <div className="flex items-center gap-4" style={{ padding: '0 5%', paddingBottom: '20px' }}>
-            <div style={{ width: '4px', height: '28px', background: 'var(--bestiee-gradient-vertical)' }}></div>
-            <span style={{ color: 'black', fontSize: '22px', letterSpacing: '0.1em', fontWeight: '500' }}>取締役・CXO</span>
-          </div>
-        </div>
+        <SectionHeader title="取締役・CXO" withBorder id="executives" padding="0 5% 20px 5%" />
       </section>
 
       {/* Executives Content Section */}
@@ -279,12 +275,7 @@ export default function ExecutivesPage() {
       {/* Core Members Section */}
       <section style={{ backgroundColor: 'white', position: 'relative' }}>
         {/* Section header with full-width border */}
-        <div id="core-members" style={{ borderBottom: '1px solid #e5e7eb' }}>
-          <div className="flex items-center gap-4" style={{ padding: '20px 5%' }}>
-            <div style={{ width: '4px', height: '28px', background: 'var(--bestiee-gradient-vertical)' }}></div>
-            <span style={{ color: 'black', fontSize: '22px', letterSpacing: '0.1em', fontWeight: '500' }}>コアメンバー</span>
-          </div>
-        </div>
+        <SectionHeader title="コアメンバー" withBorder id="core-members" />
 
         {/* Core Members Content */}
         <div style={{ padding: '80px 5%', paddingRight: '300px' }}>
@@ -352,10 +343,7 @@ export default function ExecutivesPage() {
       {/* Related Pages Section */}
       <section ref={relatedSectionRef} style={{ backgroundColor: '#f8fafc', padding: '80px 5%' }}>
         {/* Section header */}
-        <div className="flex items-center gap-4" style={{ marginBottom: '40px' }}>
-          <div style={{ width: '4px', height: '28px', background: 'var(--bestiee-gradient-vertical)' }}></div>
-          <span style={{ color: 'black', fontSize: '22px', letterSpacing: '0.1em', fontWeight: '500' }}>関連ページ</span>
-        </div>
+        <SectionHeader title="関連ページ" padding="0 0 40px 0" />
 
         {/* Related pages grid */}
         <div style={{
