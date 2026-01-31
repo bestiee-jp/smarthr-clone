@@ -1,7 +1,23 @@
 'use client';
 
+import Link from 'next/link';
 import { useIsMobile } from '@/hooks/useIsMobile';
 import { homeNewsItems } from '@/data/news';
+
+// News Card Image Component
+function NewsCardImage({ image }: { image: string }) {
+  return (
+    <img
+      src={image}
+      alt=""
+      style={{
+        width: '100%',
+        height: '100%',
+        objectFit: 'cover',
+      }}
+    />
+  );
+}
 
 export default function News() {
   const isMobile = useIsMobile();
@@ -32,9 +48,9 @@ export default function News() {
         }}
       >
         {homeNewsItems.map((item, index) => (
-          <a
+          <Link
             key={index}
-            href="#"
+            href={`/news/${item.slug}`}
             className="group"
             style={{
               display: 'flex',
@@ -53,45 +69,63 @@ export default function News() {
                 backgroundColor: '#f3f4f6',
               }}
             >
-              <img
-                src={item.image}
-                alt={item.title}
+              <div
                 style={{
                   width: '100%',
                   height: '100%',
-                  objectFit: 'cover',
                   transition: 'transform 0.3s ease',
                 }}
                 className="group-hover:scale-105"
-              />
+              >
+                <NewsCardImage image={item.image} />
+              </div>
             </div>
 
-            {/* Date and Category */}
+            {/* Date, Category and Theme */}
             <div
               style={{
                 display: 'flex',
                 alignItems: 'center',
-                gap: '12px',
+                gap: isMobile ? '4px' : '6px',
                 marginBottom: '8px',
+                flexWrap: 'wrap',
               }}
             >
               <span
                 style={{
                   color: '#6b7280',
-                  fontSize: isMobile ? '12px' : '14px',
+                  fontSize: isMobile ? '11px' : '12px',
                 }}
               >
                 {item.date}
               </span>
               <span
                 style={{
-                  color: 'var(--bestiee-cyan)',
-                  fontSize: isMobile ? '12px' : '14px',
+                  color: 'white',
+                  backgroundColor: 'var(--bestiee-cyan)',
+                  padding: isMobile ? '2px 8px' : '3px 10px',
+                  borderRadius: '50px',
+                  fontSize: isMobile ? '10px' : '11px',
                   fontWeight: '500',
                 }}
               >
                 {item.category}
               </span>
+              {item.themes.slice(0, 1).map((theme, idx) => (
+                <span
+                  key={idx}
+                  style={{
+                    color: 'white',
+                    backgroundColor: '#2563eb',
+                    padding: isMobile ? '2px 8px' : '3px 10px',
+                    borderRadius: '50px',
+                    fontSize: isMobile ? '10px' : '11px',
+                    fontWeight: '500',
+                  }}
+                >
+                  {theme}
+                </span>
+              ))}
             </div>
 
             {/* Title */}
@@ -110,13 +144,13 @@ export default function News() {
             >
               {item.title}
             </p>
-          </a>
+          </Link>
         ))}
       </div>
 
       {/* ニュース一覧 Button */}
       <div style={{ display: 'flex', justifyContent: 'center', marginTop: isMobile ? '32px' : '60px', padding: '0 5%' }}>
-        <a
+        <Link
           href="/news"
           className="inline-flex items-center justify-between bg-black text-white"
           style={{
@@ -140,7 +174,7 @@ export default function News() {
           >
             <path d="M5 12h14M12 5l7 7-7 7" />
           </svg>
-        </a>
+        </Link>
       </div>
     </section>
   );

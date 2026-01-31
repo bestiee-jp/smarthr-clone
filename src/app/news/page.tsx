@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 import Link from "next/link";
+import { useIsMobile } from '@/hooks/useIsMobile';
 import { featuredNews, newsListItems, newsFilterOptions, type NewsListItem } from "@/data/news";
 
 // Filter Pill Component
@@ -28,7 +29,6 @@ function FilterPill({
         backgroundColor: isSelected ? '#f3f4f6' : 'white',
         color: '#333',
         cursor: 'pointer',
-        transition: 'all 0.2s ease',
         fontWeight: isSelected ? '600' : '400',
       }}
     >
@@ -37,268 +37,53 @@ function FilterPill({
   );
 }
 
-// News Card Image Component
-function NewsCardImage({ type }: { type: string }) {
-  if (type === 'kickza') {
-    return (
-      <div style={{
-        width: '100%',
-        height: '100%',
-        backgroundColor: 'white',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: '20px',
-      }}>
-        <div style={{ fontSize: '12px', color: '#333', textAlign: 'center', marginBottom: '20px', lineHeight: 1.5 }}>
-          SmartHR、<br/>
-          ITコンサルティング事業を展開する<br/>
-          KICK ZA ISSUE株式会社をグループ会社化
-        </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-            <div style={{
-              width: '28px',
-              height: '28px',
-              background: 'var(--bestiee-gradient)',
-              borderRadius: '6px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}>
-              <span style={{ color: 'white', fontWeight: 'bold', fontSize: '14px' }}>S</span>
-            </div>
-            <span style={{ fontWeight: 'bold', fontSize: '14px' }}>SmartHR</span>
-          </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-            <div style={{
-              width: '0',
-              height: '0',
-              borderLeft: '14px solid transparent',
-              borderRight: '14px solid transparent',
-              borderBottom: '24px solid #333',
-            }} />
-            <span style={{ fontWeight: 'bold', fontSize: '12px' }}>KICK ZA ISSUE</span>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  if (type === 'ai-search') {
-    return (
-      <div style={{
-        width: '100%',
-        height: '100%',
-        backgroundColor: 'white',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: '20px',
-      }}>
-        <div style={{ fontSize: '10px', color: '#666', marginBottom: '8px' }}>AI</div>
-        <div style={{ fontSize: '18px', fontWeight: 'bold', color: '#333', marginBottom: '16px' }}>
-          AI 類似<br/>従業員検索
-        </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-          <div style={{
-            width: '20px',
-            height: '20px',
-            background: 'var(--bestiee-gradient)',
-            borderRadius: '4px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}>
-            <span style={{ color: 'white', fontWeight: 'bold', fontSize: '10px' }}>S</span>
-          </div>
-          <span style={{ fontSize: '12px' }}>SmartHR</span>
-        </div>
-      </div>
-    );
-  }
-
-  if (type === 'salary') {
-    return (
-      <div style={{
-        width: '100%',
-        height: '100%',
-        backgroundColor: 'white',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: '20px',
-      }}>
-        <div style={{ fontSize: '18px', fontWeight: 'bold', color: '#333', marginBottom: '16px' }}>
-          給与シミュレーション<br/>機能
-        </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-          <div style={{
-            width: '20px',
-            height: '20px',
-            background: 'var(--bestiee-gradient)',
-            borderRadius: '4px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}>
-            <span style={{ color: 'white', fontWeight: 'bold', fontSize: '10px' }}>S</span>
-          </div>
-          <span style={{ fontSize: '12px' }}>SmartHR</span>
-        </div>
-      </div>
-    );
-  }
-
-  if (type === 'ai-assistant') {
-    return (
-      <div style={{
-        width: '100%',
-        height: '100%',
-        background: 'var(--bestiee-gradient)',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: '20px',
-      }}>
-        <div style={{ fontSize: '10px', color: 'white', marginBottom: '8px' }}>人・知識の使える</div>
-        <div style={{ fontSize: '22px', fontWeight: 'bold', color: 'white', marginBottom: '16px' }}>
-          AIアシスタント
-        </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-          <div style={{
-            width: '20px',
-            height: '20px',
-            backgroundColor: 'white',
-            borderRadius: '4px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}>
-            <span style={{ color: 'var(--bestiee-blue)', fontWeight: 'bold', fontSize: '10px' }}>S</span>
-          </div>
-          <span style={{ fontSize: '12px', color: 'white' }}>SmartHR</span>
-        </div>
-      </div>
-    );
-  }
-
-  if (type === 'anniversary') {
-    return (
-      <div style={{
-        width: '100%',
-        height: '100%',
-        background: 'var(--bestiee-gradient)',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        position: 'relative',
-      }}>
-        <div style={{
-          position: 'absolute',
-          left: '10px',
-          bottom: '10px',
-          width: '30px',
-          height: '30px',
-          backgroundColor: '#ff6b35',
-          borderRadius: '50%',
-        }} />
-        <div style={{
-          position: 'absolute',
-          right: '20%',
-          top: '15%',
-          width: '40px',
-          height: '40px',
-          backgroundColor: '#333',
-          borderRadius: '50%',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}>
-          <span style={{ color: 'white', fontSize: '6px', textAlign: 'center', lineHeight: 1.2 }}>
-            10周年<br/>特設サイト<br/>公開
-          </span>
-        </div>
-        <div style={{
-          position: 'absolute',
-          left: '15px',
-          top: '15px',
-          color: 'white',
-          fontSize: '8px',
-        }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '2px', marginBottom: '4px' }}>
-            0→1→10→
-          </div>
-        </div>
-        <div style={{
-          color: '#333',
-          fontSize: '14px',
-          fontWeight: 'bold',
-          writingMode: 'vertical-rl',
-        }}>
-          人が、社会が、本当に欲しいもの
-        </div>
-      </div>
-    );
-  }
-
-  if (type === 'photo1') {
-    return (
-      <div style={{
-        width: '100%',
-        height: '100%',
-        backgroundColor: '#f0f0f0',
-        backgroundImage: 'linear-gradient(45deg, #e0e0e0 25%, transparent 25%), linear-gradient(-45deg, #e0e0e0 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #e0e0e0 75%), linear-gradient(-45deg, transparent 75%, #e0e0e0 75%)',
-        backgroundSize: '20px 20px',
-        backgroundPosition: '0 0, 0 10px, 10px -10px, -10px 0px',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-      }}>
-        <span style={{ color: '#999', fontSize: '12px' }}>Photo</span>
-      </div>
-    );
-  }
-
-  // Default: SmartHR logo on teal background
+// Select All / Deselect All Button Component
+function SelectAllButton({
+  isAllSelected,
+  onSelectAll,
+  onDeselectAll,
+}: {
+  isAllSelected: boolean;
+  onSelectAll: () => void;
+  onDeselectAll: () => void;
+}) {
   return (
-    <div style={{
-      width: '100%',
-      height: '100%',
-      background: 'var(--bestiee-gradient)',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      gap: '12px',
-    }}>
-      <div style={{
-        width: '60px',
-        height: '60px',
+    <button
+      onClick={isAllSelected ? onDeselectAll : onSelectAll}
+      style={{
+        padding: '8px 16px',
+        fontSize: '13px',
+        border: '1px solid #9ca3af',
+        borderRadius: '4px',
         backgroundColor: 'white',
-        borderRadius: '16px',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-      }}>
-        <svg width="36" height="36" viewBox="0 0 40 40" fill="none">
-          <path
-            d="M20.5 10C16.5 10 14 12 14 14.8C14 17.8 16.5 19 20 19.8C23 20.5 24 21.2 24 22.5C24 24 22.5 25 20 25C17 25 15.5 23.5 15.2 21.5H11.5C11.8 25.5 15 28.5 20 28.5C24.5 28.5 27.5 26 27.5 22.3C27.5 19 25 17.5 21 16.7C18.2 16.1 17 15.5 17 14.3C17 13 18.3 12 20.3 12C22.5 12 24 13.2 24.3 15H28C27.5 11.5 24.5 10 20.5 10Z"
-            fill="var(--bestiee-blue-light)"
-          />
-        </svg>
-      </div>
-      <span style={{ color: 'white', fontWeight: 'bold', fontSize: '16px' }}>SmartHR</span>
-    </div>
+        color: '#666',
+        cursor: 'pointer',
+        transition: 'all 0.2s ease',
+        marginLeft: '8px',
+      }}
+    >
+      {isAllSelected ? '全解除' : '全選択'}
+    </button>
+  );
+}
+
+// News Card Image Component
+function NewsCardImage({ image, contain = false }: { image: string; contain?: boolean }) {
+  return (
+    <img
+      src={image}
+      alt=""
+      style={{
+        width: '100%',
+        height: '100%',
+        objectFit: contain ? 'contain' : 'cover',
+      }}
+    />
   );
 }
 
 // News Card Component
-function NewsCard({ item }: { item: NewsListItem }) {
+function NewsCard({ item, isMobile }: { item: NewsListItem; isMobile: boolean }) {
   return (
     <Link href={item.href} className="group block">
       {/* Image */}
@@ -308,7 +93,7 @@ function NewsCard({ item }: { item: NewsListItem }) {
         overflow: 'hidden',
         marginBottom: '16px',
       }}>
-        <NewsCardImage type={item.imageType} />
+        <NewsCardImage image={item.image} />
       </div>
 
       {/* Meta row */}
@@ -321,20 +106,38 @@ function NewsCard({ item }: { item: NewsListItem }) {
         <div style={{
           display: 'flex',
           alignItems: 'center',
-          gap: '12px',
-          fontSize: '13px',
+          gap: isMobile ? '4px' : '6px',
+          flexWrap: 'wrap',
         }}>
-          <span style={{ color: '#666' }}>{item.date}</span>
-          {item.categories.map((cat, index) => (
+          <span style={{ color: '#666', fontSize: isMobile ? '11px' : '12px' }}>{item.date}</span>
+          {item.categories.slice(0, 1).map((cat, index) => (
             <span
-              key={index}
+              key={`cat-${index}`}
               style={{
-                color: index === 0 ? '#333' : '#666',
-                textDecoration: index === 0 ? 'underline' : 'none',
-                textUnderlineOffset: '3px',
+                color: 'white',
+                backgroundColor: 'var(--bestiee-cyan)',
+                padding: isMobile ? '2px 8px' : '3px 10px',
+                borderRadius: '50px',
+                fontSize: isMobile ? '10px' : '11px',
+                fontWeight: '500',
               }}
             >
               {cat}
+            </span>
+          ))}
+          {item.themes.slice(0, 1).map((theme, index) => (
+            <span
+              key={`theme-${index}`}
+              style={{
+                color: 'white',
+                backgroundColor: '#2563eb',
+                padding: isMobile ? '2px 8px' : '3px 10px',
+                borderRadius: '50px',
+                fontSize: isMobile ? '10px' : '11px',
+                fontWeight: '500',
+              }}
+            >
+              {theme}
             </span>
           ))}
         </div>
@@ -342,8 +145,8 @@ function NewsCard({ item }: { item: NewsListItem }) {
         {/* Arrow Button */}
         <div
           style={{
-            width: '36px',
-            height: '36px',
+            width: isMobile ? '28px' : '36px',
+            height: isMobile ? '28px' : '36px',
             borderRadius: '50%',
             background: 'var(--bestiee-gradient)',
             display: 'flex',
@@ -354,7 +157,7 @@ function NewsCard({ item }: { item: NewsListItem }) {
           }}
           className="group-hover:scale-110"
         >
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
+          <svg width={isMobile ? "12" : "16"} height={isMobile ? "12" : "16"} viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
             <path d="M5 12h14M12 5l7 7-7 7" />
           </svg>
         </div>
@@ -362,7 +165,7 @@ function NewsCard({ item }: { item: NewsListItem }) {
 
       {/* Title */}
       <h3 style={{
-        fontSize: '15px',
+        fontSize: isMobile ? '14px' : '15px',
         fontWeight: '500',
         color: '#333',
         lineHeight: 1.7,
@@ -374,7 +177,15 @@ function NewsCard({ item }: { item: NewsListItem }) {
 }
 
 // Pagination Component
-function Pagination({ currentPage, totalPages }: { currentPage: number; totalPages: number }) {
+function Pagination({
+  currentPage,
+  totalPages,
+  onPageChange
+}: {
+  currentPage: number;
+  totalPages: number;
+  onPageChange: (page: number) => void;
+}) {
   const pages = [];
 
   // Show first 5 pages, then ... and last page
@@ -390,9 +201,29 @@ function Pagination({ currentPage, totalPages }: { currentPage: number; totalPag
       gap: '8px',
       marginTop: '60px',
     }}>
+      {/* Previous Button */}
+      <button
+        onClick={() => currentPage > 1 && onPageChange(currentPage - 1)}
+        disabled={currentPage === 1}
+        style={{
+          width: '36px',
+          height: '36px',
+          borderRadius: '50%',
+          backgroundColor: 'transparent',
+          color: currentPage === 1 ? '#ccc' : '#333',
+          border: 'none',
+          fontSize: '16px',
+          cursor: currentPage === 1 ? 'default' : 'pointer',
+          transition: 'all 0.2s ease',
+        }}
+      >
+        ‹
+      </button>
+
       {pages.map(page => (
         <button
           key={page}
+          onClick={() => onPageChange(page)}
           style={{
             width: page === currentPage ? '40px' : '36px',
             height: page === currentPage ? '40px' : '36px',
@@ -413,14 +244,16 @@ function Pagination({ currentPage, totalPages }: { currentPage: number; totalPag
         <>
           <span style={{ color: '#666', padding: '0 8px' }}>...</span>
           <button
+            onClick={() => onPageChange(totalPages)}
             style={{
-              width: '36px',
-              height: '36px',
+              width: totalPages === currentPage ? '40px' : '36px',
+              height: totalPages === currentPage ? '40px' : '36px',
               borderRadius: '50%',
-              backgroundColor: 'transparent',
-              color: '#333',
+              backgroundColor: totalPages === currentPage ? '#333' : 'transparent',
+              color: totalPages === currentPage ? 'white' : '#333',
               border: 'none',
               fontSize: '16px',
+              fontWeight: totalPages === currentPage ? '600' : '400',
               cursor: 'pointer',
             }}
           >
@@ -428,6 +261,25 @@ function Pagination({ currentPage, totalPages }: { currentPage: number; totalPag
           </button>
         </>
       )}
+
+      {/* Next Button */}
+      <button
+        onClick={() => currentPage < totalPages && onPageChange(currentPage + 1)}
+        disabled={currentPage === totalPages}
+        style={{
+          width: '36px',
+          height: '36px',
+          borderRadius: '50%',
+          backgroundColor: 'transparent',
+          color: currentPage === totalPages ? '#ccc' : '#333',
+          border: 'none',
+          fontSize: '16px',
+          cursor: currentPage === totalPages ? 'default' : 'pointer',
+          transition: 'all 0.2s ease',
+        }}
+      >
+        ›
+      </button>
     </div>
   );
 }
@@ -436,8 +288,8 @@ export default function NewsPage() {
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const [selectedThemes, setSelectedThemes] = useState<string[]>([]);
   const [selectedYears, setSelectedYears] = useState<string[]>([]);
-  const [showOlderYears, setShowOlderYears] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
+  const isMobile = useIsMobile();
 
   const toggleFilter = (
     item: string,
@@ -449,15 +301,77 @@ export default function NewsPage() {
     } else {
       setSelected([...selected, item]);
     }
+    // Reset to page 1 when filter changes
+    setCurrentPage(1);
   };
 
   const clearAllFilters = () => {
     setSelectedCategories([]);
     setSelectedThemes([]);
     setSelectedYears([]);
+    setCurrentPage(1);
+  };
+
+  // Select all / Deselect all helpers
+  const selectAllCategories = () => {
+    setSelectedCategories([...newsFilterOptions.categories]);
+    setCurrentPage(1);
+  };
+  const deselectAllCategories = () => {
+    setSelectedCategories([]);
+    setCurrentPage(1);
+  };
+
+  const selectAllThemes = () => {
+    setSelectedThemes([...newsFilterOptions.themes]);
+    setCurrentPage(1);
+  };
+  const deselectAllThemes = () => {
+    setSelectedThemes([]);
+    setCurrentPage(1);
+  };
+
+  const selectAllYears = () => {
+    setSelectedYears([...newsFilterOptions.years]);
+    setCurrentPage(1);
+  };
+  const deselectAllYears = () => {
+    setSelectedYears([]);
+    setCurrentPage(1);
   };
 
   const totalSelected = selectedCategories.length + selectedThemes.length + selectedYears.length;
+
+  // Filter news items based on selected filters
+  const filteredNewsItems = newsListItems.filter(item => {
+    // Category filter
+    if (selectedCategories.length > 0) {
+      const hasCategory = item.categories.some(cat => selectedCategories.includes(cat));
+      if (!hasCategory) return false;
+    }
+
+    // Theme filter
+    if (selectedThemes.length > 0) {
+      const hasTheme = item.themes?.some(theme => selectedThemes.includes(theme));
+      if (!hasTheme) return false;
+    }
+
+    // Year filter
+    if (selectedYears.length > 0) {
+      const itemYear = item.date.split('.')[0] + '年'; // Extract year from "2025.12.21" and add "年"
+      if (!selectedYears.includes(itemYear)) return false;
+    }
+
+    return true;
+  });
+
+  // Calculate total pages based on items per page
+  const itemsPerPage = isMobile ? 6 : 9;
+  const totalPages = Math.ceil(filteredNewsItems.length / itemsPerPage);
+
+  // Get current page items
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const currentPageItems = filteredNewsItems.slice(startIndex, startIndex + itemsPerPage);
 
   return (
     <main className="min-h-screen flex flex-col">
@@ -473,12 +387,12 @@ export default function NewsPage() {
       />
 
       {/* Topics Section */}
-      <section style={{ backgroundColor: 'white', padding: '60px 5%' }}>
+      <section style={{ backgroundColor: 'white', padding: isMobile ? '40px 5%' : '60px 5%' }}>
         <h2 style={{
-          fontSize: '24px',
+          fontSize: isMobile ? '20px' : '24px',
           fontWeight: 'bold',
           color: 'black',
-          marginBottom: '40px',
+          marginBottom: isMobile ? '24px' : '40px',
         }}>
           トピックス
         </h2>
@@ -489,112 +403,62 @@ export default function NewsPage() {
           className="group"
           style={{
             display: 'flex',
-            gap: '40px',
+            flexDirection: isMobile ? 'column' : 'row',
+            gap: isMobile ? '20px' : '40px',
             alignItems: 'flex-start',
           }}
         >
           {/* Image */}
           <div style={{
-            flex: '0 0 55%',
+            flex: isMobile ? undefined : '0 0 55%',
+            width: isMobile ? '100%' : undefined,
             aspectRatio: '16/9',
-            backgroundColor: '#00a0a0',
             borderRadius: '8px',
             overflow: 'hidden',
             position: 'relative',
           }}>
-            {/* Placeholder design mimicking SmartHR 10th anniversary */}
-            <div style={{
-              width: '100%',
-              height: '100%',
-              background: 'var(--bestiee-gradient)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              position: 'relative',
-            }}>
-              {/* Decorative elements */}
-              <div style={{
-                position: 'absolute',
-                left: '20px',
-                bottom: '20px',
-                width: '60px',
-                height: '60px',
-                backgroundColor: '#ff6b35',
-                borderRadius: '50%',
-              }} />
-              <div style={{
-                position: 'absolute',
-                right: '30%',
-                top: '20%',
-                width: '80px',
-                height: '80px',
-                backgroundColor: '#333',
-                borderRadius: '50%',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}>
-                <span style={{ color: 'white', fontSize: '12px', textAlign: 'center', lineHeight: 1.2 }}>
-                  10周年<br/>特設サイト<br/>公開
-                </span>
-              </div>
-              {/* Text overlay */}
-              <div style={{
-                position: 'absolute',
-                left: '30px',
-                top: '30px',
-                color: 'white',
-                fontSize: '14px',
-              }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '4px', marginBottom: '8px' }}>
-                  <span>0</span>
-                  <span>→</span>
-                  <span>1</span>
-                  <span>→</span>
-                  <span>10</span>
-                  <span>→</span>
-                </div>
-                <div style={{ fontSize: '11px', opacity: 0.8 }}>SmartHR 10th Anniversary</div>
-              </div>
-              {/* Japanese text */}
-              <div style={{
-                position: 'absolute',
-                left: '50%',
-                top: '50%',
-                transform: 'translate(-50%, -50%)',
-                color: '#333',
-                fontSize: '28px',
-                fontWeight: 'bold',
-                writingMode: 'vertical-rl',
-                textOrientation: 'mixed',
-                letterSpacing: '0.1em',
-              }}>
-                人が、社会が、本当に欲しいもの
-              </div>
-            </div>
+            <NewsCardImage image={newsListItems[0]?.image || ''} contain />
           </div>
 
           {/* Content */}
-          <div style={{ flex: 1, paddingTop: '10px' }}>
+          <div style={{ flex: 1, paddingTop: isMobile ? '0' : '10px' }}>
             {/* Date and Tags */}
             <div style={{
               display: 'flex',
               alignItems: 'center',
-              gap: '16px',
+              gap: isMobile ? '8px' : '12px',
               marginBottom: '16px',
-              fontSize: '14px',
+              flexWrap: 'wrap',
             }}>
-              <span style={{ color: '#666' }}>{featuredNews.date}</span>
-              {featuredNews.categories.map((cat, index) => (
+              <span style={{ color: '#666', fontSize: isMobile ? '13px' : '14px' }}>{featuredNews.date}</span>
+              {featuredNews.categories.slice(0, 1).map((cat, index) => (
                 <span
-                  key={index}
+                  key={`cat-${index}`}
                   style={{
-                    color: index === 0 ? '#333' : '#666',
-                    textDecoration: index === 0 ? 'underline' : 'none',
-                    textUnderlineOffset: '4px',
+                    color: 'white',
+                    backgroundColor: 'var(--bestiee-cyan)',
+                    padding: '4px 12px',
+                    borderRadius: '50px',
+                    fontSize: isMobile ? '11px' : '12px',
+                    fontWeight: '500',
                   }}
                 >
                   {cat}
+                </span>
+              ))}
+              {newsListItems[0]?.themes.slice(0, 1).map((theme, index) => (
+                <span
+                  key={`theme-${index}`}
+                  style={{
+                    color: 'white',
+                    backgroundColor: '#2563eb',
+                    padding: '4px 12px',
+                    borderRadius: '50px',
+                    fontSize: isMobile ? '11px' : '12px',
+                    fontWeight: '500',
+                  }}
+                >
+                  {theme}
                 </span>
               ))}
             </div>
@@ -606,7 +470,7 @@ export default function NewsPage() {
               gap: '20px',
             }}>
               <h3 style={{
-                fontSize: '20px',
+                fontSize: isMobile ? '18px' : '20px',
                 fontWeight: '500',
                 color: '#333',
                 lineHeight: 1.6,
@@ -620,8 +484,8 @@ export default function NewsPage() {
               {/* Arrow Button */}
               <div
                 style={{
-                  width: '48px',
-                  height: '48px',
+                  width: isMobile ? '40px' : '48px',
+                  height: isMobile ? '40px' : '48px',
                   borderRadius: '50%',
                   background: 'var(--bestiee-gradient)',
                   display: 'flex',
@@ -632,7 +496,7 @@ export default function NewsPage() {
                 }}
                 className="group-hover:scale-110"
               >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
+                <svg width={isMobile ? "16" : "20"} height={isMobile ? "16" : "20"} viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
               </div>
@@ -642,12 +506,12 @@ export default function NewsPage() {
       </section>
 
       {/* Filter Section */}
-      <section style={{ backgroundColor: 'white', padding: '60px 5% 80px' }}>
+      <section style={{ backgroundColor: 'white', padding: isMobile ? '40px 5% 60px' : '60px 5% 80px' }}>
         <h2 style={{
-          fontSize: '24px',
+          fontSize: isMobile ? '20px' : '24px',
           fontWeight: 'bold',
           color: 'black',
-          marginBottom: '40px',
+          marginBottom: isMobile ? '24px' : '40px',
         }}>
           ニュースを絞り込む
         </h2>
@@ -660,20 +524,22 @@ export default function NewsPage() {
           {/* Category Row */}
           <div style={{
             display: 'flex',
-            alignItems: 'center',
-            padding: '24px 32px',
+            flexDirection: isMobile ? 'column' : 'row',
+            alignItems: isMobile ? 'flex-start' : 'center',
+            padding: isMobile ? '16px 20px' : '24px 32px',
             borderBottom: '1px solid #e5e7eb',
+            gap: isMobile ? '12px' : '0',
           }}>
             <span style={{
-              width: '120px',
-              fontSize: '16px',
+              width: isMobile ? 'auto' : '120px',
+              fontSize: isMobile ? '14px' : '16px',
               fontWeight: '500',
               color: '#333',
               flexShrink: 0,
             }}>
               カテゴリー
             </span>
-            <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+            <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', alignItems: 'center' }}>
               {newsFilterOptions.categories.map(cat => (
                 <FilterPill
                   key={cat}
@@ -682,26 +548,33 @@ export default function NewsPage() {
                   onClick={() => toggleFilter(cat, selectedCategories, setSelectedCategories)}
                 />
               ))}
+              <SelectAllButton
+                isAllSelected={selectedCategories.length === newsFilterOptions.categories.length}
+                onSelectAll={selectAllCategories}
+                onDeselectAll={deselectAllCategories}
+              />
             </div>
           </div>
 
           {/* Theme Row */}
           <div style={{
             display: 'flex',
-            alignItems: 'center',
-            padding: '24px 32px',
+            flexDirection: isMobile ? 'column' : 'row',
+            alignItems: isMobile ? 'flex-start' : 'center',
+            padding: isMobile ? '16px 20px' : '24px 32px',
             borderBottom: '1px solid #e5e7eb',
+            gap: isMobile ? '12px' : '0',
           }}>
             <span style={{
-              width: '120px',
-              fontSize: '16px',
+              width: isMobile ? 'auto' : '120px',
+              fontSize: isMobile ? '14px' : '16px',
               fontWeight: '500',
               color: '#333',
               flexShrink: 0,
             }}>
               テーマ
             </span>
-            <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+            <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', alignItems: 'center' }}>
               {newsFilterOptions.themes.map(theme => (
                 <FilterPill
                   key={theme}
@@ -710,18 +583,25 @@ export default function NewsPage() {
                   onClick={() => toggleFilter(theme, selectedThemes, setSelectedThemes)}
                 />
               ))}
+              <SelectAllButton
+                isAllSelected={selectedThemes.length === newsFilterOptions.themes.length}
+                onSelectAll={selectAllThemes}
+                onDeselectAll={deselectAllThemes}
+              />
             </div>
           </div>
 
           {/* Year Row */}
           <div style={{
             display: 'flex',
-            alignItems: 'center',
-            padding: '24px 32px',
+            flexDirection: isMobile ? 'column' : 'row',
+            alignItems: isMobile ? 'flex-start' : 'center',
+            padding: isMobile ? '16px 20px' : '24px 32px',
+            gap: isMobile ? '12px' : '0',
           }}>
             <span style={{
-              width: '120px',
-              fontSize: '16px',
+              width: isMobile ? 'auto' : '120px',
+              fontSize: isMobile ? '14px' : '16px',
               fontWeight: '500',
               color: '#333',
               flexShrink: 0,
@@ -737,24 +617,11 @@ export default function NewsPage() {
                   onClick={() => toggleFilter(year, selectedYears, setSelectedYears)}
                 />
               ))}
-              <button
-                onClick={() => setShowOlderYears(!showOlderYears)}
-                style={{
-                  padding: '10px 24px',
-                  fontSize: '15px',
-                  border: '1px solid #d1d5db',
-                  borderRadius: '50px',
-                  backgroundColor: 'white',
-                  color: '#333',
-                  cursor: 'pointer',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '8px',
-                }}
-              >
-                それ以前を表示する
-                <span style={{ fontSize: '18px' }}>{showOlderYears ? '−' : '+'}</span>
-              </button>
+              <SelectAllButton
+                isAllSelected={selectedYears.length === newsFilterOptions.years.length}
+                onSelectAll={selectAllYears}
+                onDeselectAll={deselectAllYears}
+              />
             </div>
           </div>
         </div>
@@ -762,9 +629,10 @@ export default function NewsPage() {
         {/* Action Buttons */}
         <div style={{
           display: 'flex',
+          flexDirection: isMobile ? 'column' : 'row',
           justifyContent: 'center',
-          gap: '20px',
-          marginTop: '48px',
+          gap: isMobile ? '16px' : '20px',
+          marginTop: isMobile ? '32px' : '48px',
         }}>
           {/* Search Button */}
           <button
@@ -773,21 +641,21 @@ export default function NewsPage() {
               alignItems: 'center',
               justifyContent: 'center',
               gap: '12px',
-              padding: '20px 60px',
+              padding: isMobile ? '16px 40px' : '20px 60px',
               backgroundColor: '#333',
               color: 'white',
-              fontSize: '16px',
+              fontSize: isMobile ? '14px' : '16px',
               fontWeight: '500',
               border: 'none',
               borderRadius: '50px',
               cursor: 'pointer',
-              minWidth: '280px',
+              minWidth: isMobile ? 'auto' : '280px',
               transition: 'border-radius 0.3s ease',
             }}
             onMouseEnter={(e) => e.currentTarget.style.borderRadius = '8px'}
             onMouseLeave={(e) => e.currentTarget.style.borderRadius = '50px'}
           >
-            281件を表示する
+            {filteredNewsItems.length}件を表示する
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <circle cx="11" cy="11" r="8" />
               <path d="M21 21l-4.35-4.35" />
@@ -802,15 +670,15 @@ export default function NewsPage() {
               alignItems: 'center',
               justifyContent: 'center',
               gap: '12px',
-              padding: '20px 60px',
+              padding: isMobile ? '16px 40px' : '20px 60px',
               backgroundColor: 'white',
               color: '#333',
-              fontSize: '16px',
+              fontSize: isMobile ? '14px' : '16px',
               fontWeight: '500',
               border: '2px solid #333',
               borderRadius: '50px',
               cursor: 'pointer',
-              minWidth: '200px',
+              minWidth: isMobile ? 'auto' : '200px',
               transition: 'border-radius 0.3s ease',
             }}
             onMouseEnter={(e) => e.currentTarget.style.borderRadius = '8px'}
@@ -825,30 +693,62 @@ export default function NewsPage() {
       </section>
 
       {/* News List Section */}
-      <section style={{ backgroundColor: 'white', padding: '0 5% 100px' }}>
+      <section style={{ backgroundColor: 'white', padding: isMobile ? '0 5% 60px' : '0 5% 100px' }}>
         {/* Count */}
         <h2 style={{
-          fontSize: '36px',
+          fontSize: isMobile ? '28px' : '36px',
           fontWeight: 'bold',
           color: 'black',
-          marginBottom: '40px',
+          marginBottom: isMobile ? '24px' : '40px',
         }}>
-          281件
+          {filteredNewsItems.length}件
         </h2>
 
         {/* News Grid */}
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(3, 1fr)',
-          gap: '40px 32px',
-        }}>
-          {newsListItems.map(item => (
-            <NewsCard key={item.id} item={item} />
-          ))}
-        </div>
+        {filteredNewsItems.length > 0 ? (
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: isMobile ? 'repeat(2, 1fr)' : 'repeat(3, 1fr)',
+            gap: isMobile ? '24px 16px' : '40px 32px',
+          }}>
+            {currentPageItems.map(item => (
+              <NewsCard key={item.id} item={item} isMobile={isMobile} />
+            ))}
+          </div>
+        ) : (
+          <div style={{
+            textAlign: 'center',
+            padding: '60px 20px',
+            color: '#666',
+          }}>
+            <p style={{ fontSize: isMobile ? '16px' : '18px', marginBottom: '16px' }}>
+              条件に一致するニュースがありません
+            </p>
+            <button
+              onClick={clearAllFilters}
+              style={{
+                padding: '12px 24px',
+                backgroundColor: '#333',
+                color: 'white',
+                border: 'none',
+                borderRadius: '50px',
+                cursor: 'pointer',
+                fontSize: '14px',
+              }}
+            >
+              フィルターをクリア
+            </button>
+          </div>
+        )}
 
-        {/* Pagination */}
-        <Pagination currentPage={currentPage} totalPages={24} />
+        {/* Pagination - only show if more than 1 page */}
+        {totalPages > 1 && (
+          <Pagination
+            currentPage={currentPage}
+            totalPages={totalPages}
+            onPageChange={setCurrentPage}
+          />
+        )}
       </section>
 
       <Footer />
