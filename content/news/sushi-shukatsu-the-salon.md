@@ -3,7 +3,7 @@ title: "一社を深堀る「寿司就活® ~THE SALON~」を株式会社シオ�
 date: "2025.07.26"
 category: "イベント"
 theme: "寿司就活"
-image: "/news/default.png"
+image: "/news/sushi20250726.webp"
 imageType: "event"
 ---
 

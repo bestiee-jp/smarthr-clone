@@ -5,8 +5,11 @@ import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 import SectionHeader from "@/components/SectionHeader";
 import Link from "next/link";
+import { useIsMobile } from '@/hooks/useIsMobile';
 
 export default function HistoryPage() {
+  const isMobile = useIsMobile();
+
   return (
     <main className="min-h-screen flex flex-col">
       <Header />
@@ -28,46 +31,55 @@ export default function HistoryPage() {
         {/* Timeline Content */}
         <div style={{ position: 'relative' }}>
           {/* 2024 */}
-          <div style={{ display: 'flex', minHeight: '500px' }}>
+          <div style={{
+            display: 'flex',
+            flexDirection: isMobile ? 'column' : 'row',
+            minHeight: isMobile ? 'auto' : '500px'
+          }}>
             {/* Left side - Images */}
             <div style={{
-              width: '55%',
+              width: isMobile ? '100%' : '55%',
               position: 'relative',
-              padding: '80px 5%',
+              padding: isMobile ? '40px 5%' : '80px 5%',
               overflow: 'hidden',
             }}>
               {/* Decorative diagonal stripes */}
-              <div style={{
-                position: 'absolute',
-                top: '40px',
-                right: '0',
-                width: '400px',
-                height: '200px',
-                background: 'repeating-linear-gradient(-65deg, var(--bestiee-blue-light) 0px, var(--bestiee-blue-light) 3px, transparent 3px, transparent 10px)',
-                opacity: 0.4,
-                zIndex: 0,
-              }} />
-              <div style={{
-                position: 'absolute',
-                top: '100px',
-                right: '50px',
-                width: '300px',
-                height: '150px',
-                background: 'repeating-linear-gradient(-65deg, var(--bestiee-cyan) 0px, var(--bestiee-cyan) 2px, transparent 2px, transparent 8px)',
-                opacity: 0.3,
-                zIndex: 0,
-              }} />
+              {!isMobile && (
+                <>
+                  <div style={{
+                    position: 'absolute',
+                    top: '40px',
+                    right: '0',
+                    width: '400px',
+                    height: '200px',
+                    background: 'repeating-linear-gradient(-65deg, var(--bestiee-blue-light) 0px, var(--bestiee-blue-light) 3px, transparent 3px, transparent 10px)',
+                    opacity: 0.4,
+                    zIndex: 0,
+                  }} />
+                  <div style={{
+                    position: 'absolute',
+                    top: '100px',
+                    right: '50px',
+                    width: '300px',
+                    height: '150px',
+                    background: 'repeating-linear-gradient(-65deg, var(--bestiee-cyan) 0px, var(--bestiee-cyan) 2px, transparent 2px, transparent 8px)',
+                    opacity: 0.3,
+                    zIndex: 0,
+                  }} />
+                </>
+              )}
 
               {/* Image container */}
               <div style={{ position: 'relative', zIndex: 1 }}>
                 <div style={{
                   display: 'flex',
-                  gap: '0',
+                  flexDirection: isMobile ? 'column' : 'row',
+                  gap: isMobile ? '16px' : '0',
                 }}>
                   {/* Logo card */}
                   <div style={{
-                    width: '180px',
-                    height: '180px',
+                    width: isMobile ? '120px' : '180px',
+                    height: isMobile ? '120px' : '180px',
                     backgroundColor: 'white',
                     boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
                     display: 'flex',
@@ -75,14 +87,14 @@ export default function HistoryPage() {
                     justifyContent: 'center',
                     zIndex: 2,
                   }}>
-                    <span style={{ fontSize: '28px', fontWeight: 'bold', color: '#333' }}>bestiee</span>
+                    <span style={{ fontSize: isMobile ? '20px' : '28px', fontWeight: 'bold', color: '#333' }}>bestiee</span>
                   </div>
                   {/* Photo */}
                   <div style={{
-                    width: '350px',
-                    height: '250px',
-                    marginLeft: '-20px',
-                    marginTop: '30px',
+                    width: isMobile ? '100%' : '350px',
+                    height: isMobile ? '200px' : '250px',
+                    marginLeft: isMobile ? '0' : '-20px',
+                    marginTop: isMobile ? '0' : '30px',
                     overflow: 'hidden',
                   }}>
                     <img
@@ -94,8 +106,8 @@ export default function HistoryPage() {
                 </div>
                 {/* Additional photo */}
                 <div style={{
-                  width: '400px',
-                  height: '280px',
+                  width: isMobile ? '100%' : '400px',
+                  height: isMobile ? '200px' : '280px',
                   marginTop: '24px',
                   overflow: 'hidden',
                 }}>
@@ -110,17 +122,18 @@ export default function HistoryPage() {
 
             {/* Right side - Timeline */}
             <div style={{
-              width: '45%',
-              borderLeft: '1px solid #e5e7eb',
-              padding: '80px 60px',
+              width: isMobile ? '100%' : '45%',
+              borderLeft: isMobile ? 'none' : '1px solid #e5e7eb',
+              borderTop: isMobile ? '1px solid #e5e7eb' : 'none',
+              padding: isMobile ? '40px 5%' : '80px 60px',
               position: 'relative',
             }}>
               {/* Year */}
               <h2 style={{
-                fontSize: '72px',
+                fontSize: isMobile ? '48px' : '72px',
                 fontWeight: '300',
                 color: 'black',
-                marginBottom: '40px',
+                marginBottom: isMobile ? '24px' : '40px',
                 letterSpacing: '-0.02em',
               }}>
                 2024
@@ -130,137 +143,192 @@ export default function HistoryPage() {
               <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
                 <div style={{ display: 'flex', alignItems: 'center', position: 'relative' }}>
                   {/* Dot on the vertical line */}
-                  <div style={{
-                    position: 'absolute',
-                    left: '-66px',
-                    width: '12px',
-                    height: '12px',
-                    background: 'linear-gradient(135deg, var(--bestiee-blue) 0%, var(--bestiee-blue-light) 100%)',
-                    borderRadius: '50%',
-                  }} />
+                  {!isMobile && (
+                    <div style={{
+                      position: 'absolute',
+                      left: '-66px',
+                      width: '12px',
+                      height: '12px',
+                      background: 'linear-gradient(135deg, var(--bestiee-blue) 0%, var(--bestiee-blue-light) 100%)',
+                      borderRadius: '50%',
+                    }} />
+                  )}
                   {/* Horizontal line */}
-                  <div style={{
-                    position: 'absolute',
-                    left: '-54px',
-                    width: '54px',
-                    height: '1px',
-                    backgroundColor: '#333',
-                  }} />
-                  <span style={{ fontSize: '20px', color: '#333' }}>株式会社bestiee設立</span>
+                  {!isMobile && (
+                    <div style={{
+                      position: 'absolute',
+                      left: '-54px',
+                      width: '54px',
+                      height: '1px',
+                      backgroundColor: '#333',
+                    }} />
+                  )}
+                  {/* Mobile dot */}
+                  {isMobile && (
+                    <div style={{
+                      width: '10px',
+                      height: '10px',
+                      background: 'linear-gradient(135deg, var(--bestiee-blue) 0%, var(--bestiee-blue-light) 100%)',
+                      borderRadius: '50%',
+                      marginRight: '12px',
+                      flexShrink: 0,
+                    }} />
+                  )}
+                  <span style={{ fontSize: isMobile ? '16px' : '20px', color: '#333' }}>株式会社bestiee設立</span>
                 </div>
               </div>
             </div>
           </div>
 
           {/* 2025 */}
-          <div style={{ display: 'flex', minHeight: '700px' }}>
+          <div style={{
+            display: 'flex',
+            flexDirection: isMobile ? 'column-reverse' : 'row',
+            minHeight: isMobile ? 'auto' : '700px'
+          }}>
             {/* Left side - Timeline (テキスト左側) */}
             <div style={{
-              width: '45%',
-              borderRight: '1px solid #e5e7eb',
-              padding: '80px 60px',
+              width: isMobile ? '100%' : '45%',
+              borderRight: isMobile ? 'none' : '1px solid #e5e7eb',
+              borderTop: isMobile ? '1px solid #e5e7eb' : 'none',
+              padding: isMobile ? '40px 5%' : '80px 60px',
               position: 'relative',
               display: 'flex',
               flexDirection: 'column',
-              alignItems: 'flex-end',
+              alignItems: isMobile ? 'flex-start' : 'flex-end',
             }}>
               {/* Year */}
               <h2 style={{
-                fontSize: '72px',
+                fontSize: isMobile ? '48px' : '72px',
                 fontWeight: '300',
                 color: 'black',
-                marginBottom: '40px',
+                marginBottom: isMobile ? '24px' : '40px',
                 letterSpacing: '-0.02em',
               }}>
                 2025
               </h2>
 
               {/* Events */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '24px', alignItems: 'flex-end' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '24px', alignItems: isMobile ? 'flex-start' : 'flex-end' }}>
                 <div style={{ display: 'flex', alignItems: 'center', position: 'relative' }}>
-                  <span style={{ fontSize: '20px', color: '#333', textAlign: 'right' }}>家庭教師サービス「ベストティーチ」正式リリース</span>
+                  {/* Mobile dot */}
+                  {isMobile && (
+                    <div style={{
+                      width: '10px',
+                      height: '10px',
+                      background: 'linear-gradient(135deg, var(--bestiee-blue) 0%, var(--bestiee-blue-light) 100%)',
+                      borderRadius: '50%',
+                      marginRight: '12px',
+                      flexShrink: 0,
+                    }} />
+                  )}
+                  <span style={{ fontSize: isMobile ? '16px' : '20px', color: '#333', textAlign: isMobile ? 'left' : 'right' }}>家庭教師サービス「ベストティーチ」正式リリース</span>
                   {/* Horizontal line */}
-                  <div style={{
-                    position: 'absolute',
-                    right: '-60px',
-                    width: '54px',
-                    height: '1px',
-                    backgroundColor: '#333',
-                  }} />
+                  {!isMobile && (
+                    <div style={{
+                      position: 'absolute',
+                      right: '-60px',
+                      width: '54px',
+                      height: '1px',
+                      backgroundColor: '#333',
+                    }} />
+                  )}
                   {/* Dot on the vertical line */}
-                  <div style={{
-                    position: 'absolute',
-                    right: '-66px',
-                    width: '12px',
-                    height: '12px',
-                    background: 'linear-gradient(135deg, var(--bestiee-blue) 0%, var(--bestiee-blue-light) 100%)',
-                    borderRadius: '50%',
-                  }} />
+                  {!isMobile && (
+                    <div style={{
+                      position: 'absolute',
+                      right: '-66px',
+                      width: '12px',
+                      height: '12px',
+                      background: 'linear-gradient(135deg, var(--bestiee-blue) 0%, var(--bestiee-blue-light) 100%)',
+                      borderRadius: '50%',
+                    }} />
+                  )}
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', position: 'relative' }}>
-                  <span style={{ fontSize: '20px', color: '#333', textAlign: 'right' }}>AIチャレンジャーズフェス第1回開催</span>
+                  {/* Mobile dot */}
+                  {isMobile && (
+                    <div style={{
+                      width: '10px',
+                      height: '10px',
+                      background: 'linear-gradient(135deg, var(--bestiee-blue) 0%, var(--bestiee-blue-light) 100%)',
+                      borderRadius: '50%',
+                      marginRight: '12px',
+                      flexShrink: 0,
+                    }} />
+                  )}
+                  <span style={{ fontSize: isMobile ? '16px' : '20px', color: '#333', textAlign: isMobile ? 'left' : 'right' }}>AIチャレンジャーズフェス第1回開催</span>
                   {/* Horizontal line */}
-                  <div style={{
-                    position: 'absolute',
-                    right: '-60px',
-                    width: '54px',
-                    height: '1px',
-                    backgroundColor: '#333',
-                  }} />
+                  {!isMobile && (
+                    <div style={{
+                      position: 'absolute',
+                      right: '-60px',
+                      width: '54px',
+                      height: '1px',
+                      backgroundColor: '#333',
+                    }} />
+                  )}
                   {/* Dot on the vertical line */}
-                  <div style={{
-                    position: 'absolute',
-                    right: '-66px',
-                    width: '12px',
-                    height: '12px',
-                    background: 'linear-gradient(135deg, var(--bestiee-blue) 0%, var(--bestiee-blue-light) 100%)',
-                    borderRadius: '50%',
-                  }} />
+                  {!isMobile && (
+                    <div style={{
+                      position: 'absolute',
+                      right: '-66px',
+                      width: '12px',
+                      height: '12px',
+                      background: 'linear-gradient(135deg, var(--bestiee-blue) 0%, var(--bestiee-blue-light) 100%)',
+                      borderRadius: '50%',
+                    }} />
+                  )}
                 </div>
               </div>
             </div>
 
             {/* Right side - Images (画像右側・左右配置) */}
             <div style={{
-              width: '55%',
+              width: isMobile ? '100%' : '55%',
               position: 'relative',
-              padding: '80px 5%',
+              padding: isMobile ? '40px 5%' : '80px 5%',
               overflow: 'hidden',
             }}>
               {/* Decorative diagonal stripes */}
-              <div style={{
-                position: 'absolute',
-                top: '40px',
-                left: '0',
-                width: '400px',
-                height: '200px',
-                background: 'repeating-linear-gradient(65deg, var(--bestiee-blue-light) 0px, var(--bestiee-blue-light) 3px, transparent 3px, transparent 10px)',
-                opacity: 0.4,
-                zIndex: 0,
-              }} />
-              <div style={{
-                position: 'absolute',
-                top: '100px',
-                left: '50px',
-                width: '300px',
-                height: '150px',
-                background: 'repeating-linear-gradient(65deg, var(--bestiee-cyan) 0px, var(--bestiee-cyan) 2px, transparent 2px, transparent 8px)',
-                opacity: 0.3,
-                zIndex: 0,
-              }} />
+              {!isMobile && (
+                <>
+                  <div style={{
+                    position: 'absolute',
+                    top: '40px',
+                    left: '0',
+                    width: '400px',
+                    height: '200px',
+                    background: 'repeating-linear-gradient(65deg, var(--bestiee-blue-light) 0px, var(--bestiee-blue-light) 3px, transparent 3px, transparent 10px)',
+                    opacity: 0.4,
+                    zIndex: 0,
+                  }} />
+                  <div style={{
+                    position: 'absolute',
+                    top: '100px',
+                    left: '50px',
+                    width: '300px',
+                    height: '150px',
+                    background: 'repeating-linear-gradient(65deg, var(--bestiee-cyan) 0px, var(--bestiee-cyan) 2px, transparent 2px, transparent 8px)',
+                    opacity: 0.3,
+                    zIndex: 0,
+                  }} />
+                </>
+              )}
 
               {/* Image container - 2024年風の左右配置 */}
               <div style={{ position: 'relative', zIndex: 1 }}>
                 {/* 上段: ベストティーチ + YouTube動画 */}
                 <div style={{
                   display: 'flex',
-                  gap: '0',
+                  flexDirection: isMobile ? 'column' : 'row',
+                  gap: isMobile ? '16px' : '0',
                   marginBottom: '24px',
                 }}>
                   {/* ベストティーチ */}
                   <div style={{
-                    width: '200px',
-                    height: '200px',
+                    width: isMobile ? '140px' : '200px',
+                    height: isMobile ? '140px' : '200px',
                     backgroundColor: 'white',
                     boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
                     overflow: 'hidden',
@@ -269,15 +337,15 @@ export default function HistoryPage() {
                     <img
                       src="/images/history-bestteach.png"
                       alt="ベストティーチ"
-                      style={{ width: '100%', height: '100%', objectFit: 'contain', padding: '16px' }}
+                      style={{ width: '100%', height: '100%', objectFit: 'contain', padding: isMobile ? '12px' : '16px' }}
                     />
                   </div>
                   {/* YouTube動画 */}
                   <div style={{
-                    width: '320px',
-                    height: '180px',
-                    marginLeft: '-20px',
-                    marginTop: '40px',
+                    width: isMobile ? '100%' : '320px',
+                    height: isMobile ? '200px' : '180px',
+                    marginLeft: isMobile ? '0' : '-20px',
+                    marginTop: isMobile ? '0' : '40px',
                     borderRadius: '8px',
                     overflow: 'hidden',
                     boxShadow: '0 4px 20px rgba(0,0,0,0.15)',
@@ -296,9 +364,9 @@ export default function HistoryPage() {
 
                 {/* 下段: 2025年チーム写真 */}
                 <div style={{
-                  width: '420px',
-                  height: '280px',
-                  marginLeft: '60px',
+                  width: isMobile ? '100%' : '420px',
+                  height: isMobile ? '200px' : '280px',
+                  marginLeft: isMobile ? '0' : '60px',
                   overflow: 'hidden',
                 }}>
                   <img
@@ -312,32 +380,38 @@ export default function HistoryPage() {
           </div>
 
           {/* 2026 */}
-          <div style={{ display: 'flex', minHeight: '400px' }}>
+          <div style={{
+            display: 'flex',
+            flexDirection: isMobile ? 'column' : 'row',
+            minHeight: isMobile ? 'auto' : '400px'
+          }}>
             {/* Left side - Images */}
             <div style={{
-              width: '55%',
+              width: isMobile ? '100%' : '55%',
               position: 'relative',
-              padding: '80px 5%',
+              padding: isMobile ? '40px 5%' : '80px 5%',
               overflow: 'hidden',
             }}>
               {/* Decorative diagonal stripes */}
-              <div style={{
-                position: 'absolute',
-                bottom: '40px',
-                right: '0',
-                width: '350px',
-                height: '180px',
-                background: 'repeating-linear-gradient(-65deg, var(--bestiee-blue-light) 0px, var(--bestiee-blue-light) 3px, transparent 3px, transparent 10px)',
-                opacity: 0.3,
-                zIndex: 0,
-              }} />
+              {!isMobile && (
+                <div style={{
+                  position: 'absolute',
+                  bottom: '40px',
+                  right: '0',
+                  width: '350px',
+                  height: '180px',
+                  background: 'repeating-linear-gradient(-65deg, var(--bestiee-blue-light) 0px, var(--bestiee-blue-light) 3px, transparent 3px, transparent 10px)',
+                  opacity: 0.3,
+                  zIndex: 0,
+                }} />
+              )}
 
               {/* Image container */}
               <div style={{ position: 'relative', zIndex: 1 }}>
                 <div style={{
                   width: '100%',
-                  maxWidth: '500px',
-                  height: '280px',
+                  maxWidth: isMobile ? '100%' : '500px',
+                  height: isMobile ? '200px' : '280px',
                   overflow: 'hidden',
                   borderRadius: '8px',
                 }}>
@@ -352,17 +426,18 @@ export default function HistoryPage() {
 
             {/* Right side - Timeline */}
             <div style={{
-              width: '45%',
-              borderLeft: '1px solid #e5e7eb',
-              padding: '80px 60px',
+              width: isMobile ? '100%' : '45%',
+              borderLeft: isMobile ? 'none' : '1px solid #e5e7eb',
+              borderTop: isMobile ? '1px solid #e5e7eb' : 'none',
+              padding: isMobile ? '40px 5%' : '80px 60px',
               position: 'relative',
             }}>
               {/* Year */}
               <h2 style={{
-                fontSize: '72px',
+                fontSize: isMobile ? '48px' : '72px',
                 fontWeight: '300',
                 color: 'black',
-                marginBottom: '40px',
+                marginBottom: isMobile ? '24px' : '40px',
                 letterSpacing: '-0.02em',
               }}>
                 2026
@@ -372,23 +447,38 @@ export default function HistoryPage() {
               <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
                 <div style={{ display: 'flex', alignItems: 'center', position: 'relative' }}>
                   {/* Dot on the vertical line */}
-                  <div style={{
-                    position: 'absolute',
-                    left: '-66px',
-                    width: '12px',
-                    height: '12px',
-                    background: 'linear-gradient(135deg, var(--bestiee-blue) 0%, var(--bestiee-blue-light) 100%)',
-                    borderRadius: '50%',
-                  }} />
+                  {!isMobile && (
+                    <div style={{
+                      position: 'absolute',
+                      left: '-66px',
+                      width: '12px',
+                      height: '12px',
+                      background: 'linear-gradient(135deg, var(--bestiee-blue) 0%, var(--bestiee-blue-light) 100%)',
+                      borderRadius: '50%',
+                    }} />
+                  )}
                   {/* Horizontal line */}
-                  <div style={{
-                    position: 'absolute',
-                    left: '-54px',
-                    width: '54px',
-                    height: '1px',
-                    backgroundColor: '#333',
-                  }} />
-                  <span style={{ fontSize: '20px', color: '#333' }}>AI面接練習データを活用した採用マッチングサービス「FastPass」リリース</span>
+                  {!isMobile && (
+                    <div style={{
+                      position: 'absolute',
+                      left: '-54px',
+                      width: '54px',
+                      height: '1px',
+                      backgroundColor: '#333',
+                    }} />
+                  )}
+                  {/* Mobile dot */}
+                  {isMobile && (
+                    <div style={{
+                      width: '10px',
+                      height: '10px',
+                      background: 'linear-gradient(135deg, var(--bestiee-blue) 0%, var(--bestiee-blue-light) 100%)',
+                      borderRadius: '50%',
+                      marginRight: '12px',
+                      flexShrink: 0,
+                    }} />
+                  )}
+                  <span style={{ fontSize: isMobile ? '16px' : '20px', color: '#333' }}>AI面接練習データを活用した採用マッチングサービス「FastPass」リリース</span>
                 </div>
               </div>
             </div>
@@ -397,18 +487,18 @@ export default function HistoryPage() {
       </section>
 
       {/* Related Pages Section */}
-      <section style={{ backgroundColor: '#f8fafc', padding: '80px 5%' }}>
+      <section style={{ backgroundColor: '#f8fafc', padding: isMobile ? '40px 5%' : '80px 5%' }}>
         {/* Section header */}
-        <div className="flex items-center gap-4" style={{ marginBottom: '40px' }}>
+        <div className="flex items-center gap-4" style={{ marginBottom: isMobile ? '24px' : '40px' }}>
           <div style={{ width: '4px', height: '28px', background: 'var(--bestiee-gradient-vertical)' }}></div>
-          <span style={{ color: 'black', fontSize: '22px', letterSpacing: '0.1em', fontWeight: '500' }}>関連ページ</span>
+          <span style={{ color: 'black', fontSize: isMobile ? '18px' : '22px', letterSpacing: '0.1em', fontWeight: '500' }}>関連ページ</span>
         </div>
 
         {/* Related pages grid */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(3, 1fr)',
-          gap: '24px',
+          gridTemplateColumns: isMobile ? '1fr' : 'repeat(3, 1fr)',
+          gap: isMobile ? '16px' : '24px',
         }}>
           {/* 会社情報 */}
           <Link href="/company" style={{ textDecoration: 'none' }}>
@@ -432,10 +522,10 @@ export default function HistoryPage() {
                 bottom: 0,
                 left: 0,
                 right: 0,
-                padding: '20px',
+                padding: isMobile ? '16px' : '20px',
                 background: 'linear-gradient(transparent, rgba(0,0,0,0.7))',
               }}>
-                <span style={{ color: 'white', fontSize: '18px', fontWeight: '600' }}>会社情報</span>
+                <span style={{ color: 'white', fontSize: isMobile ? '16px' : '18px', fontWeight: '600' }}>会社情報</span>
               </div>
             </div>
           </Link>
@@ -462,10 +552,10 @@ export default function HistoryPage() {
                 bottom: 0,
                 left: 0,
                 right: 0,
-                padding: '20px',
+                padding: isMobile ? '16px' : '20px',
                 background: 'linear-gradient(transparent, rgba(0,0,0,0.7))',
               }}>
-                <span style={{ color: 'white', fontSize: '18px', fontWeight: '600' }}>役員紹介</span>
+                <span style={{ color: 'white', fontSize: isMobile ? '16px' : '18px', fontWeight: '600' }}>役員紹介</span>
               </div>
             </div>
           </Link>
@@ -492,10 +582,10 @@ export default function HistoryPage() {
                 bottom: 0,
                 left: 0,
                 right: 0,
-                padding: '20px',
+                padding: isMobile ? '16px' : '20px',
                 background: 'linear-gradient(transparent, rgba(0,0,0,0.7))',
               }}>
-                <span style={{ color: 'white', fontSize: '18px', fontWeight: '600' }}>沿革</span>
+                <span style={{ color: 'white', fontSize: isMobile ? '16px' : '18px', fontWeight: '600' }}>沿革</span>
               </div>
             </div>
           </Link>
