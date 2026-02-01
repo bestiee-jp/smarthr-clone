@@ -342,7 +342,7 @@ export default function HistoryPage() {
                   borderRadius: '8px',
                 }}>
                   <img
-                    src="/images/history-fastpass.jpg"
+                    src="/images/fastpass.png"
                     alt="FastPass"
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   />

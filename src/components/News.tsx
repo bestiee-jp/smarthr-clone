@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useIsMobile } from '@/hooks/useIsMobile';
-import { homeNewsItems } from '@/data/news';
+import type { NewsMetadata } from '@/lib/news';
 
 // News Card Image Component
 function NewsCardImage({ image }: { image: string }) {
@@ -19,7 +19,11 @@ function NewsCardImage({ image }: { image: string }) {
   );
 }
 
-export default function News() {
+interface NewsProps {
+  newsItems: NewsMetadata[];
+}
+
+export default function News({ newsItems }: NewsProps) {
   const isMobile = useIsMobile();
 
   return (
@@ -47,7 +51,7 @@ export default function News() {
           gap: isMobile ? '20px' : '24px',
         }}
       >
-        {homeNewsItems.map((item, index) => (
+        {newsItems.map((item, index) => (
           <Link
             key={index}
             href={`/news/${item.slug}`}
@@ -111,21 +115,18 @@ export default function News() {
               >
                 {item.category}
               </span>
-              {item.themes.slice(0, 1).map((theme, idx) => (
-                <span
-                  key={idx}
-                  style={{
-                    color: 'white',
-                    backgroundColor: '#2563eb',
-                    padding: isMobile ? '2px 8px' : '3px 10px',
-                    borderRadius: '50px',
-                    fontSize: isMobile ? '10px' : '11px',
-                    fontWeight: '500',
-                  }}
-                >
-                  {theme}
-                </span>
-              ))}
+              <span
+                style={{
+                  color: 'white',
+                  backgroundColor: '#2563eb',
+                  padding: isMobile ? '2px 8px' : '3px 10px',
+                  borderRadius: '50px',
+                  fontSize: isMobile ? '10px' : '11px',
+                  fontWeight: '500',
+                }}
+              >
+                {item.theme}
+              </span>
             </div>
 
             {/* Title */}

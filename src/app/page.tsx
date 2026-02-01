@@ -7,8 +7,11 @@ import CompanyLinks from "@/components/CompanyLinks";
 import ContactSection from "@/components/ContactSection";
 import CyanBackground from "@/components/CyanBackground";
 import Footer from "@/components/Footer";
+import { getAllNewsMetadata } from "@/lib/news";
 
 export default function Home() {
+  const newsItems = getAllNewsMetadata().slice(0, 4);
+
   return (
     <main className="min-h-screen flex flex-col">
       <Header />
@@ -21,7 +24,7 @@ export default function Home() {
         </div>
       </div>
       <ServicesMercari />
-      <News />
+      <News newsItems={newsItems} />
       <CompanyLinks />
       <ContactSection />
       <Footer />

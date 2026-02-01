@@ -25,7 +25,7 @@ const slides = [
     category: 'Services',
     description: '「FastPass」は、AI面接練習データを活用した、ハイクラス学生特化の採用マッチングサービスです。AIが解析した面接データをもとに、エージェントが貴社に最適な学生を紹介します。',
     bgColor: '#1E5AA8', // bestiee-blue
-    image: '/images/service-fastpass.png',
+    image: '/images/fastpass.png',
     scale: 1.3,
   },
   {

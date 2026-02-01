@@ -3,16 +3,25 @@
 
 interface ArrowIconProps {
   size?: number;
+  direction?: 'right' | 'left' | 'up' | 'down';
+  color?: string;
 }
 
 /**
  * Arrow Icon - Used for buttons and links
  * Used in: News, ContactSection, CompanyLinks, service/page, company/page
  */
-export function ArrowIcon({ size = 20 }: ArrowIconProps) {
+export function ArrowIcon({ size = 20, direction = 'right', color = 'currentColor' }: ArrowIconProps) {
+  const paths: Record<string, string> = {
+    right: 'M5 12h14M12 5l7 7-7 7',
+    left: 'M19 12H5M12 19l-7-7 7-7',
+    up: 'M12 19V5M5 12l7-7 7 7',
+    down: 'M12 5v14M19 12l-7 7-7-7',
+  };
+
   return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-      <path d="M5 12h14M12 5l7 7-7 7" />
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2">
+      <path d={paths[direction]} />
     </svg>
   );
 }
