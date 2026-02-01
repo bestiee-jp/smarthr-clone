@@ -5,6 +5,8 @@ import PageHero from "@/components/PageHero";
 import { getNewsArticle, getRelatedArticles, getAllNewsSlugs, type NewsArticle } from "@/lib/news";
 import NewsArticleClient from "./NewsArticleClient";
 
+export const dynamic = 'force-static';
+
 // Generate static params for all news articles
 export async function generateStaticParams() {
   const slugs = getAllNewsSlugs();

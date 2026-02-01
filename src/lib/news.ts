@@ -1,8 +1,4 @@
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
-
-const newsDirectory = path.join(process.cwd(), 'content/news');
+import newsData from './news-data.json';
 
 export interface NewsArticle {
   slug: string;
@@ -25,62 +21,34 @@ export interface NewsMetadata {
   imageType: string;
 }
 
+const articles: NewsArticle[] = newsData as NewsArticle[];
+
 /**
  * Get all news article slugs
  */
 export function getAllNewsSlugs(): string[] {
-  const fileNames = fs.readdirSync(newsDirectory);
-  return fileNames
-    .filter(fileName => fileName.endsWith('.md') && !fileName.startsWith('_'))
-    .map(fileName => fileName.replace(/\.md$/, ''));
+  return articles.map(article => article.slug);
 }
 
 /**
  * Get a single news article by slug
  */
 export function getNewsArticle(slug: string): NewsArticle | null {
-  try {
-    const fullPath = path.join(newsDirectory, `${slug}.md`);
-    const fileContents = fs.readFileSync(fullPath, 'utf8');
-    const { data, content } = matter(fileContents);
-
-    return {
-      slug,
-      title: data.title || '',
-      date: data.date || '',
-      category: data.category || '',
-      theme: data.theme || 'その他',
-      content: content,
-      image: data.image || '/news/default.png',
-      imageType: data.imageType || 'notice',
-    };
-  } catch {
-    return null;
-  }
+  return articles.find(article => article.slug === slug) || null;
 }
 
 /**
  * Get all news articles sorted by date (newest first)
  */
 export function getAllNewsArticles(): NewsArticle[] {
-  const slugs = getAllNewsSlugs();
-  const articles = slugs
-    .map(slug => getNewsArticle(slug))
-    .filter((article): article is NewsArticle => article !== null);
-
-  // Sort by date (newest first)
-  return articles.sort((a, b) => {
-    const dateA = a.date.replace(/\./g, '-');
-    const dateB = b.date.replace(/\./g, '-');
-    return dateB.localeCompare(dateA);
-  });
+  return [...articles];
 }
 
 /**
  * Get news metadata only (for list pages)
  */
 export function getAllNewsMetadata(): NewsMetadata[] {
-  return getAllNewsArticles().map(({ slug, title, date, category, theme, image, imageType }) => ({
+  return articles.map(({ slug, title, date, category, theme, image, imageType }) => ({
     slug,
     title,
     date,
@@ -98,10 +66,10 @@ export function getAllNewsMetadata(): NewsMetadata[] {
 export function getRelatedArticles(currentSlug: string, limit: number = 3): NewsArticle[] {
   const currentArticle = getNewsArticle(currentSlug);
   if (!currentArticle) {
-    return getAllNewsArticles().slice(0, limit);
+    return articles.slice(0, limit);
   }
 
-  const otherArticles = getAllNewsArticles().filter(article => article.slug !== currentSlug);
+  const otherArticles = articles.filter(article => article.slug !== currentSlug);
 
   // Score articles by relevance
   const scored = otherArticles.map(article => {

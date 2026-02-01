@@ -4,6 +4,8 @@ import PageHero from "@/components/PageHero";
 import { getAllNewsMetadata } from "@/lib/news";
 import NewsListClient from "./NewsListClient";
 
+export const dynamic = 'force-static';
+
 export const metadata = {
   title: 'ニュース | bestiee',
   description: 'bestieeの最新ニュース、プレスリリース、イベント情報をお届けします。',
