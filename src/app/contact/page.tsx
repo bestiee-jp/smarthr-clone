@@ -7,9 +7,11 @@ import PageHero from "@/components/PageHero";
 import Link from "next/link";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useTranslation } from '@/hooks/useTranslation';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function ContactPage() {
   const { t } = useTranslation();
+  const { lang } = useLanguage();
   const [formData, setFormData] = useState({
     lastName: '',
     firstName: '',
@@ -1014,10 +1016,12 @@ export default function ContactPage() {
                   {/* reCAPTCHA */}
                   <div style={{ marginBottom: '24px' }}>
                     <ReCAPTCHA
+                      key={lang}
                       ref={recaptchaRef}
                       sitekey="6LcTuFQsAAAAAGynPT8ZzeWTsWgPRn77o7SFrtXx"
                       onChange={handleRecaptchaChange}
                       onExpired={handleRecaptchaExpired}
+                      hl={lang === 'zh' ? 'zh-CN' : lang}
                     />
                   </div>
 
