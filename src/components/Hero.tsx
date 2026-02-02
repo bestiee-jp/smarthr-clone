@@ -4,16 +4,23 @@ import { useState, useEffect } from 'react';
 import { useTranslation } from '@/hooks/useTranslation';
 
 export default function Hero() {
+  const [isMounted, setIsMounted] = useState(false);
   const [isVideoReady, setIsVideoReady] = useState(false);
   const { t } = useTranslation();
 
+  // Wait for mount before showing anything (prevents SSR flash)
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   // Trigger animation after video is ready or fallback after 500ms
   useEffect(() => {
+    if (!isMounted) return;
     const timer = setTimeout(() => {
       setIsVideoReady(true);
     }, 500);
     return () => clearTimeout(timer);
-  }, []);
+  }, [isMounted]);
 
   return (
     <section className="relative overflow-hidden min-h-[60vh] md:min-h-[80vh] lg:min-h-[90vh]">
@@ -35,7 +42,7 @@ export default function Hero() {
       <div className="absolute top-0 left-0 w-full h-full z-[1] bg-black/20" />
 
       {/* Main content */}
-      <div className="relative z-10 flex items-center min-h-[60vh] md:min-h-[80vh] lg:min-h-[90vh]" style={{ paddingLeft: '5%', paddingRight: '5%' }}>
+      <div className="relative z-10 flex items-center min-h-[60vh] md:min-h-[80vh] lg:min-h-[90vh]" style={{ paddingLeft: '5%', paddingRight: '5%', visibility: isMounted ? 'visible' : 'hidden' }}>
         <div className="w-full">
           {/* TURN FEAR */}
           <div
