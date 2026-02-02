@@ -12,7 +12,11 @@ export default function Hero() {
 
   // Wait for mount before showing anything (prevents SSR flash)
   useEffect(() => {
-    setIsMounted(true);
+    // Small delay to ensure styles are applied before showing
+    const timer = setTimeout(() => {
+      setIsMounted(true);
+    }, 50);
+    return () => clearTimeout(timer);
   }, []);
 
   // Trigger animation after video is ready or fallback (longer delay on mobile)
@@ -55,6 +59,7 @@ export default function Hero() {
           <div
             className="flex items-start gap-4 mb-[-14px] md:mb-[-28px]"
             style={{
+              visibility: isMounted ? 'visible' : 'hidden',
               opacity: isVideoReady ? 1 : 0,
               transform: isVideoReady ? 'translateY(0)' : 'translateY(150px)',
               transition: `opacity ${duration} ease-out 0s, transform ${duration} cubic-bezier(0.16, 1, 0.3, 1) 0s`,
@@ -72,6 +77,7 @@ export default function Hero() {
           <div
             className="flex items-center gap-5 mb-[-14px] md:mb-[-28px]"
             style={{
+              visibility: isMounted ? 'visible' : 'hidden',
               opacity: isVideoReady ? 1 : 0,
               transform: isVideoReady ? 'translateY(0)' : 'translateY(150px)',
               transition: `opacity ${duration} ease-out 0.5s, transform ${duration} cubic-bezier(0.16, 1, 0.3, 1) 0.5s`,
@@ -92,6 +98,7 @@ export default function Hero() {
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
                   backgroundClip: 'text',
+                  visibility: isMounted ? 'visible' : 'hidden',
                   opacity: isVideoReady ? 1 : 0,
                   transform: isVideoReady ? 'translateY(0)' : 'translateY(50px)',
                   transition: `opacity ${duration} ease-out 2s, transform ${duration} cubic-bezier(0.16, 1, 0.3, 1) 2s`,
@@ -102,6 +109,7 @@ export default function Hero() {
               <span
                 className="text-[clamp(22px,4.2vw,39px)] text-white font-medium tracking-wide"
                 style={{
+                  visibility: isMounted ? 'visible' : 'hidden',
                   opacity: isVideoReady ? 1 : 0,
                   transform: isVideoReady ? 'translateX(0)' : 'translateX(-150px)',
                   transition: `opacity ${longDuration} ease-out 3s, transform ${longDuration} cubic-bezier(0.16, 1, 0.3, 1) 3s`,
@@ -116,6 +124,7 @@ export default function Hero() {
           <div
             className="flex items-start gap-4"
             style={{
+              visibility: isMounted ? 'visible' : 'hidden',
               opacity: isVideoReady ? 1 : 0,
               transform: isVideoReady ? 'translateY(0)' : 'translateY(150px)',
               transition: `opacity ${duration} ease-out 1s, transform ${duration} cubic-bezier(0.16, 1, 0.3, 1) 1s`,
