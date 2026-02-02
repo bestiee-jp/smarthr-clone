@@ -372,12 +372,20 @@ export default function Header() {
           <BestieeLogo />
           <div style={{ display: 'flex', alignItems: 'center', gap: isMobile ? '12px' : '20px' }}>
             {/* Language Switcher */}
-            <div className="flex items-center gap-2" style={{ fontSize: isMobile ? '14px' : '16px' }}>
+            <div
+              className="flex items-center"
+              style={{
+                fontSize: isMobile ? '12px' : '16px',
+                gap: isMobile ? '4px' : '8px',
+                whiteSpace: 'nowrap',
+                flexShrink: 0,
+              }}
+            >
               <button
                 onClick={() => setLang('ja')}
                 className={lang === 'ja' ? 'font-medium' : 'opacity-50'}
               >
-                日本語
+                {isMobile ? 'JP' : '日本語'}
               </button>
               <span className="text-gray-400">|</span>
               <button
@@ -391,7 +399,7 @@ export default function Header() {
                 onClick={() => setLang('zh')}
                 className={lang === 'zh' ? 'font-medium' : 'opacity-50'}
               >
-                中文
+                {isMobile ? 'CN' : '中文'}
               </button>
             </div>
             {/* Close Button */}
@@ -424,6 +432,7 @@ export default function Header() {
                 { label: t('nav.history'), href: '/company/history' },
               ],
             },
+            { label: t('nav.contact'), sublabel: 'Contact', href: '/contact' },
           ].map((item, index) => {
             const isExpanded = expandedSubmenu === item.label;
 
@@ -550,30 +559,6 @@ export default function Header() {
             );
           })}
 
-        </div>
-
-        {/* お問い合わせ link - bottom center */}
-        <div style={{
-          marginTop: 'auto',
-          paddingTop: '20px',
-          paddingBottom: isMobile ? '40px' : '30px',
-          textAlign: 'center',
-        }}>
-          <Link
-            href="/contact"
-            className="group"
-            style={{
-              fontSize: isMobile ? '14px' : '16px',
-              fontWeight: '500',
-              color: 'black',
-            }}
-            onClick={() => setIsMenuOpen(false)}
-          >
-            <span className="relative inline-block">
-              {t('nav.contact')}
-              <span className="absolute left-0 bottom-[-2px] h-[1px] bg-black transition-all duration-[400ms] w-0 group-hover:w-full"></span>
-            </span>
-          </Link>
         </div>
       </div>
     </header>
