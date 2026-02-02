@@ -23,10 +23,12 @@ export default function Hero() {
         muted
         loop
         playsInline
+        preload="auto"
+        poster="/hero-poster.jpg"
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
         onCanPlay={() => setIsVideoReady(true)}
       >
-        <source src="/hero-bg.mp4?v=3" type="video/mp4" />
+        <source src="/hero-bg.mp4?v=4" type="video/mp4" />
       </video>
 
       {/* Overlay for better text readability */}
