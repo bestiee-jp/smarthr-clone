@@ -95,4 +95,4 @@ export const policyLinks: PolicyLink[] = [
 export const copyrightText = '© 2025 bestiee Inc.';
 
 // Footer logo path
-export const footerLogoPath = '/logo-footer.png';
+export const footerLogoPath = '/logo-footer.webp';
