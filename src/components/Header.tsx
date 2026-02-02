@@ -358,6 +358,8 @@ export default function Header() {
           transform: isMenuOpen ? 'translateX(0)' : 'translateX(100%)',
           transition: 'transform 0.4s ease',
           overflowY: 'auto',
+          display: 'flex',
+          flexDirection: 'column',
         }}
       >
         {/* Menu Header */}
@@ -407,7 +409,7 @@ export default function Header() {
         </div>
 
         {/* Menu Items */}
-        <div style={{ padding: isMobile ? '20px' : '40px' }}>
+        <div style={{ padding: isMobile ? '20px' : '40px', flex: 1 }}>
           {[
             { label: t('nav.aboutUs'), sublabel: 'About Us', href: '/mission' },
             { label: t('nav.service'), sublabel: 'Service', href: '/service' },
@@ -552,10 +554,10 @@ export default function Header() {
 
         {/* お問い合わせ link - bottom center */}
         <div style={{
-          position: 'absolute',
-          bottom: isMobile ? '20px' : '30px',
-          left: '50%',
-          transform: 'translateX(-50%)',
+          marginTop: 'auto',
+          paddingTop: '20px',
+          paddingBottom: isMobile ? '40px' : '30px',
+          textAlign: 'center',
         }}>
           <Link
             href="/contact"
