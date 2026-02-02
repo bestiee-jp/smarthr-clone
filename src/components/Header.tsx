@@ -169,6 +169,33 @@ export default function Header() {
                   isOpen={openDropdown === 'company'}
                   onMouseEnter={() => setOpenDropdown('company')}
                 />
+                {/* Language Switcher */}
+                <div
+                  className="flex items-center gap-2 ml-4"
+                  style={{ fontSize: '14px' }}
+                  onMouseEnter={() => setOpenDropdown(null)}
+                >
+                  <button
+                    onClick={() => setLang('ja')}
+                    className={`transition-opacity ${lang === 'ja' ? 'font-medium opacity-100' : 'opacity-40 hover:opacity-70'}`}
+                  >
+                    日本語
+                  </button>
+                  <span className="text-gray-300">|</span>
+                  <button
+                    onClick={() => setLang('en')}
+                    className={`transition-opacity ${lang === 'en' ? 'font-medium opacity-100' : 'opacity-40 hover:opacity-70'}`}
+                  >
+                    EN
+                  </button>
+                  <span className="text-gray-300">|</span>
+                  <button
+                    onClick={() => setLang('zh')}
+                    className={`transition-opacity ${lang === 'zh' ? 'font-medium opacity-100' : 'opacity-40 hover:opacity-70'}`}
+                  >
+                    中文
+                  </button>
+                </div>
               </nav>
             )}
           </div>
