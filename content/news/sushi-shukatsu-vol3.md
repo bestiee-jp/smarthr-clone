@@ -9,7 +9,7 @@ category_zh: "活动"
 theme: "寿司就活"
 theme_en: "Sushi Shukatsu"
 theme_zh: "寿司就活"
-image: "/news/sushi20250208.png"
+image: "/news/sushi20250208.webp"
 imageType: "event"
 content_zh: |
   bestiee株式会社与株式会社Scion共同举办了「第三届寿司就活」招聘活动。
