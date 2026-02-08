@@ -243,6 +243,7 @@ export default function ServicesMercari() {
                 fontWeight: '700',
                 color: '#333',
                 letterSpacing: '-0.02em',
+                whiteSpace: 'pre-line',
                 opacity: isAnimating ? 0 : 1,
                 transition: 'opacity 0.3s ease',
               }}

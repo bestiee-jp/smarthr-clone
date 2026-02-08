@@ -1,12 +1,12 @@
 ---
-title: "ベストティーチが、東大王（後藤弘・伊藤七海）の授業を自宅で受けられるキャンペーンを実施"
+title: "東大王の家庭教師「ベストティーチ」が、東大王（後藤弘・伊藤七海）の授業を自宅で受けられるキャンペーンを実施"
 title_en: "Best Teach Launches Campaign for Home Tutoring by Toudaiou Members (Kou Goto & Nanami Ito)"
 title_zh: "Best Teach举办东大王（后藤弘·伊藤七海）上门授课活动"
 date: "2024.09.10"
 category: "お知らせ"
 category_en: "News"
 category_zh: "公告"
-theme: "ベストティーチ"
+theme: "東大王の家庭教師「ベストティーチ」"
 theme_en: "Best Teach"
 theme_zh: "Best Teach"
 image: "/news/bestteach20240910.webp"
@@ -80,9 +80,9 @@ content_en: |
 料金：1万円（税込）/ 90分
 選考方法：抽選。当選者は公式LINEから発表。
 
-＜単発からの新しい家庭教師サービス「ベストティーチ」＞
+＜東大王の家庭教師「ベストティーチ」＞
 
-ベストティーチは、「最高の先生の授業を」「単発から気軽に」受けられる、新しい家庭教師サービスです。
+東大王の家庭教師「ベストティーチ」は、「最高の先生の授業を」「単発から気軽に」受けられる、新しい家庭教師サービスです。
 
 ＜会社概要＞
 

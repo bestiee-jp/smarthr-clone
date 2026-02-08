@@ -69,7 +69,7 @@ export default function PrivacyPage() {
             <li>お問い合わせ対応</li>
           </ul>
 
-          <h4 style={{ fontSize: '15px', fontWeight: 'bold', marginTop: '20px', marginBottom: '8px' }}>【ベストティーチ利用者（保護者・生徒）】</h4>
+          <h4 style={{ fontSize: '15px', fontWeight: 'bold', marginTop: '20px', marginBottom: '8px' }}>【東大王の家庭教師「ベストティーチ」利用者（保護者・生徒）】</h4>
           <ul style={{ marginBottom: '16px', paddingLeft: '24px', listStyleType: 'disc' }}>
             <li>本人確認、ユーザー認証</li>
             <li>サービスの提供、先生とのマッチング</li>
@@ -113,7 +113,7 @@ export default function PrivacyPage() {
           <ul style={{ marginBottom: '16px', paddingLeft: '24px', listStyleType: 'disc' }}>
             <li><strong>企業への紹介・推薦：</strong>利用者がFastPass等を通じて求人に応募した場合、またはスカウト・オファーを承諾した場合、当該企業に対して利用者の氏名、経歴、AI面接の評価レポート等を提供します。</li>
             <li><strong>イベント開催企業への提供：</strong>採用イベントの実施に必要な範囲内で、参加者情報を開催企業に提供します。</li>
-            <li><strong>先生への生徒情報提供：</strong>ベストティーチにおいて、授業実施のために必要な範囲内で、先生に生徒情報を提供します。</li>
+            <li><strong>先生への生徒情報提供：</strong>東大王の家庭教師「ベストティーチ」において、授業実施のために必要な範囲内で、先生に生徒情報を提供します。</li>
             <li><strong>統計データの提供：</strong>個人を特定できないように加工した統計情報を、提携企業に提供する場合があります。</li>
           </ul>
 
@@ -134,7 +134,7 @@ export default function PrivacyPage() {
 
           <h4 style={{ fontSize: '15px', fontWeight: 'bold', marginTop: '20px', marginBottom: '8px' }}>【決済関連】</h4>
           <ul style={{ marginBottom: '16px', paddingLeft: '24px', listStyleType: 'disc' }}>
-            <li>Stripe：決済処理（ベストティーチ）</li>
+            <li>Stripe：決済処理（東大王の家庭教師「ベストティーチ」）</li>
           </ul>
 
           <h4 style={{ fontSize: '15px', fontWeight: 'bold', marginTop: '20px', marginBottom: '8px' }}>【分析・監視関連】</h4>

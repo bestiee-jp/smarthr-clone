@@ -1,12 +1,12 @@
 ---
-title: "ベストティーチ運営に、元東大王の伊藤七海と大道麻優子が加入しました"
+title: "東大王の家庭教師「ベストティーチ」運営に、元東大王の伊藤七海と大道麻優子が加入しました"
 title_en: "Former Toudaiou Members Nanami Ito and Mayuko Omichi Join Best Teach Team"
 title_zh: "前东大王成员伊藤七海和大道麻优子加入Best Teach运营团队"
 date: "2024.12.01"
 category: "お知らせ"
 category_en: "News"
 category_zh: "公告"
-theme: "ベストティーチ"
+theme: "東大王の家庭教師「ベストティーチ」"
 theme_en: "Best Teach"
 theme_zh: "Best Teach"
 image: "/news/bestteach20241201.webp"
@@ -89,7 +89,7 @@ content_en: |
 
 1999年6月21日生まれ　福井県出身
 東京大学教育学部卒
-TBS『東大王』に5年間出演。SAPIX講師経験や家庭教師経験を活かし、「ベストティーチ」の単発授業キャンペーンにも参加した。
+TBS『東大王』に5年間出演。SAPIX講師経験や家庭教師経験を活かし、東大王の家庭教師「ベストティーチ」の単発授業キャンペーンにも参加した。
 X：https://x.com/nanaumi110
 Instagram：https://www.instagram.com/nanaumi110
 
@@ -107,9 +107,9 @@ Instagram：https://www.instagram.com/mayuko_o_michi
 
 『東大王』のレギュラー放送が終わってしまったことを受けて、今度はこのbestieeという会社から、新たに教育への良い働きかけができればと考えています！！
 
-＜単発からの新しい家庭教師サービス「ベストティーチ」＞
+＜東大王の家庭教師「ベストティーチ」＞
 
-ベストティーチは、「最高の先生の授業を」「単発から気軽に」受けられる、新しい家庭教師サービスです。
+東大王の家庭教師「ベストティーチ」は、「最高の先生の授業を」「単発から気軽に」受けられる、新しい家庭教師サービスです。
 
 ＜会社概要＞
 

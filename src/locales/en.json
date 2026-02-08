@@ -139,8 +139,8 @@
       "description": "FastPass meetup is a recruitment event where you can engage deeply with a small group of high-caliber students carefully selected by AI. Experience meaningful dialogue and mutual understanding that's difficult to achieve at large-scale events."
     },
     "bestTeach": {
-      "name": "Best Teach",
-      "description": "Best Teach is a tutoring service where AI suggests the perfect teacher for your child. Choose from experienced teachers based on 350+ criteria including their alma mater, high school, and hobbies. Try it out with just a single session."
+      "name": "Toudaiou's Tutoring\n'Best Teach'",
+      "description": "Toudaiou's Tutoring 'Best Teach' is a tutoring service where AI suggests the perfect teacher for your child. Choose from experienced teachers based on 350+ criteria including their alma mater, high school, and hobbies. Try it out with just a single session."
     }
   },
   "companyInfo": {
@@ -178,15 +178,15 @@
       "bio": "Co-founded bestiee Inc. with Goto in 2024 and became COO. Oversees new business development and product development. Specializes in AI-powered service design and product management, driving the development of FastPass. Graduated from Kaisei High School and Keio University Faculty of Economics. During university, conducted research on TikTok Shop and new business ventures in Southeast Asia (Indonesia)."
     },
     "coreMember1": {
-      "title": "Best Teach Operations",
+      "title": "Toudaiou's Tutoring 'Best Teach' Operations",
       "name": "Nanami Ito",
-      "bio": "Joined bestiee Inc. in December 2024. Manages the tutoring matching service 'Best Teach'. Gained admission to the University of Tokyo directly from Fukui Prefectural Takefu High School without attending cram school. Graduated from the Faculty of Education at the University of Tokyo. Appeared on TBS 'Toudaiou' since 2019 as the 'Absolute Champion of Science and Mathematics'. Joined bestiee to impact more people through education, reuniting with Goto from their 'Toudaiou' days."
+      "bio": "Joined bestiee Inc. in December 2024. Manages Toudaiou's Tutoring 'Best Teach'. Gained admission to the University of Tokyo directly from Fukui Prefectural Takefu High School without attending cram school. Graduated from the Faculty of Education at the University of Tokyo. Appeared on TBS 'Toudaiou' since 2019 as the 'Absolute Champion of Science and Mathematics'. Joined bestiee to impact more people through education, reuniting with Goto from their 'Toudaiou' days."
     }
   },
   "history": {
     "sectionTitle": "History of bestiee",
     "event2024": "bestiee Inc. established",
-    "event2025_1": "Official launch of tutoring service 'Best Teach'",
+    "event2025_1": "Official launch of Toudaiou's Tutoring 'Best Teach'",
     "event2025_2": "First AI Challengers Fest held",
     "event2026": "Launch of 'FastPass', an AI interview practice data-driven recruitment matching service"
   },
@@ -245,7 +245,7 @@
       "fastpass": "AI Interview Practice & Recruitment Matching 'FastPass'",
       "aiFest": "Large-scale Recruitment Event 'AI Challengers Fest'",
       "meetup": "Small-group Recruitment Event 'FastPass meetup'",
-      "bestTeach": "Tutoring Service 'Best Teach'",
+      "bestTeach": "Toudaiou's Tutoring 'Best Teach'",
       "media": "Media Coverage & Press",
       "other": "Other"
     },

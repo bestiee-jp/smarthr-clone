@@ -10,7 +10,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 // Filter options (Japanese values for data matching)
 const filterOptions = {
   categories: ['プレスリリース', 'お知らせ', 'イベント'],
-  themes: ['寿司就活', 'AIチャレンジャーズフェス', 'FastPass', 'FastPass meetup', 'ベストティーチ', 'その他'],
+  themes: ['寿司就活', 'AIチャレンジャーズフェス', 'FastPass', 'FastPass meetup', '東大王の家庭教師「ベストティーチ」', 'その他'],
   years: ['2026年', '2025年', '2024年'],
 };
 
@@ -25,7 +25,7 @@ const filterLabelsEn: Record<string, string> = {
   'AIチャレンジャーズフェス': 'AI Challengers Fes',
   'FastPass': 'FastPass',
   'FastPass meetup': 'FastPass meetup',
-  'ベストティーチ': 'Best Teach',
+  '東大王の家庭教師「ベストティーチ」': 'Best Teach',
   'その他': 'Others',
   // Years
   '2026年': '2026',
@@ -44,7 +44,7 @@ const filterLabelsZh: Record<string, string> = {
   'AIチャレンジャーズフェス': 'AI挑战者节',
   'FastPass': 'FastPass',
   'FastPass meetup': 'FastPass meetup',
-  'ベストティーチ': 'Best Teach',
+  '東大王の家庭教師「ベストティーチ」': 'Best Teach',
   'その他': '其他',
   // Years
   '2026年': '2026年',

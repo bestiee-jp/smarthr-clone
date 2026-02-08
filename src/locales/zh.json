@@ -139,8 +139,8 @@
       "description": "FastPass meetup是与AI精选的少数优秀学生进行深度交流的招聘活动。在这里，您可以体验大型活动难以实现的深度对话和相互理解。"
     },
     "bestTeach": {
-      "name": "Best Teach",
-      "description": "Best Teach是AI为您推荐最适合孩子的老师的家教服务。从大学、高中、兴趣爱好等350多个维度，让您从经验丰富的老师中进行选择。单次课程即可轻松体验。"
+      "name": "东大王的家教\n「Best Teach」",
+      "description": "东大王的家教「Best Teach」是AI为您推荐最适合孩子的老师的家教服务。从大学、高中、兴趣爱好等350多个维度，让您从经验丰富的老师中进行选择。单次课程即可轻松体验。"
     }
   },
   "companyInfo": {
@@ -178,15 +178,15 @@
       "bio": "2024年与后藤共同创立bestiee株式会社并担任COO。负责新业务开发和产品开发。擅长活用AI的服务设计和产品管理，主导FastPass的开发。开成高中毕业，庆应义塾大学经济学部毕业。大学期间，在东南亚（印度尼西亚）进行TikTok Shop和新业务相关的调研。"
     },
     "coreMember1": {
-      "title": "Best Teach运营",
+      "title": "东大王的家教「Best Teach」运营",
       "name": "伊藤七海",
-      "bio": "2024年12月加入bestiee株式会社。负责家教匹配服务「Best Teach」的运营。不上补习班直接从福井县立武生高中考入东京大学。东京大学教育学部毕业。2019年起作为「理数绝对王者」出演TBS「东大王」。为了通过教育影响更多人而加入bestiee，与「东大王」时期的后藤再次相遇。"
+      "bio": "2024年12月加入bestiee株式会社。负责东大王的家教「Best Teach」的运营。不上补习班直接从福井县立武生高中考入东京大学。东京大学教育学部毕业。2019年起作为「理数绝对王者」出演TBS「东大王」。为了通过教育影响更多人而加入bestiee，与「东大王」时期的后藤再次相遇。"
     }
   },
   "history": {
     "sectionTitle": "bestiee的历程",
     "event2024": "bestiee株式会社成立",
-    "event2025_1": "家教服务「Best Teach」正式运营",
+    "event2025_1": "东大王的家教「Best Teach」正式运营",
     "event2025_2": "首届「AI挑战者节」举办",
     "event2026": "利用AI面试练习数据的招聘匹配服务「FastPass」上线"
   },
@@ -245,7 +245,7 @@
       "fastpass": "AI面试练习·招聘匹配「FastPass」",
       "aiFest": "大型招聘活动「AI挑战者节」",
       "meetup": "小规模招聘活动「FastPass meetup」",
-      "bestTeach": "家教服务「Best Teach」",
+      "bestTeach": "东大王的家教「Best Teach」",
       "media": "媒体采访·新闻",
       "other": "其他"
     },

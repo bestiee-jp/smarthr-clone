@@ -48,7 +48,7 @@ const satisfy = Satisfy({
 
 export const metadata: Metadata = {
   title: "bestiee | 学びと出会いに、ワクワクを。",
-  description: "株式会社bestiee - 学びと出会いに、ワクワクを。AI面接練習サービス「FastPass」や家庭教師マッチングサービス「ベストティーチ」を運営。",
+  description: "株式会社bestiee - 学びと出会いに、ワクワクを。AI面接練習サービス「FastPass」や東大王の家庭教師「ベストティーチ」を運営。",
   openGraph: {
     title: "bestiee | 学びと出会いに、ワクワクを。",
     description: "株式会社bestiee - 学びと出会いに、ワクワクを。",

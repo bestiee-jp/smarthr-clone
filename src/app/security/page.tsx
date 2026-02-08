@@ -24,7 +24,7 @@ export default function SecurityPage() {
       <section style={{ backgroundColor: 'white', padding: '60px 5%', flex: 1 }}>
         <div style={{ maxWidth: '900px', margin: '0 auto', lineHeight: '1.8', color: '#333' }}>
           <p style={{ marginBottom: '24px' }}>
-            株式会社bestiee（以下「当社」といいます。）は、「学びと出会いに、ワクワクを」をミッションに掲げ、AI面接練習・採用マッチングサービス「FastPass」、採用イベント、家庭教師サービス「ベストティーチ」等を提供しています。
+            株式会社bestiee（以下「当社」といいます。）は、「学びと出会いに、ワクワクを」をミッションに掲げ、AI面接練習・採用マッチングサービス「FastPass」、採用イベント、東大王の家庭教師「ベストティーチ」等を提供しています。
           </p>
           <p style={{ marginBottom: '24px' }}>
             当社は、AIを活用したサービスを提供する事業者として、情報セキュリティが重要な経営課題であることを認識し、お客様、お取引先様からお預かりした情報資産および当社の情報資産をサイバー攻撃などあらゆる脅威から守り、情報資産の機密性、完全性、可用性の維持・向上に努めます。

@@ -320,14 +320,14 @@ export default function HistoryPage() {
 
               {/* Image container - 2024年風の左右配置 */}
               <div style={{ position: 'relative', zIndex: 1 }}>
-                {/* 上段: ベストティーチ + YouTube動画 */}
+                {/* 上段: 東大王の家庭教師「ベストティーチ」 + YouTube動画 */}
                 <div style={{
                   display: 'flex',
                   flexDirection: isMobile ? 'column' : 'row',
                   gap: isMobile ? '16px' : '0',
                   marginBottom: '24px',
                 }}>
-                  {/* ベストティーチ */}
+                  {/* 東大王の家庭教師「ベストティーチ」 */}
                   <div style={{
                     width: isMobile ? '140px' : '200px',
                     height: isMobile ? '140px' : '200px',
@@ -338,7 +338,7 @@ export default function HistoryPage() {
                   }}>
                     <img
                       src="/images/history-bestteach.webp"
-                      alt="ベストティーチ"
+                      alt="東大王の家庭教師「ベストティーチ」"
                       style={{ width: '100%', height: '100%', objectFit: 'contain', padding: isMobile ? '12px' : '16px' }}
                     />
                   </div>

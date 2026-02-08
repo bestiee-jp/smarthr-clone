@@ -15,6 +15,6 @@ imageType: "notice"
 
 <!--
 カテゴリ: プレスリリース / お知らせ / イベント
-テーマ: FastPass / AIチャレンジャーズフェス / ベストティーチ / FastPass meetup / その他
+テーマ: FastPass / AIチャレンジャーズフェス / 東大王の家庭教師「ベストティーチ」 / FastPass meetup / その他
 imageType: press / notice / event
 -->

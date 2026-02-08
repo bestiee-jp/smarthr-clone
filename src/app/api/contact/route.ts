@@ -52,7 +52,7 @@ const interestKeyToLabel: Record<string, string> = {
   fastpass: 'AI面接練習データ活用の採用マッチング「FastPass」',
   aiFest: '大規模採用イベント「AIチャレンジャーズフェス」',
   meetup: '少人数制採用イベント「FastPass meetup」',
-  bestTeach: '家庭教師サービス「ベストティーチ」',
+  bestTeach: '東大王の家庭教師「ベストティーチ」',
   media: 'メディア取材・掲載',
   other: 'その他',
 };

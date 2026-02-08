@@ -40,8 +40,8 @@ export const recruitmentServices: ServiceItem[] = [
 // Education services (教育)
 export const educationServices: ServiceItem[] = [
   {
-    name: 'ベストティーチ',
-    description: '「ベストティーチ」は、AIがお子さまにぴったりの先生を提案してくれる家庭教師サービスです。出身塾や出身高、趣味など350以上の項目から指導経験豊富な先生を選べて、単発1回からお試しできます。',
+    name: '東大王の家庭教師「ベストティーチ」',
+    description: '東大王の家庭教師「ベストティーチ」は、AIがお子さまにぴったりの先生を提案してくれる家庭教師サービスです。出身塾や出身高、趣味など350以上の項目から指導経験豊富な先生を選べて、単発1回からお試しできます。',
     image: '/images/service-bestteach.webp',
   },
 ];
