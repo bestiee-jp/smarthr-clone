@@ -14,6 +14,7 @@ const executiveImages = {
   ceo: '/images/ceo.jpg',
   coo: '/images/coo.jpg',
   coreMember1: '/images/core-member-ito.jpeg',
+  coreMember2: '/images/core-member-omichi.png',
 };
 
 export default function ExecutivesPage() {
@@ -43,6 +44,12 @@ export default function ExecutivesPage() {
       name: t('executives.coreMember1.name'),
       bio: t('executives.coreMember1.bio'),
       image: executiveImages.coreMember1,
+    },
+    {
+      title: t('executives.coreMember2.title'),
+      name: t('executives.coreMember2.name'),
+      bio: t('executives.coreMember2.bio'),
+      image: executiveImages.coreMember2,
     },
   ];
 
