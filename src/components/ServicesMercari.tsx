@@ -33,21 +33,21 @@ const slideConfigs = [
     category: 'Events',
     bgColor: '#00A3E0', // bestiee-blue-light
     image: '/images/service-aicf.jpg',
-    scale: 1,
+    scale: 1.3,
   },
   {
     key: 'meetup',
     category: 'Events',
     bgColor: '#4DD9D9', // bestiee-cyan
     image: '/images/service-meetup.jpg',
-    scale: 1,
+    scale: 1.1,
   },
   {
     key: 'bestTeach',
     category: 'Services',
     bgColor: '#EAEAEA',
     image: '/images/service-bestteach.webp',
-    scale: 1.7,
+    scale: 1.5,
   },
 ];
 
@@ -202,8 +202,8 @@ export default function ServicesMercari() {
             backgroundColor: 'white',
             borderRadius: '16px',
             padding: isMobile ? '24px' : '48px',
-            width: isMobile ? '100%' : '500px',
-            maxWidth: isMobile ? '400px' : 'none',
+            width: isMobile ? '100%' : '45%',
+            maxWidth: isMobile ? '400px' : '500px',
             height: isMobile ? 'auto' : '380px',
             minHeight: isMobile ? '300px' : 'auto',
             boxShadow: '0 20px 60px rgba(0, 0, 0, 0.15)',
@@ -405,8 +405,8 @@ export default function ServicesMercari() {
             right: isMobile ? 'auto' : '0',
             top: isMobile ? 'auto' : '50%',
             transform: isMobile ? 'none' : 'translateY(-50%)',
-            width: isMobile ? '100%' : '550px',
-            maxWidth: isMobile ? '350px' : 'none',
+            width: isMobile ? '100%' : '50%',
+            maxWidth: isMobile ? '350px' : '550px',
             height: isMobile ? '300px' : '500px',
             zIndex: 1,
             display: 'flex',

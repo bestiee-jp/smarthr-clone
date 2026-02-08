@@ -33,7 +33,7 @@ export default function CyanBackground() {
         <path
           d="M0,250 Q100,150 200,180 C350,220 450,280 550,220 C650,160 720,200 800,180 Q850,170 800,280 C700,380 550,350 400,370 C250,390 100,340 50,290 Q0,250 0,250 Z"
           fill="url(#wave1Gradient)"
-          opacity="0.85"
+          opacity="0.6"
         />
       </svg>
 
@@ -58,7 +58,7 @@ export default function CyanBackground() {
         <path
           d="M0,150 Q80,80 180,100 C300,130 400,80 520,120 Q600,150 580,220 C500,300 350,260 200,280 Q50,300 0,220 Q-20,180 0,150 Z"
           fill="url(#wave2Gradient)"
-          opacity="0.6"
+          opacity="0.4"
         />
       </svg>
 
@@ -83,7 +83,7 @@ export default function CyanBackground() {
         <path
           d="M700,100 Q650,50 550,80 C400,130 300,220 180,300 Q80,370 100,450 C150,520 300,500 450,470 C600,440 680,380 700,280 Q720,180 700,100 Z"
           fill="url(#wave3Gradient)"
-          opacity="0.9"
+          opacity="0.65"
         />
       </svg>
 
@@ -108,7 +108,7 @@ export default function CyanBackground() {
         <path
           d="M0,80 Q80,30 160,60 C260,100 300,200 280,320 C260,440 320,520 260,580 Q180,650 80,600 C20,560 0,450 0,320 Q0,180 0,80 Z"
           fill="url(#wave4Gradient)"
-          opacity="0.85"
+          opacity="0.6"
         />
       </svg>
 
@@ -120,7 +120,7 @@ export default function CyanBackground() {
           left: '20%',
           width: '300px',
           height: '300px',
-          background: 'radial-gradient(circle, rgba(0, 163, 224, 0.4) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(0, 163, 224, 0.28) 0%, transparent 70%)',
           borderRadius: '50%',
           filter: 'blur(30px)',
         }}
@@ -148,7 +148,7 @@ export default function CyanBackground() {
         <path
           d="M800,100 Q720,40 600,70 C450,110 300,80 150,140 Q50,190 80,300 C120,400 300,380 500,360 C700,340 780,280 800,200 Q820,140 800,100 Z"
           fill="url(#wave5Gradient)"
-          opacity="0.8"
+          opacity="0.55"
         />
       </svg>
 
@@ -173,7 +173,7 @@ export default function CyanBackground() {
         <path
           d="M0,100 Q60,40 150,60 C280,90 400,160 480,260 Q520,340 420,350 C280,360 140,340 60,300 Q0,260 0,180 Q0,140 0,100 Z"
           fill="url(#wave6Gradient)"
-          opacity="0.85"
+          opacity="0.6"
         />
       </svg>
     </div>
