@@ -391,35 +391,71 @@ export default function ContactPage() {
                     <h3 style={{ fontSize: '18px', fontWeight: 'bold', color: '#333' }}>{t('contactForm.media.title')}</h3>
                   </div>
 
-                  {/* Media Images */}
+                  {/* Media Images - 6枚グリッド (上下3枚ずつ) */}
                   <div style={{
-                    display: 'flex',
-                    gap: '16px',
-                    flexWrap: 'wrap',
+                    display: 'grid',
+                    gridTemplateColumns: '1fr 0.75fr 1fr',
+                    gap: '8px',
                   }}>
+                    {/* 上段: 横長・縦長・横長 */}
                     <img
-                      src="/media/メディア掲載1.jpg"
-                      alt="メディア掲載実績1"
-                      style={{
-                        width: 'calc(50% - 8px)',
-                        borderRadius: '8px',
-                        objectFit: 'cover',
-                      }}
-                    />
-                    <img
-                      src="/media/メディア掲載2.jpg"
-                      alt="メディア掲載実績2"
-                      style={{
-                        width: 'calc(50% - 8px)',
-                        borderRadius: '8px',
-                        objectFit: 'cover',
-                      }}
-                    />
-                    <img
-                      src="/media/Forbes.webp"
-                      alt="Forbes JAPAN 2026年総予測"
+                      src="/media/kouno-taidan.jpg"
+                      alt="河野太郎 元デジタル大臣との対談"
                       style={{
                         width: '100%',
+                        height: '140px',
+                        borderRadius: '8px',
+                        objectFit: 'cover',
+                      }}
+                    />
+                    <img
+                      src="/media/forbes-cover.jpg"
+                      alt="Forbes JAPAN 2026年注目の100人"
+                      style={{
+                        width: '100%',
+                        height: '140px',
+                        borderRadius: '8px',
+                        objectFit: 'cover',
+                        objectPosition: 'top',
+                      }}
+                    />
+                    <img
+                      src="/media/dmm-taidan.jpg"
+                      alt="DMM亀山敬司 会長との対談（M&A CAMP）"
+                      style={{
+                        width: '100%',
+                        height: '140px',
+                        borderRadius: '8px',
+                        objectFit: 'cover',
+                      }}
+                    />
+                    {/* 下段: 横長・縦長・横長 */}
+                    <img
+                      src="/media/escort-event.jpg"
+                      alt="民間学童えすこーと 特別イベント"
+                      style={{
+                        width: '100%',
+                        height: '140px',
+                        borderRadius: '8px',
+                        objectFit: 'cover',
+                      }}
+                    />
+                    <img
+                      src="/media/albirex-shikyushiki.jpg"
+                      alt="新潟アルビレックスBC 開幕戦 始球式"
+                      style={{
+                        width: '100%',
+                        height: '140px',
+                        borderRadius: '8px',
+                        objectFit: 'cover',
+                      }}
+                    />
+                    <img
+                      src="/media/school-lecture.png"
+                      alt="福井県 学校講演"
+                      style={{
+                        width: '100%',
+                        height: '140px',
                         borderRadius: '8px',
                         objectFit: 'cover',
                       }}
@@ -434,9 +470,12 @@ export default function ContactPage() {
                     gap: '12px',
                   }}>
                     {[
-                      t('contactForm.mediaItems.forbes'),
                       t('contactForm.mediaItems.toudaiou'),
+                      t('contactForm.mediaItems.forbes'),
+                      t('contactForm.mediaItems.kouno'),
                       t('contactForm.mediaItems.dmm'),
+                      t('contactForm.mediaItems.albirex'),
+                      t('contactForm.mediaItems.lecture'),
                       t('contactForm.mediaItems.press'),
                     ].map((item, index) => (
                       <div key={index} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
@@ -868,6 +907,7 @@ export default function ContactPage() {
                         { key: 'aiFest', label: t('contactForm.interestOptions.aiFest') },
                         { key: 'meetup', label: t('contactForm.interestOptions.meetup') },
                         { key: 'bestTeach', label: t('contactForm.interestOptions.bestTeach') },
+                        { key: 'speaking', label: t('contactForm.interestOptions.speaking') },
                         { key: 'media', label: t('contactForm.interestOptions.media') },
                         { key: 'other', label: t('contactForm.interestOptions.other') },
                       ].map((option) => (
